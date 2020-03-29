@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  border: 4px solid black;
+  width: 100%;
+  height: 10vh;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+}
+nav div a {
+  color: #fff;
+  display: flex;
+  margin: 10px 15px 5px 30px;
+  font-size: 24px;
+  text-decoration: none;
+}
+nav div:first-child {
+  flex-grow: 6;
+  width: 20%;
+}
+nav div:first-child a {
+  color: gold;
+  font-size: 30px;
+  padding: 20px;
+}
+.about {
+  position: relative;
+}
+.about a {
+  border-bottom: 0 solid white;
+}
+.aboutOpen {
+  position: absolute;
+  display: block;
+  top: 35;
+  left: 20;
+  height: 0;
+  width: 60px;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+}
+.aboutOpen li {
+  list-style: none;
+  margin: 10px;
+  padding: 5px;
+  visibility: hidden;
+}
+.aboutOpen li a {
+  font-size: 18px;
+}
+
+.vidoeDiv {
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+  /* z-index: -1; */
+}
+video {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  /* overflow: hidden; */
+  object-fit: fill;
+  z-index: -3;
+}
+.overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  z-index: -2;
+  opacity: 0.5;
+}
+.title {
+  display: block;
+  position: absolute;
+  top: 35vh;
+  left: 10vw;
+  width: 50%;
+  font-size: 72px;
+  color: #fff;
+}
+.afterVideo {
+  position: relative;
+  top: 90vh;
+  height: fit-content;
+  padding-top: 140px;
+}
+#divSer {
+  height: 25vh;
+  /* padding-left: 10%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  z-index: 4;
+}
+#services_header {
+  display: flex;
+  font-size: 42px;
+  padding-left: 13%;
+  max-width: 87%;
+}
+#underline {
+  display: flex;
+  height: 4px;
+  width: 60%;
+  margin-left: 8%;
+
+  background-color: gold;
+}
+.service_section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: fit-content;
+}
+.service {
+  display: flex;
+  height: 80vh;
+  justify-content: space-around;
+  align-items: center;
+}
+.service:nth-child(even) {
+  background-color: azure;
+  flex-direction: row-reverse;
+}
+.service:last-child {
+  position: relative;
+}
+button {
+  width: 180px;
+  height: 70px;
+}
+footer {
+  height: 20vh;
+  background-color: cadetblue;
+  position: relative;
+  bottom: 0;
+}
+/* media queries */
+@media screen and (max-width: 738px) {
+  nav div:first-child {
+    flex-grow: 3;
+  }
+  nav div:first-child a {
+    color: red;
+  }
+}

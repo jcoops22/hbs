@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>HairByShandel</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="/frameworks/scrollmagic/minified/ScrollMagic.min.js"></script>
+  <script src="/frameworks/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+  <script src="/frameworks/minified/TweenMax.min.js"></script>
+  <script src="/frameworks/minified/TimelineMax.min.js"></script>
+  <script src="/frameworks/minified/plugins/CSSPlugin.min.js"></script>
+</head>
+
+
+<!-- landing section -->
+<div class="container">
+  <!-- navbar -->
+  <nav>
+    <div>
+      <a id="nav_title" href="#">{{ title }}</a>
+    </div>
+    <div><a href="#">home</a></div>
+    <div class="about">
+      <a href="#">about</a>
+      <div class="aboutOpen">
+        <li><a href="#">Shan</a></li>
+        <li><a href="#">Crystal</a></li>
+      </div>
+    </div>
+
+    <div><a href="#">schedule</a></div>
+    <div><a href="#">follow</a></div>
+  </nav>
+</div>
+<!-- end navbar -->
+<!-- title overlay -->
+<div class="videoDiv">
+  <div class="overlay"></div>
+  <h1 class="title">{{ title }}</h1>
+  <!-- video -->
+  <video id="vid" autoplay muted>
+    <source src="./resources/movie.MP4" type="video/mp4" />
+  </video>
+</div>
+
+<!-- features -->
+<section class="afterVideo">
+  <div id="divSer">
+    <h2 id="services_header">Services</h2>
+    <div id="underline"></div>
+  </div>
+
+  <section class="services_section">
+    <div class="service service_1">
+      <button class="sbutton">Men's Cuts</button>
+      <img class="images" :src="mensCuts" alt="male haircut">
+    </div>
+    <div class="service service_2">
+      <button class="sbutton">Color</button>
+      <img class="images" :src="color" alt="rainbow colored hair">
+    </div>
+    <div class="service service_3">
+      <button class="sbutton">Cuts</button>
+      <img class="images" :src="womenCuts" alt="female haircut">
+    </div>
+    <div class="service service_4">
+      <button class="sbutton">Healthy Hair</button>
+      <img class="images" :src="healthyHair" alt="healthy hair">
+    </div>
+    <div class="service service_5">
+      <button class="sbutton">Products</button>
+      <img class="images" :src="products" alt="kevin murphy">
+      <p>Shandel is a licensed seller for Kevin Murphy products</p>
+    </div>
+  </section>
+</section>
+<div>
+  <iframe width="600" height="450" frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4Yr1TokMU4cRGdf7yNGllhU&key=AIzaSyBhgkuFckBTFwJOwnnsOffUff7-lGKa8SM"
+    allowfullscreen></iframe>
+</div>
+
+<footer>
+  <div>
+    <p>Built by Jonathan Cooper</p>
+  </div>
+</footer>
+<script src="/jambascramps/main.js"></script>
+</body>
+
+</html>
