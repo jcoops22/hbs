@@ -1,9 +1,17 @@
+/* Fonts: 
+Dancing Script: Headers
+font-family: "Dancing Script", cursive;
+Orbitron: Product names subheaders
+font-family: "Orbitron", sans-serif;
+Handlee: text  
+font-family: 'Handlee', cursive;
+*/
+
 * {
   box-sizing: border-box;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  font-family: "Handlee", cursive;
 }
 nav {
   display: flex;
@@ -31,6 +39,10 @@ nav div:first-child a {
   font-size: 30px;
   padding: 20px;
 }
+.header {
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+}
 .about {
   position: relative;
 }
@@ -57,18 +69,13 @@ nav div:first-child a {
 .aboutOpen li a {
   font-size: 18px;
 }
-
-.vidoeDiv {
-  width: 100vw;
-  height: 90vh;
-  position: relative;
-  /* z-index: -1; */
+.videoDiv {
+  height: 80vh;
 }
 video {
   width: 100vw;
   height: 90vh;
   position: absolute;
-  /* overflow: hidden; */
   object-fit: fill;
   z-index: -3;
 }
@@ -78,6 +85,9 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
+  background-image: url("./resources/shan.jpg");
+  background-size: contain;
+  background-attachment: fixed;
   width: 100vw;
   height: 90vh;
   position: absolute;
@@ -85,6 +95,7 @@ video {
   opacity: 0.5;
 }
 .title {
+  font-family: "Dancing Script", cursive;
   display: block;
   position: absolute;
   top: 35vh;
@@ -95,13 +106,12 @@ video {
 }
 .afterVideo {
   position: relative;
-  top: 90vh;
+  /* top: 90vh; */
   height: fit-content;
   padding-top: 140px;
 }
 #divSer {
   height: 25vh;
-  /* padding-left: 10%; */
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -118,8 +128,18 @@ video {
   height: 4px;
   width: 60%;
   margin-left: 8%;
-
   background-color: gold;
+}
+.service {
+  display: flex;
+  height: 28rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+.service p {
+  font-family: "Handlee", cursive;
 }
 .service_section {
   display: flex;
@@ -127,29 +147,124 @@ video {
   flex-wrap: nowrap;
   min-height: fit-content;
 }
-.service {
-  display: flex;
-  height: 80vh;
-  justify-content: space-around;
-  align-items: center;
-}
 .service:nth-child(even) {
-  background-color: azure;
-  flex-direction: row-reverse;
+  /* background-color: rosybrown; */
+  background-color: #ddd;
 }
 .service:last-child {
   position: relative;
 }
-button {
-  width: 180px;
-  height: 70px;
-}
-footer {
-  height: 20vh;
-  background-color: cadetblue;
+.carosel {
   position: relative;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
+.carosel div {
+  position: relative;
+  display: flex;
+  width: 300px;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  transition-duration: 1s;
+}
+.carosel div img {
+  position: relative;
+  max-width: 100%;
+  border-radius: 5px;
+  transition-duration: 1s;
+}
+.img1 {
+  width: 100px;
+  height: 200px;
+  align-self: center;
+  filter: blur(4px);
+  /* transform: skewY(-20deg); */
+}
+.img2 {
+  height: 300px;
+}
+.img3 {
+  width: 100px;
+  height: 200px;
+  align-self: center;
+  filter: blur(4px);
+  /* transform: skewY(20deg); */
+}
+.div1 {
+}
+.div2 {
+  height: 300px;
+}
+.div3 {
+}
+.left1 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  filter: blur(4px);
+  z-index: -1;
+}
+.middle1 {
+  filter: blur(0px);
+  height: 300px;
+  width: 250px;
+  transform: translateX(19rem);
+  z-index: 1;
+}
+.right1 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  transform: translateX(38rem);
+  filter: blur(4px);
+}
+.left2 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  transform: translateX(-19rem);
+  filter: blur(4px);
+  z-index: -1;
+}
+.middle2 {
+  filter: blur(0px);
+  height: 300px;
+  width: 250px;
+  z-index: 1;
+}
+.right2 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  transform: translateX(19rem);
+  filter: blur(4px);
+}
+.left3 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  transform: translateX(-38rem);
+  filter: blur(4px);
+  z-index: -1;
+}
+.middle3 {
+  filter: blur(0px);
+  height: 300px;
+  width: 250px;
+  transform: translateX(-19rem);
+  z-index: 1;
+}
+.right3 {
+  align-self: center;
+  width: 100px;
+  height: 200px;
+  filter: blur(4px);
+}
+.googleMaps {
+  margin: 1.3rem;
+}
+
 /* media queries */
 @media screen and (max-width: 738px) {
   nav div:first-child {
