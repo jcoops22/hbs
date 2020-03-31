@@ -174,32 +174,7 @@ video {
   border-radius: 5px;
   transition-duration: 1s;
 }
-.img1 {
-  width: 100px;
-  height: 200px;
-  align-self: center;
-  filter: blur(4px);
-  /* transform: skewY(-20deg); */
-}
-.img2 {
-  height: 300px;
-}
-.img3 {
-  width: 100px;
-  height: 200px;
-  align-self: center;
-  filter: blur(4px);
-  /* transform: skewY(20deg); */
-}
-.div1 {
-  /* left: 10%; */
-}
-.div2 {
-  height: 300px;
-}
-.div3 {
-  /* left: -15%; */
-}
+
 .left1 {
   align-self: center;
   width: 100px;

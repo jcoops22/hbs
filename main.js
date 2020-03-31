@@ -85,21 +85,28 @@ let div3 = document.querySelector(".div3");
 
 const mensCuts = [
   "./resources/mensCut.png",
-  "./resources/mensCut1.png",
-  "./resources/mensCut2.png",
-  "./resources/mensCut3.png"
+  "./resources/mensCut1.jpg",
+  "./resources/mensCut2.jpg",
+  "./resources/mensCut3.jpg"
 ];
 const rotateClasses = ["left", "middle", "right"];
 let count1 = 0;
 let count2 = 1;
 let count3 = 2;
 
+// rotate event right
 div1.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
     img1.classList.remove("middle1");
     img1.classList.add("right1");
     img2.classList.remove("right2");
+    count2++;
+    img2.src = mensCuts[count2];
+    if (count2 >= mensCuts.length) {
+      count2 = 0;
+      img2.src = mensCuts[count2];
+    }
     img2.classList.add("left2");
     img3.classList.remove("left3");
     img3.classList.add("middle3");
@@ -107,6 +114,12 @@ div1.addEventListener("click", () => {
     console.log("img1 has right");
     img1.classList.add("left1");
     img1.classList.remove("right1");
+    count1++;
+    img1.src = mensCuts[count1];
+    if (count1 >= mensCuts.length) {
+      count1 = 0;
+      img1.src = mensCuts[count1];
+    }
     img2.classList.add("middle2");
     img2.classList.remove("left2");
     img3.classList.add("right3");
@@ -119,32 +132,60 @@ div1.addEventListener("click", () => {
     img2.classList.remove("middle2");
     img3.classList.add("left3");
     img3.classList.remove("right3");
+    count3++;
+    img3.src = mensCuts[count3];
+    if (count3 >= mensCuts.length) {
+      count3 = 0;
+      img3.src = mensCuts[count3];
+    }
   }
 });
+// rotate event left
 div3.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
     img1.classList.remove("middle1");
-    img1.classList.add("right1");
+    img1.classList.add("left1");
     img2.classList.remove("right2");
-    img2.classList.add("left2");
+    count3--;
+    if (count3 < 0) {
+      count3 = mensCuts.length - 1;
+      img3.src = mensCuts[count3];
+    } else {
+      img3.src = mensCuts[count3];
+    }
+    img2.classList.add("middle2");
     img3.classList.remove("left3");
-    img3.classList.add("middle3");
+    img3.classList.add("right3");
   } else if (img1.classList.contains("right1")) {
     console.log("img1 has right");
-    img1.classList.add("left1");
+    img1.classList.add("middle1");
     img1.classList.remove("right1");
-    img2.classList.add("middle2");
+    count2--;
+    if (count2 < 0) {
+      count2 = mensCuts.length - 1;
+      img2.src = mensCuts[count2];
+    } else {
+      img2.src = mensCuts[count2];
+    }
+    img2.classList.add("right2");
     img2.classList.remove("left2");
-    img3.classList.add("right3");
+    img3.classList.add("left3");
     img3.classList.remove("middle3");
   } else {
     console.log("img1 has nothing or left");
-    img1.classList.add("middle1");
+    img1.classList.add("right1");
     img1.classList.remove("left1");
-    img2.classList.add("right2");
+    img2.classList.add("left2");
     img2.classList.remove("middle2");
-    img3.classList.add("left3");
+    img3.classList.add("middle3");
     img3.classList.remove("right3");
+    count1--;
+    if (count1 < 0) {
+      count1 = mensCuts.length - 1;
+      img1.src = mensCuts[count1];
+    } else {
+      img1.src = mensCuts[count1];
+    }
   }
 });
