@@ -130,6 +130,16 @@ video {
   margin-left: 8%;
   background-color: gold;
 }
+.modal {
+  position: absolute;
+  opacity: 0.6;
+  top: 170vh;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  /* display: none; */
+  background-color: slategray;
+}
 .service {
   display: flex;
   height: 28rem;
@@ -141,20 +151,14 @@ video {
 .service p {
   font-family: "Handlee", cursive;
 }
-.service_section {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  min-height: fit-content;
-}
 .service:nth-child(even) {
-  /* background-color: rosybrown; */
   background-color: #ddd;
 }
 .service:last-child {
   position: relative;
 }
 .carosel {
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -173,73 +177,70 @@ video {
   max-width: 100%;
   border-radius: 5px;
   transition-duration: 1s;
+  box-shadow: 8px 10px 8px grey;
 }
 
-.left1 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
+.left1,
+.left2,
+.left3,
+.right1,
+.right2,
+.right3 {
   filter: blur(4px);
+  align-self: center;
+}
+.left1 {
+  transform: scale(0.8);
   z-index: -1;
 }
 .middle1 {
   align-self: center;
   filter: blur(0px);
   height: 300px;
-  width: 250px;
-  transform: translateX(19rem);
+  width: initial;
+  transform: translateX(19rem) scale(1);
   z-index: 1;
+  cursor: pointer;
 }
 .right1 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
-  transform: translateX(38rem);
-  filter: blur(4px);
+  transform: translateX(38rem) scale(0.8);
 }
 .left2 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
-  transform: translateX(-19rem);
-  filter: blur(4px);
+  transform: translateX(-19rem) scale(0.8);
   z-index: -1;
 }
 .middle2 {
   align-self: center;
   filter: blur(0px);
   height: 300px;
-  width: 250px;
+  width: initial;
   z-index: 1;
+  cursor: pointer;
+  transform: scale(1);
 }
 .right2 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
-  transform: translateX(19rem);
-  filter: blur(4px);
+  transform: translateX(19rem) scale(0.8);
 }
 .left3 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
-  transform: translateX(-38rem);
-  filter: blur(4px);
+  transform: translateX(-38rem) scale(0.8);
   z-index: -1;
 }
 .middle3 {
   align-self: center;
   filter: blur(0px);
   height: 300px;
-  width: 250px;
-  transform: translateX(-19rem);
+  width: initial;
+  transform: translateX(-19rem) scale(1);
   z-index: 1;
+  cursor: pointer;
 }
 .right3 {
-  align-self: center;
-  width: 100px;
-  height: 200px;
-  filter: blur(4px);
+  transform: scale(0.8);
+}
+.service_5 {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
 }
 .googleMaps {
   margin: 1.3rem;

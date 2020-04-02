@@ -71,11 +71,6 @@ about.addEventListener("mouseout", () => {
 });
 
 // carosel
-let rotateLeft = new TimelineMax({ paused: true });
-
-// let img1 = document.querySelector(".img1");
-// let img2 = document.querySelector(".img2");
-// let img3 = document.querySelector(".img3");
 let img1 = document.querySelector(" .div1 img");
 let img2 = document.querySelector(".div2 img");
 let img3 = document.querySelector(".div3 img");
@@ -95,7 +90,7 @@ let count2 = 1;
 let count3 = 2;
 
 // rotate event right
-div1.addEventListener("click", () => {
+div1.addEventListener("click", e => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
     img1.classList.remove("middle1");
@@ -141,7 +136,7 @@ div1.addEventListener("click", () => {
   }
 });
 // rotate event left
-div3.addEventListener("click", () => {
+div3.addEventListener("click", e => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
     img1.classList.remove("middle1");
