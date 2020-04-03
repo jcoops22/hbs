@@ -71,18 +71,21 @@ about.addEventListener("mouseout", () => {
 });
 
 // carosel
-let img1 = document.querySelector(" .div1 img");
+let img1 = document.querySelector(".div1 img");
 let img2 = document.querySelector(".div2 img");
 let img3 = document.querySelector(".div3 img");
 let div1 = document.querySelector(".div1");
 let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
+let next = document.querySelector("#next");
+let back = document.querySelector("#back");
 
 const mensCuts = [
   "./resources/mensCut.png",
   "./resources/mensCut1.jpg",
   "./resources/mensCut2.jpg",
-  "./resources/mensCut3.jpg"
+  "./resources/mensCut3.jpg",
+  "./resources/mensCut4.jpg"
 ];
 const rotateClasses = ["left", "middle", "right"];
 let count1 = 0;
@@ -90,37 +93,50 @@ let count2 = 1;
 let count3 = 2;
 
 // rotate event right
-div1.addEventListener("click", e => {
+next.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
-    img1.classList.remove("middle1");
+    img2.style.zIndex = "-4";
     img1.classList.add("right1");
-    img2.classList.remove("right2");
-    count2++;
-    img2.src = mensCuts[count2];
-    if (count2 >= mensCuts.length) {
-      count2 = 0;
-      img2.src = mensCuts[count2];
-    }
+    img1.classList.remove("middle1");
     img2.classList.add("left2");
-    img3.classList.remove("left3");
+    img2.classList.remove("right2");
     img3.classList.add("middle3");
+    img3.classList.remove("left3");
+    count2++;
+    setTimeout(() => {
+      img2.src = mensCuts[count2];
+      if (count2 >= mensCuts.length) {
+        count2 = 0;
+        img2.src = mensCuts[count2];
+      }
+    }, 400);
+    setTimeout(() => {
+      img2.style.zIndex = "0";
+    }, 1000);
   } else if (img1.classList.contains("right1")) {
     console.log("img1 has right");
+    img1.style.zIndex = "-4";
     img1.classList.add("left1");
     img1.classList.remove("right1");
-    count1++;
-    img1.src = mensCuts[count1];
-    if (count1 >= mensCuts.length) {
-      count1 = 0;
-      img1.src = mensCuts[count1];
-    }
     img2.classList.add("middle2");
     img2.classList.remove("left2");
     img3.classList.add("right3");
     img3.classList.remove("middle3");
+    count1++;
+    setTimeout(() => {
+      img1.src = mensCuts[count1];
+      if (count1 >= mensCuts.length) {
+        count1 = 0;
+        img1.src = mensCuts[count1];
+      }
+    }, 400);
+    setTimeout(() => {
+      img1.style.zIndex = "0";
+    }, 1000);
   } else {
-    console.log("img1 has nothing or left");
+    console.log("img1 has nothing or is left");
+    img3.style.zIndex = "-4";
     img1.classList.add("middle1");
     img1.classList.remove("left1");
     img2.classList.add("right2");
@@ -128,47 +144,65 @@ div1.addEventListener("click", e => {
     img3.classList.add("left3");
     img3.classList.remove("right3");
     count3++;
-    img3.src = mensCuts[count3];
-    if (count3 >= mensCuts.length) {
-      count3 = 0;
+    setTimeout(() => {
       img3.src = mensCuts[count3];
-    }
+      if (count3 >= mensCuts.length) {
+        count3 = 0;
+        img3.src = mensCuts[count3];
+      }
+    }, 500);
+    setTimeout(() => {
+      img3.style.zIndex = "0";
+    }, 1000);
   }
 });
 // rotate event left
-div3.addEventListener("click", e => {
+back.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
     console.log("img1 has middle");
-    img1.classList.remove("middle1");
+    img3.style.zIndex = "-4";
     img1.classList.add("left1");
-    img2.classList.remove("right2");
-    count3--;
-    if (count3 < 0) {
-      count3 = mensCuts.length - 1;
-      img3.src = mensCuts[count3];
-    } else {
-      img3.src = mensCuts[count3];
-    }
+    img1.classList.remove("middle1");
     img2.classList.add("middle2");
-    img3.classList.remove("left3");
+    img2.classList.remove("right2");
     img3.classList.add("right3");
+    img3.classList.remove("left3");
+    count3--;
+    setTimeout(() => {
+      if (count3 < 0) {
+        count3 = mensCuts.length - 1;
+        img3.src = mensCuts[count3];
+      } else {
+        img3.src = mensCuts[count3];
+      }
+    }, 400);
+    setTimeout(() => {
+      img3.style.zIndex = "0";
+    }, 1000);
   } else if (img1.classList.contains("right1")) {
     console.log("img1 has right");
+    img2.style.zIndex = "-4";
     img1.classList.add("middle1");
     img1.classList.remove("right1");
-    count2--;
-    if (count2 < 0) {
-      count2 = mensCuts.length - 1;
-      img2.src = mensCuts[count2];
-    } else {
-      img2.src = mensCuts[count2];
-    }
     img2.classList.add("right2");
     img2.classList.remove("left2");
     img3.classList.add("left3");
     img3.classList.remove("middle3");
+    count2--;
+    setTimeout(() => {
+      if (count2 < 0) {
+        count2 = mensCuts.length - 1;
+        img2.src = mensCuts[count2];
+      } else {
+        img2.src = mensCuts[count2];
+      }
+    }, 400);
+    setTimeout(() => {
+      img2.style.zIndex = "0";
+    }, 1000);
   } else {
     console.log("img1 has nothing or left");
+    img1.style.zIndex = "-4";
     img1.classList.add("right1");
     img1.classList.remove("left1");
     img2.classList.add("left2");
@@ -176,11 +210,24 @@ div3.addEventListener("click", e => {
     img3.classList.add("middle3");
     img3.classList.remove("right3");
     count1--;
-    if (count1 < 0) {
-      count1 = mensCuts.length - 1;
-      img1.src = mensCuts[count1];
-    } else {
-      img1.src = mensCuts[count1];
-    }
+    setTimeout(() => {
+      if (count1 < 0) {
+        count1 = mensCuts.length - 1;
+        img1.src = mensCuts[count1];
+      } else {
+        img1.src = mensCuts[count1];
+      }
+    }, 400);
+    setTimeout(() => {
+      img1.style.zIndex = "0";
+    }, 1000);
   }
+});
+
+let modal = document.querySelector(".modal");
+let middle1 = document.querySelector(".middle1");
+let middle2 = document.querySelector(".middle2");
+let middle3 = document.querySelector(".middle3");
+div2.addEventListener("click", () => {
+  modal.style.display = "block";
 });
