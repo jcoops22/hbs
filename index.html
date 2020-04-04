@@ -7,32 +7,59 @@
   <script src="./frameworks/minified/TweenMax.min.js"></script>
   <script src="./frameworks/minified/TimelineMax.min.js"></script>
   <script src="./frameworks/minified/plugins/CSSPlugin.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script> -->
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Handlee|Orbitron&display=swap" rel="stylesheet">
 </head>
-
-<!-- Fonts: 
-Dancing Script: Headers
-Orbitron: Product names subheaders
-Handlee: text -->
 <!-- landing section -->
 <div class="container">
   <!-- navbar -->
   <div class="navDiv">
     <nav>
-      <div>
-        <a id="nav_title" href="#"><h1 class="header">HairByShandel</h1></a>
+      <div class="header">
+        <a href="#">HairByShandel</a>
       </div>
-      <div><a href="#">home</a></div>
+      <div class="home">
+        <a href="#">Home</a>
+      </div>
       <div class="about">
-        <a href="#">about</a>
-        <div class="aboutOpen">
-          <li><a href="#">Shan</a></li>
-          <li><a href="#">Crystal</a></li>
-        </div>
+        <a href="">About</a>
       </div>
-      <div><a href="#">schedule</a></div>
-      <div><a href="#">follow</a></div>
+      <div class="products">
+        <a href="">Products</a> 
+      </div>
+      <div class="schedule">
+        <a href="#">Schedule</a>
+      </div>
+      <div class="follow">
+        <a href="https://www.instagram.com/hairbyshandel/" > 
+          <img src="./resources/Icons/instagram.svg" target="_blank" rel="noopener noreferrer" width="20px" alt="instagram icon">
+          Follow</a>
+      </div>
+    </nav>
+  </div>
+  <div class="scrolledNav">
+    <nav>
+      <div class="header">
+        <a href="#">HairByShandel</a>
+      </div>
+      <div class="home">
+        <a href="#">Home</a>
+      </div>
+      <div class="about">
+        <a href="">About</a>
+      </div>
+      <div class="products">
+        <a href="">Products</a>
+      </div>
+      <div class="schedule">
+        <a href="#">Schedule</a>
+      </div>
+      <div class="follow">
+        <a href="https://www.instagram.com/hairbyshandel/">
+          <img src="./resources/Icons/instagram.svg" target="_blank" rel="noopener noreferrer" width="20px"
+            alt="instagram icon">
+          Follow</a>
+      </div>
     </nav>
   </div>
 <!-- end navbar -->
@@ -40,7 +67,6 @@ Handlee: text -->
 <div class="videoDiv">
   <div class="overlay"></div>
   <h1 class="title">HairByShandel</h1>
-  <!-- <img src="https://www.instagram.com/p/B8et7Kln7cB/media" alt="Shandel"> -->
   <!-- video -->
   <!-- <video id="vid" autoplay muted>
     <source src="./resources/movie.MP4" type="video/mp4" />
@@ -48,10 +74,11 @@ Handlee: text -->
 </div>
 <!-- features -->
   <section class="services_section">
-    <section class="afterVideo">
-      <div id="divSer">
+    <section class="servicesHeaderWrapper">
+      <div id="servicesHeaderDiv">
         <h2 id="services_header">Services</h2>
         <div id="underline"></div>
+        <p id="where"></p>
       </div>
     </section>
     <div class="modal"></div>
@@ -60,49 +87,59 @@ Handlee: text -->
       <div class="carosel">
         <span id="back"></span>
         <div class="div1">
-          <img class="left1 img1" src="./resources/mensCut.png" alt="male haircut">
+          <img class="left1 img1" src="./resources/mensCuts/mensCut.png" alt="male haircut">
         </div>
         <div class="div2">
-          <img class="middle2 img2" src="./resources/mensCut1.jpg" alt="male haircut">
+          <img class="middle2 img2" src="./resources/mensCuts/mensCut1.jpg" alt="male haircut">
         </div>
         <div class="div3">
-          <img class="right3 img3" src="./resources/mensCut2.jpg" alt="male haircut">
+          <img class="right3 img3" src="./resources/mensCuts/mensCut2.jpg" alt="male haircut">
         </div>
         <span id="next"></span>
       </div>
     </div>
     <div class="service service_2">
       <div>
-        <img id="colorImg" src="./resources/colorImg.jpg" alt="color!">
+        <img id="colorImg" src="./resources/color/colorImg.jpg" alt="color!">
       </div>
       <div>
-        <p class="sbutton">Color</p>
-        <img class="images" src="./resources/color.png" alt="rainbow colored hair">
+        <p>Color</p>
+        <img class="images" src="./resources/color/color.png" alt="rainbow colored hair">
       </div>
     </div>
     <div class="service service_3">
-      <button class="sbutton">Cuts</button>
-      <img class="images" src="./resources/cut.png" alt="female haircut">
+      <p>Cuts</p>
+      <img class="images" src="./resources/style/cut.png" alt="female haircut">
     </div>
     <div class="service service_4">
-      <button class="sbutton">Healthy Hair</button>
-      <img class="images" src="./resources/style.png" alt="healthy hair">
+      <p>Healthy Hair</p>
+      <img class="images" src="./resources/style/style.png" alt="healthy hair">
     </div>
     <div class="service service_5">
-      <button class="sbutton">Products</button>
-      <img class="images" width="400px"  src="./resources/kmurph.jpg" alt="kevin murphy">
+      <p>Products</p>
+      <img class="images" width="400px"  src="./resources/products/kmurph.jpg" alt="kevin murphy">
       <p>Shandel is a licensed seller for Kevin Murphy products</p>
     </div>
   </section>
-<div class="googleMaps">
-  <iframe width="600" height="450" frameborder="0" style="border:0"
-    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4Yr1TokMU4cRGdf7yNGllhU&key=AIzaSyBhgkuFckBTFwJOwnnsOffUff7-lGKa8SM"
-    allowfullscreen></iframe>
 </div>
-</div>
-<footer>
-  <div>
-    <p>Built by Jonathan Cooper</p>
+<footer id="footer">
+  <div id="footerContact">
+    <h3>Contact Shandel:</h3>
+    <p>Email: 
+      <a href="mailto: hairbyshandel@gmail.com?subject=Getting In Touch">hairbyshandel@gmail.com</a>
+    </p>
+    <p>HairByShandel on <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer"> Instagram</a></p>
+  </div>
+  <div id="footerAddress">
+    <h3>Address:</h3>
+     <p>2271 N 400 E</p> 
+     <p>Ogden, UT</p>
+     <p>84414</p> 
+     <div class="googleMaps">
+       <iframe width="300" height="150" frameborder="0" style="border:0"
+         src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4Yr1TokMU4cRGdf7yNGllhU&key=AIzaSyBhgkuFckBTFwJOwnnsOffUff7-lGKa8SM"
+         allowfullscreen></iframe>
+     </div>
   </div>
 </footer>
 <script src="./main.js"></script>

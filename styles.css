@@ -17,64 +17,82 @@ font-family: 'Handlee', cursive;
   padding: 0;
   font-family: "Handlee", cursive;
 }
-nav {
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.navDiv {
+  display: flex;
+  width: 100%;
+}
+.navDiv nav {
   display: flex;
   flex-direction: row;
-  border: 4px solid black;
   width: 100%;
   height: 10vh;
   justify-content: flex-end;
   align-items: center;
   background-color: black;
 }
-nav div a {
+.navDiv nav div a {
   color: #fff;
   display: flex;
   margin: 10px 15px 5px 30px;
   font-size: 24px;
   text-decoration: none;
 }
-nav div:first-child {
+.navDiv nav div:first-child {
   flex-grow: 6;
   width: 20%;
 }
-nav div:first-child a {
+.navDiv nav div:first-child a {
   color: gold;
   font-size: 30px;
-  padding: 20px;
-}
-.header {
+  padding: 1rem;
+  margin: 0;
   font-family: "Dancing Script", cursive;
   font-size: 24px;
 }
-.about {
-  position: relative;
-}
-.about a {
-  border-bottom: 0 solid white;
-}
-.aboutOpen {
-  position: absolute;
-  display: block;
-  top: 35;
-  left: 20;
-  height: 0;
-  width: 60px;
+/* scrolled nav */
+.scrolledNav {
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 100%;
   background-color: black;
-  color: white;
-  border-radius: 8px;
 }
-.aboutOpen li {
-  list-style: none;
-  margin: 10px;
-  padding: 5px;
-  visibility: hidden;
+.scrolledNav nav {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  justify-content: flex-end;
+  align-items: center;
 }
-.aboutOpen li a {
-  font-size: 18px;
+.scrolledNav nav div a {
+  color: #fff;
+  display: flex;
+  margin: 10px 15px 5px 30px;
+  font-size: 24px;
+  text-decoration: none;
+}
+.scrolledNav nav div:first-child {
+  flex-grow: 6;
+  width: 20%;
+}
+.scrolledNav nav div:first-child a {
+  color: gold;
+  font-size: 30px;
+  padding: 1rem;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+}
+.follow img {
+  margin-right: 0.5rem;
 }
 .videoDiv {
-  height: 80vh;
+  /* height: 80vh; */
+  height: 100vh;
 }
 video {
   width: 100vw;
@@ -93,7 +111,8 @@ video {
   background-size: contain;
   background-attachment: fixed;
   width: 100vw;
-  height: 90vh;
+  /* height: 90vh; */
+  height: 100vh;
   position: absolute;
   z-index: -2;
   opacity: 0.5;
@@ -108,14 +127,12 @@ video {
   font-size: 72px;
   color: #fff;
 }
-.afterVideo {
+.servicesHeaderWrapper {
   position: relative;
-  /* top: 90vh; */
-  height: fit-content;
-  padding-top: 140px;
+  top: 140px;
+  margin-bottom: 8rem;
 }
-#divSer {
-  height: 25vh;
+#servicesHeaderDiv {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -134,6 +151,9 @@ video {
   margin-left: 8%;
   background-color: gold;
 }
+#where {
+  opacity: 0;
+}
 .modal {
   position: absolute;
   opacity: 0.6;
@@ -146,7 +166,8 @@ video {
 }
 .service {
   display: flex;
-  height: 28rem;
+  /* height: 35rem; */
+  height: 100vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -167,9 +188,10 @@ video {
   top: 50%;
   height: 60px;
   width: 80px;
-  background-image: url("./resources/next.svg");
+  background-image: url("./resources/icons/next.svg");
   background-repeat: no-repeat;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 #back {
   transform: rotate(180deg);
@@ -262,10 +284,41 @@ video {
   flex-direction: row;
   height: fit-content;
 }
-.googleMaps {
-  margin: 1.3rem;
+footer {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: black;
 }
-
+footer h3 {
+  color: white;
+  margin: 2rem 0;
+}
+#footer p {
+  color: white;
+}
+footer a {
+  color: gold;
+}
+footer a:visited {
+  color: gold;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+#footerContact,
+#footerAddress {
+  margin: 1.4rem 0;
+}
+#footerContact p {
+  margin: 8px 0 8px 2rem;
+}
+#footerAddress p {
+  color: gold;
+}
+.googleMaps {
+  margin: 2rem 0;
+}
 /* media queries */
 @media screen and (max-width: 738px) {
   nav div:first-child {
@@ -273,5 +326,10 @@ video {
   }
   nav div:first-child a {
     color: red;
+  }
+  footer {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* align-items: center; */
   }
 }

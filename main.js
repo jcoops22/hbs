@@ -1,74 +1,6 @@
 // REG JS
 let about = document.querySelector(".about");
 let video = document.querySelector("#vid");
-let instapic = document.querySelector("#insta");
-// GSAP
-var tl = new TimelineMax({ paused: true });
-var tlhover = new TimelineMax({ paused: true });
-
-// controller for services header bar
-const controller3 = new ScrollMagic.Controller();
-// controller for services slide in
-const controller = new ScrollMagic.Controller();
-let services = document.getElementsByClassName("service");
-
-// // slide in divs
-for (let i = 0; i < services.length; i++) {
-  const tween = TweenMax.from(services[i], ".7", {
-    // width: '0',
-    opacity: "0",
-    display: "flex",
-    transform: "scale(.5)"
-  });
-  const scene = new ScrollMagic.Scene({
-    triggerElement: services[i],
-    offset: "-200px",
-    reverse: false
-  })
-    .setTween(tween)
-    .addTo(controller);
-}
-
-// sticky services header
-const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
-  fontSize: "25px",
-  width: "15%",
-  display: "flex",
-  paddingLeft: "8px",
-  margin: 0,
-  y: -65
-});
-const sceneHeader = new ScrollMagic.Scene({
-  triggerElement: "#divSer",
-  triggerHook: "onCenter",
-  duration: ".service_5",
-  offset: 278
-})
-  .setTween(tweenHeader)
-  .setPin("#divSer")
-  .addTo(controller);
-
-// navbar hover
-tlhover
-  .to(".aboutOpen", 0.4, {
-    height: "130px",
-    width: "160px",
-    ease: Power1.easeIn
-  })
-  .to(".aboutOpen li", 0.2, {
-    visibility: "visible",
-    ease: Power1.easeOut
-  });
-
-// events
-
-// navbar events
-about.addEventListener("mouseover", () => {
-  tlhover.play();
-});
-about.addEventListener("mouseout", () => {
-  tlhover.reverse();
-});
 
 // carosel
 let img1 = document.querySelector(".div1 img");
@@ -81,11 +13,11 @@ let next = document.querySelector("#next");
 let back = document.querySelector("#back");
 
 const mensCuts = [
-  "./resources/mensCut.png",
-  "./resources/mensCut1.jpg",
-  "./resources/mensCut2.jpg",
-  "./resources/mensCut3.jpg",
-  "./resources/mensCut4.jpg"
+  "./resources/mensCuts/mensCut.png",
+  "./resources/mensCuts/mensCut1.jpg",
+  "./resources/mensCuts/mensCut2.jpg",
+  "./resources/mensCuts/mensCut3.jpg",
+  "./resources/mensCuts/mensCut4.jpg",
 ];
 const rotateClasses = ["left", "middle", "right"];
 let count1 = 0;
@@ -230,4 +162,119 @@ let middle2 = document.querySelector(".middle2");
 let middle3 = document.querySelector(".middle3");
 div2.addEventListener("click", () => {
   modal.style.display = "block";
+});
+
+// GSAP
+var tl = new TimelineMax({ paused: true });
+var tlhover = new TimelineMax({ paused: true });
+
+// constroller for navbar fade in
+const navbarController = new ScrollMagic.Controller();
+// controller for services header bar
+const controller3 = new ScrollMagic.Controller();
+// controller for services slide in
+const controller = new ScrollMagic.Controller();
+
+// sticky navbar
+const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
+  position: "fixed",
+  height: "10vh",
+  zIndex: 100,
+  display: "flex",
+});
+const navbarScene = new ScrollMagic.Scene({
+  triggerElement: "#servicesHeaderDiv",
+  triggerHook: "onCenter",
+  // duration: ".service_5",
+  // duration: 200,
+  offset: 190,
+})
+  .setTween(tweenNavbar)
+  .addTo(navbarController);
+// stickey navbar end
+// sticky services header
+const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
+  fontSize: "25px",
+  width: "15%",
+  display: "flex",
+  paddingLeft: "8px",
+  margin: 0,
+  y: -65,
+});
+const sceneHeader = new ScrollMagic.Scene({
+  triggerElement: "#servicesHeaderDiv",
+  triggerHook: "onCenter",
+  duration: ".service_5",
+  offset: 190,
+})
+  .setTween(tweenHeader)
+  .setPin("#servicesHeaderDiv")
+  .addTo(controller);
+// sticky services header end
+// // slide in divs
+let services = document.getElementsByClassName("service");
+for (let i = 0; i < services.length; i++) {
+  const tween = TweenMax.from(services[i], ".7", {
+    // width: '0',
+    opacity: "0",
+    display: "flex",
+    transform: "scale(.5)",
+  });
+  const scene = new ScrollMagic.Scene({
+    triggerElement: services[i],
+    offset: "-200px",
+    reverse: false,
+  })
+    .setTween(tween)
+    .addTo(controller);
+}
+// slide in divs end
+
+// change scroll location title
+for (let i = 0; i < services.length; i++) {
+  let where = document.querySelector("#where");
+  let locations = ["Men's cuts", "Color", "Womens Cuts", "Styles"];
+
+  const whereTween = new TweenMax.to("#where", ".7", {
+    opacity: 1,
+  });
+  const scene = new ScrollMagic.Scene({
+    triggerElement: services[i],
+    triggerHook: "onCenter",
+    offset: 124,
+    reverse: true,
+  })
+    .on("progress", (event) => {
+      if (event.progress === 0) {
+        event.target.triggerElement().classList.contains("service_1")
+          ? (where.innerHTML = locations[0])
+          : (where.innerHTML = locations[i - 1]);
+      } else if (event.progress === 1) {
+        where.innerHTML = locations[i];
+      }
+    })
+    .setTween(whereTween)
+    .addTo(controller);
+}
+// change scroll location title end
+
+// navbar hover
+tlhover
+  .to(".aboutOpen", 0.4, {
+    height: "130px",
+    width: "160px",
+    ease: Power1.easeIn,
+  })
+  .to(".aboutOpen li", 0.2, {
+    visibility: "visible",
+    ease: Power1.easeOut,
+  });
+// events
+
+// navbar events
+about.addEventListener("mouseover", () => {
+  tlhover.play();
+});
+about.addEventListener("mouseout", () => {
+  tlhover.reverse();
 });
