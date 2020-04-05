@@ -21,6 +21,9 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+.active {
+  border-bottom: 4px solid gold;
+}
 .navDiv {
   display: flex;
   width: 100%;
@@ -38,8 +41,10 @@ a {
   color: #fff;
   display: flex;
   margin: 10px 15px 5px 30px;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 100;
   text-decoration: none;
+  /* transition-duration: 0.3s; */
 }
 .navDiv nav div:first-child {
   flex-grow: 6;
@@ -72,7 +77,7 @@ a {
   color: #fff;
   display: flex;
   margin: 10px 15px 5px 30px;
-  font-size: 24px;
+  font-size: 18px;
   text-decoration: none;
 }
 .scrolledNav nav div:first-child {
@@ -166,7 +171,6 @@ video {
 }
 .service {
   display: flex;
-  /* height: 35rem; */
   height: 100vh;
   flex-direction: column;
   justify-content: space-around;
@@ -182,6 +186,25 @@ video {
 .service:last-child {
   position: relative;
 }
+.service_1_div {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+}
+.prices {
+  height: 10rem;
+  width: 10rem;
+  padding: 8px;
+  border: 3px solid black;
+}
+.prices h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.prices ul li {
+  margin-top: 1.2rem;
+  list-style: none;
+}
 #next,
 #back {
   position: relative;
@@ -194,11 +217,15 @@ video {
   transition-duration: 0.3s;
 }
 #back {
+  left: 10rem;
   transform: rotate(180deg);
+}
+#next {
+  right: 10rem;
 }
 .carosel {
   height: 100%;
-  width: 100%;
+  width: 70%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -212,11 +239,21 @@ video {
   justify-content: center;
   transition-duration: 1s;
 }
+.div1 {
+  left: 10rem;
+}
+.div2 {
+  width: auto;
+}
+.div3 {
+  right: 10rem;
+  z-index: -1;
+}
 .carosel div img {
   position: relative;
-  max-width: 100%;
+  /* max-width: 100%; */
   border-radius: 5px;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
   box-shadow: 8px 10px 8px grey;
 }
 .left1,
@@ -237,14 +274,14 @@ video {
   filter: blur(0px);
   height: 300px;
   width: initial;
-  transform: translateX(19rem) scale(1);
+  transform: translateX(5rem) scale(1);
   cursor: pointer;
 }
 .right1 {
-  transform: translateX(38rem) scale(0.8);
+  transform: translateX(10rem) scale(0.8);
 }
 .left2 {
-  transform: translateX(-19rem) scale(0.8);
+  transform: translateX(-5rem) scale(0.8);
 }
 .middle2 {
   align-self: center;
@@ -255,17 +292,17 @@ video {
   transform: scale(1);
 }
 .right2 {
-  transform: translateX(19rem) scale(0.8);
+  transform: translateX(5rem) scale(0.8);
 }
 .left3 {
-  transform: translateX(-38rem) scale(0.8);
+  transform: translateX(-10rem) scale(0.8);
 }
 .middle3 {
   align-self: center;
   filter: blur(0px);
   height: 300px;
   width: initial;
-  transform: translateX(-19rem) scale(1);
+  transform: translateX(-5rem) scale(1);
   cursor: pointer;
 }
 .right3 {

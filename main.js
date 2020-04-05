@@ -1,7 +1,5 @@
 // REG JS
-let about = document.querySelector(".about");
 let video = document.querySelector("#vid");
-
 // carosel
 let img1 = document.querySelector(".div1 img");
 let img2 = document.querySelector(".div2 img");
@@ -20,72 +18,69 @@ const mensCuts = [
   "./resources/mensCuts/mensCut4.jpg",
 ];
 const rotateClasses = ["left", "middle", "right"];
-let count1 = 0;
-let count2 = 1;
-let count3 = 2;
+let count1 = 1;
+let count2 = 2;
+let count3 = 3;
 
 // rotate event right
 next.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
-    console.log("img1 has middle");
-    img2.style.zIndex = "-4";
-    img1.classList.add("right1");
-    img1.classList.remove("middle1");
-    img2.classList.add("left2");
-    img2.classList.remove("right2");
-    img3.classList.add("middle3");
-    img3.classList.remove("left3");
-    count2++;
+    // img1 is in the middle
+    img1.style.zIndex = "-4";
+    img2.style.zIndex = "-5";
+    img3.style.zIndex = "-4";
     setTimeout(() => {
-      img2.src = mensCuts[count2];
+      count2++;
       if (count2 >= mensCuts.length) {
         count2 = 0;
         img2.src = mensCuts[count2];
       }
+      img2.src = mensCuts[count2];
+      img1.classList.add("right1");
+      img1.classList.remove("middle1");
+      img2.classList.add("left2");
+      img2.classList.remove("right2");
+      img3.classList.add("middle3");
+      img3.classList.remove("left3");
     }, 400);
-    setTimeout(() => {
-      img2.style.zIndex = "0";
-    }, 1000);
   } else if (img1.classList.contains("right1")) {
-    console.log("img1 has right");
+    // img3 is in the middle
     img1.style.zIndex = "-4";
-    img1.classList.add("left1");
-    img1.classList.remove("right1");
-    img2.classList.add("middle2");
-    img2.classList.remove("left2");
-    img3.classList.add("right3");
-    img3.classList.remove("middle3");
-    count1++;
+    img2.style.zIndex = "0";
+    img3.style.zIndex = "-9";
     setTimeout(() => {
-      img1.src = mensCuts[count1];
+      count1++;
       if (count1 >= mensCuts.length) {
         count1 = 0;
         img1.src = mensCuts[count1];
       }
+      img1.src = mensCuts[count1];
+      img1.classList.add("left1");
+      img1.classList.remove("right1");
+      img2.classList.add("middle2");
+      img2.classList.remove("left2");
+      img3.classList.add("right3");
+      img3.classList.remove("middle3");
     }, 400);
-    setTimeout(() => {
-      img1.style.zIndex = "0";
-    }, 1000);
   } else {
-    console.log("img1 has nothing or is left");
-    img3.style.zIndex = "-4";
-    img1.classList.add("middle1");
-    img1.classList.remove("left1");
-    img2.classList.add("right2");
-    img2.classList.remove("middle2");
-    img3.classList.add("left3");
-    img3.classList.remove("right3");
-    count3++;
+    // img2 is in the middle
+    img1.style.zIndex = "2";
+    img3.style.zIndex = "-8";
+    img2.style.zIndex = "1";
     setTimeout(() => {
-      img3.src = mensCuts[count3];
+      count3++;
       if (count3 >= mensCuts.length) {
         count3 = 0;
         img3.src = mensCuts[count3];
       }
-    }, 500);
-    setTimeout(() => {
-      img3.style.zIndex = "0";
-    }, 1000);
+      img3.src = mensCuts[count3];
+      img1.classList.add("middle1");
+      img1.classList.remove("left1");
+      img2.classList.add("right2");
+      img2.classList.remove("middle2");
+      img3.classList.add("left3");
+      img3.classList.remove("right3");
+    }, 400);
   }
 });
 // rotate event left
@@ -107,10 +102,7 @@ back.addEventListener("click", () => {
       } else {
         img3.src = mensCuts[count3];
       }
-    }, 400);
-    setTimeout(() => {
-      img3.style.zIndex = "0";
-    }, 1000);
+    }, 300);
   } else if (img1.classList.contains("right1")) {
     console.log("img1 has right");
     img2.style.zIndex = "-4";
@@ -128,10 +120,7 @@ back.addEventListener("click", () => {
       } else {
         img2.src = mensCuts[count2];
       }
-    }, 400);
-    setTimeout(() => {
-      img2.style.zIndex = "0";
-    }, 1000);
+    }, 300);
   } else {
     console.log("img1 has nothing or left");
     img1.style.zIndex = "-4";
@@ -165,8 +154,6 @@ div2.addEventListener("click", () => {
 });
 
 // GSAP
-var tl = new TimelineMax({ paused: true });
-var tlhover = new TimelineMax({ paused: true });
 
 // constroller for navbar fade in
 const navbarController = new ScrollMagic.Controller();
@@ -258,23 +245,28 @@ for (let i = 0; i < services.length; i++) {
 }
 // change scroll location title end
 
+// navbar tweens
+
+let navHover = new TimelineMax({ paused: true });
+let navItems = document.querySelectorAll(".navDiv nav div a");
+console.log(navItems);
+
 // navbar hover
-tlhover
-  .to(".aboutOpen", 0.4, {
-    height: "130px",
-    width: "160px",
-    ease: Power1.easeIn,
-  })
-  .to(".aboutOpen li", 0.2, {
-    visibility: "visible",
-    ease: Power1.easeOut,
+for (let i = 1; i < navItems.length; i++) {
+  navItems[i].addEventListener("mouseover", (e) => {
+    e.target.classList.add("active");
   });
+  navItems[i].addEventListener("mouseout", (e) => {
+    e.target.classList.remove("active");
+  });
+}
+//   .to(".aboutOpen li", 0.2, {
+//     visibility: "visible",
+//     ease: Power1.easeOut,
+//   });
 // events
 
 // navbar events
-about.addEventListener("mouseover", () => {
-  tlhover.play();
-});
-about.addEventListener("mouseout", () => {
-  tlhover.reverse();
-});
+// about.addEventListener("mouseout", () => {
+//   tlhover.reverse();
+// });
