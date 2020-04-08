@@ -11,31 +11,49 @@ let next = document.querySelector("#next");
 let back = document.querySelector("#back");
 
 const mensCuts = [
-  "./resources/mensCuts/mensCut.png",
-  "./resources/mensCuts/mensCut1.jpg",
-  "./resources/mensCuts/mensCut2.jpg",
-  "./resources/mensCuts/mensCut3.jpg",
-  "./resources/mensCuts/mensCut4.jpg",
+  // "./resources/mensCuts/mensCut.png",
+  // "./resources/mensCuts/mensCut1.jpg",
+  // "./resources/mensCuts/mensCut2.jpg",
+  // "./resources/mensCuts/mensCut3.jpg",
+  // "./resources/mensCuts/mensCut4.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut3_npcccq.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut1_vfanvm.jpg",
 ];
 const rotateClasses = ["left", "middle", "right"];
-let count1 = 1;
-let count2 = 2;
-let count3 = 3;
+// let count1 = 1;
+// let count2 = 2;
+// let count3 = 3;
+let count = 2;
+
+function getNext() {
+  if (count >= mensCuts.length - 1) {
+    count = 0;
+    return count;
+  } else {
+    count++;
+    return count;
+  }
+}
 
 // rotate event right
 next.addEventListener("click", () => {
   if (img1.classList.contains("middle1")) {
     // img1 is in the middle
-    img1.style.zIndex = "-4";
-    img2.style.zIndex = "-5";
-    img3.style.zIndex = "-4";
     setTimeout(() => {
-      count2++;
-      if (count2 >= mensCuts.length) {
-        count2 = 0;
-        img2.src = mensCuts[count2];
+      img1.style.zIndex = "-4";
+      img2.style.zIndex = "-5";
+      img3.style.zIndex = "-4";
+    }, 300);
+    setTimeout(() => {
+      count++;
+      if (count >= mensCuts.length) {
+        count = 0;
+        img2.src = mensCuts[count];
       }
-      img2.src = mensCuts[count2];
+      img2.src = mensCuts[count];
       img1.classList.add("right1");
       img1.classList.remove("middle1");
       img2.classList.add("left2");
@@ -45,16 +63,18 @@ next.addEventListener("click", () => {
     }, 400);
   } else if (img1.classList.contains("right1")) {
     // img3 is in the middle
-    img1.style.zIndex = "-4";
-    img2.style.zIndex = "0";
-    img3.style.zIndex = "-9";
     setTimeout(() => {
-      count1++;
-      if (count1 >= mensCuts.length) {
-        count1 = 0;
-        img1.src = mensCuts[count1];
+      img1.style.zIndex = "-4";
+      img2.style.zIndex = "0";
+      img3.style.zIndex = "-9";
+    }, 300);
+    setTimeout(() => {
+      count++;
+      if (count >= mensCuts.length) {
+        count = 0;
+        img1.src = mensCuts[count];
       }
-      img1.src = mensCuts[count1];
+      img1.src = mensCuts[count];
       img1.classList.add("left1");
       img1.classList.remove("right1");
       img2.classList.add("middle2");
@@ -64,16 +84,18 @@ next.addEventListener("click", () => {
     }, 400);
   } else {
     // img2 is in the middle
-    img1.style.zIndex = "2";
-    img3.style.zIndex = "-8";
-    img2.style.zIndex = "1";
     setTimeout(() => {
-      count3++;
-      if (count3 >= mensCuts.length) {
-        count3 = 0;
-        img3.src = mensCuts[count3];
+      img1.style.zIndex = "2";
+      img3.style.zIndex = "-8";
+      img2.style.zIndex = "1";
+    }, 300);
+    setTimeout(() => {
+      count++;
+      if (count >= mensCuts.length) {
+        count = 0;
+        img3.src = mensCuts[count];
       }
-      img3.src = mensCuts[count3];
+      img3.src = mensCuts[count];
       img1.classList.add("middle1");
       img1.classList.remove("left1");
       img2.classList.add("right2");
@@ -161,7 +183,8 @@ const navbarController = new ScrollMagic.Controller();
 const controller3 = new ScrollMagic.Controller();
 // controller for services slide in
 const controller = new ScrollMagic.Controller();
-
+// controller for navbar hide
+const navbarOffController = new ScrollMagic.Controller();
 // sticky navbar
 const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
   position: "fixed",
@@ -172,13 +195,32 @@ const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
 const navbarScene = new ScrollMagic.Scene({
   triggerElement: "#servicesHeaderDiv",
   triggerHook: "onCenter",
-  // duration: ".service_5",
-  // duration: 200,
   offset: 190,
 })
   .setTween(tweenNavbar)
   .addTo(navbarController);
 // stickey navbar end
+
+// hide sticky navbar
+const tweenNavbarOff = TweenMax.to(
+  [".scrolledNav", "#services_header", "#underline", "#where"],
+  ".3",
+  {
+    // position: "initial",
+    // height: "0vh",
+    // display: "none",
+    opacity: "0",
+  }
+);
+const navbarOffScene = new ScrollMagic.Scene({
+  triggerElement: "#footer",
+  triggerHook: "onEnter",
+  offset: 150,
+})
+  .setTween(tweenNavbarOff)
+  .addTo(navbarOffController);
+// hide sticky navbar end
+
 // sticky services header
 const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
   fontSize: "25px",
@@ -198,6 +240,7 @@ const sceneHeader = new ScrollMagic.Scene({
   .setPin("#servicesHeaderDiv")
   .addTo(controller);
 // sticky services header end
+
 // // slide in divs
 let services = document.getElementsByClassName("service");
 for (let i = 0; i < services.length; i++) {
@@ -249,7 +292,7 @@ for (let i = 0; i < services.length; i++) {
 
 let navHover = new TimelineMax({ paused: true });
 let navItems = document.querySelectorAll(".navDiv nav div a");
-console.log(navItems);
+// console.log(navItems);
 
 // navbar hover
 for (let i = 1; i < navItems.length; i++) {

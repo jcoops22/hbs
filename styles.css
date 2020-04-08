@@ -65,6 +65,7 @@ a {
   display: none;
   width: 100%;
   background-color: black;
+  opacity: 0.9;
 }
 .scrolledNav nav {
   display: flex;
@@ -171,7 +172,7 @@ video {
 }
 .service {
   display: flex;
-  height: 100vh;
+  height: 120vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -186,6 +187,11 @@ video {
 .service:last-child {
   position: relative;
 }
+.service_1 {
+  display: flex;
+  flex-direction: column;
+  /* align-content: flex-end; */
+}
 .service_1_div {
   justify-content: flex-end;
   display: flex;
@@ -195,9 +201,10 @@ video {
   height: 10rem;
   width: 10rem;
   padding: 8px;
-  border: 3px solid black;
+  border: 3px solid gold;
 }
 .prices h4 {
+  margin-top: 2rem;
   font-size: 20px;
   font-weight: 500;
 }
@@ -207,10 +214,12 @@ video {
 }
 #next,
 #back {
+  display: flex;
+  align-self: center;
   position: relative;
-  top: 50%;
-  height: 60px;
-  width: 80px;
+  top: 0%;
+  min-height: 60px;
+  min-width: 80px;
   background-image: url("./resources/icons/next.svg");
   background-repeat: no-repeat;
   cursor: pointer;
@@ -224,8 +233,8 @@ video {
   right: 10rem;
 }
 .carosel {
-  height: 100%;
-  width: 70%;
+  height: 80vh;
+  width: 60%;
   position: relative;
   display: flex;
   justify-content: center;
@@ -243,7 +252,7 @@ video {
   left: 10rem;
 }
 .div2 {
-  width: auto;
+  /* width: auto; */
 }
 .div3 {
   right: 10rem;
@@ -251,7 +260,6 @@ video {
 }
 .carosel div img {
   position: relative;
-  /* max-width: 100%; */
   border-radius: 5px;
   transition-duration: 0.3s;
   box-shadow: 8px 10px 8px grey;
@@ -264,49 +272,49 @@ video {
 .right3 {
   filter: blur(4px);
   align-self: center;
-  width: 250px;
+  /* width: initial; */
 }
 .left1 {
-  transform: scale(0.8);
+  transform: translateX(0) scale(0.8);
 }
 .middle1 {
   align-self: center;
   filter: blur(0px);
-  height: 300px;
-  width: initial;
-  transform: translateX(5rem) scale(1);
+  /* height: 300px; */
+  /* width: initial; */
+  transform: translateX(7rem) scale(1);
   cursor: pointer;
 }
 .right1 {
-  transform: translateX(10rem) scale(0.8);
+  transform: translateX(14rem) scale(0.8);
 }
 .left2 {
-  transform: translateX(-5rem) scale(0.8);
+  transform: translateX(-7rem) scale(0.8);
 }
 .middle2 {
   align-self: center;
   filter: blur(0px);
-  height: 300px;
-  width: initial;
+  /* height: 300px;
+  width: initial; */
   cursor: pointer;
-  transform: scale(1);
+  transform: translateX(0) scale(1);
 }
 .right2 {
-  transform: translateX(5rem) scale(0.8);
+  transform: translateX(7rem) scale(0.8);
 }
 .left3 {
-  transform: translateX(-10rem) scale(0.8);
+  transform: translateX(-14rem) scale(0.8);
 }
 .middle3 {
   align-self: center;
   filter: blur(0px);
-  height: 300px;
-  width: initial;
-  transform: translateX(-5rem) scale(1);
+  /* height: 300px;
+  width: initial; */
+  transform: translateX(-7rem) scale(1);
   cursor: pointer;
 }
 .right3 {
-  transform: scale(0.8);
+  transform: translateX(0) scale(0.8);
 }
 .service_2 {
   margin: 4rem 0;
