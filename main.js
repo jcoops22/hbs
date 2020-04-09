@@ -203,7 +203,7 @@ const navbarScene = new ScrollMagic.Scene({
 
 // hide sticky navbar
 const tweenNavbarOff = TweenMax.to(
-  [".scrolledNav", "#services_header", "#underline", "#where"],
+  [".scrolledNav", "#services_header", "#underline"],
   ".3",
   {
     // position: "initial",
@@ -227,7 +227,7 @@ const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
   width: "15%",
   display: "flex",
   paddingLeft: "8px",
-  margin: 0,
+  margin: "0.5rem 0 0 0",
   y: -65,
 });
 const sceneHeader = new ScrollMagic.Scene({
