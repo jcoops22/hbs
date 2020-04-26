@@ -190,7 +190,7 @@ video {
   height: 100vh;
   position: absolute;
   z-index: -2;
-  opacity: 0;
+  opacity: 0.8;
 }
 .title {
   font-family: "Dancing Script", cursive;
@@ -205,6 +205,15 @@ video {
   color: #fff;
   color: gold;
   z-index: 1;
+  text-shadow: 4px 1px 9px black;
+}
+.titleUnderline {
+  position: relative;
+  top: 58vh;
+  left: 5vw;
+  width: 0;
+  background-color: black;
+  height: 3px;
 }
 .servicesHeaderWrapper {
   position: relative;
