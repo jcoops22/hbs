@@ -11,11 +11,6 @@ let next = document.querySelector("#next");
 let back = document.querySelector("#back");
 
 const mensCuts = [
-  // "./resources/mensCuts/mensCut.png",
-  // "./resources/mensCuts/mensCut1.jpg",
-  // "./resources/mensCuts/mensCut2.jpg",
-  // "./resources/mensCuts/mensCut3.jpg",
-  // "./resources/mensCuts/mensCut4.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg",
@@ -23,9 +18,6 @@ const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut1_vfanvm.jpg",
 ];
 const rotateClasses = ["left", "middle", "right"];
-// let count1 = 1;
-// let count2 = 2;
-// let count3 = 3;
 let count = 2;
 
 function getNext() {
@@ -40,6 +32,7 @@ function getNext() {
 
 // rotate event right
 next.addEventListener("click", () => {
+  modal.style.display = "none";
   if (img1.classList.contains("middle1")) {
     // img1 is in the middle
     setTimeout(() => {
@@ -106,66 +99,66 @@ next.addEventListener("click", () => {
   }
 });
 // rotate event left
-back.addEventListener("click", () => {
-  if (img1.classList.contains("middle1")) {
-    console.log("img1 has middle");
-    img3.style.zIndex = "-4";
-    img1.classList.add("left1");
-    img1.classList.remove("middle1");
-    img2.classList.add("middle2");
-    img2.classList.remove("right2");
-    img3.classList.add("right3");
-    img3.classList.remove("left3");
-    count3--;
-    setTimeout(() => {
-      if (count3 < 0) {
-        count3 = mensCuts.length - 1;
-        img3.src = mensCuts[count3];
-      } else {
-        img3.src = mensCuts[count3];
-      }
-    }, 300);
-  } else if (img1.classList.contains("right1")) {
-    console.log("img1 has right");
-    img2.style.zIndex = "-4";
-    img1.classList.add("middle1");
-    img1.classList.remove("right1");
-    img2.classList.add("right2");
-    img2.classList.remove("left2");
-    img3.classList.add("left3");
-    img3.classList.remove("middle3");
-    count2--;
-    setTimeout(() => {
-      if (count2 < 0) {
-        count2 = mensCuts.length - 1;
-        img2.src = mensCuts[count2];
-      } else {
-        img2.src = mensCuts[count2];
-      }
-    }, 300);
-  } else {
-    console.log("img1 has nothing or left");
-    img1.style.zIndex = "-4";
-    img1.classList.add("right1");
-    img1.classList.remove("left1");
-    img2.classList.add("left2");
-    img2.classList.remove("middle2");
-    img3.classList.add("middle3");
-    img3.classList.remove("right3");
-    count1--;
-    setTimeout(() => {
-      if (count1 < 0) {
-        count1 = mensCuts.length - 1;
-        img1.src = mensCuts[count1];
-      } else {
-        img1.src = mensCuts[count1];
-      }
-    }, 400);
-    setTimeout(() => {
-      img1.style.zIndex = "0";
-    }, 1000);
-  }
-});
+// back.addEventListener("click", () => {
+//   if (img1.classList.contains("middle1")) {
+//     console.log("img1 has middle");
+//     img3.style.zIndex = "-4";
+//     img1.classList.add("left1");
+//     img1.classList.remove("middle1");
+//     img2.classList.add("middle2");
+//     img2.classList.remove("right2");
+//     img3.classList.add("right3");
+//     img3.classList.remove("left3");
+//     count3--;
+//     setTimeout(() => {
+//       if (count3 < 0) {
+//         count3 = mensCuts.length - 1;
+//         img3.src = mensCuts[count3];
+//       } else {
+//         img3.src = mensCuts[count3];
+//       }
+//     }, 300);
+//   } else if (img1.classList.contains("right1")) {
+//     console.log("img1 has right");
+//     img2.style.zIndex = "-4";
+//     img1.classList.add("middle1");
+//     img1.classList.remove("right1");
+//     img2.classList.add("right2");
+//     img2.classList.remove("left2");
+//     img3.classList.add("left3");
+//     img3.classList.remove("middle3");
+//     count2--;
+//     setTimeout(() => {
+//       if (count2 < 0) {
+//         count2 = mensCuts.length - 1;
+//         img2.src = mensCuts[count2];
+//       } else {
+//         img2.src = mensCuts[count2];
+//       }
+//     }, 300);
+//   } else {
+//     console.log("img1 has nothing or left");
+//     img1.style.zIndex = "-4";
+//     img1.classList.add("right1");
+//     img1.classList.remove("left1");
+//     img2.classList.add("left2");
+//     img2.classList.remove("middle2");
+//     img3.classList.add("middle3");
+//     img3.classList.remove("right3");
+//     count1--;
+//     setTimeout(() => {
+//       if (count1 < 0) {
+//         count1 = mensCuts.length - 1;
+//         img1.src = mensCuts[count1];
+//       } else {
+//         img1.src = mensCuts[count1];
+//       }
+//     }, 400);
+//     setTimeout(() => {
+//       img1.style.zIndex = "0";
+//     }, 1000);
+//   }
+// });
 
 let modal = document.querySelector(".modal");
 let middle1 = document.querySelector(".middle1");
@@ -206,9 +199,6 @@ const tweenNavbarOff = TweenMax.to(
   [".scrolledNav", "#services_header", "#underline"],
   ".3",
   {
-    // position: "initial",
-    // height: "0vh",
-    // display: "none",
     opacity: "0",
   }
 );
