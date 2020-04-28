@@ -295,7 +295,7 @@ video {
 .service:last-child {
   position: relative;
 }
-#service_section_header {
+.service_section_header {
   margin: 3rem 0;
   border-bottom: 1px solid gold;
 }
@@ -339,7 +339,7 @@ video {
   margin-top: 1.2rem;
   list-style: none;
 }
-#next {
+.next {
   display: flex;
   flex-direction: column;
   align-content: space-between;
