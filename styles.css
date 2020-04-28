@@ -280,7 +280,7 @@ video {
 }
 .service {
   display: flex;
-  height: 110vh;
+  /* height: 110vh; */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -296,6 +296,7 @@ video {
   position: relative;
 }
 #service_section_header {
+  margin: 3rem 0;
   border-bottom: 1px solid gold;
 }
 .service_1 {
