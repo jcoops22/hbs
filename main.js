@@ -9,6 +9,48 @@ let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
 let next = document.querySelector("#next");
 let back = document.querySelector("#back");
+let titleUnderline = document.querySelector(".titleUnderline");
+// nav bar hamburger
+let hamburger = document.getElementById("hamburger");
+let patty1 = document.getElementById("patty1");
+let patty2 = document.getElementById("patty2");
+let mobileNav = document.querySelector(".mobileNavMenu");
+let expanded = false;
+
+const slide_title = TweenMax.from(".title", 0.3, {
+  x: "100vw",
+}).delay(0.5);
+const underline_title = TweenMax.to(titleUnderline, 0.3, {
+  width: "80vw",
+}).delay(0.5);
+hamburger.addEventListener("click", () => {
+  if (!expanded) {
+    expanded = true;
+    // animate hamburger
+    hamburger.style.transform = "rotate(137deg)";
+    patty1.style.transform = "rotate(-90deg)";
+    patty1.style.top = "17px";
+    patty2.style.top = "14px";
+    // animate slide in nav menu
+    mobileNav.style.display = "flex";
+    setTimeout(() => {
+      mobileNav.style.transform = "translate(-80vw)";
+      mobileNav.style.width = "80vw";
+    }, 100);
+  } else {
+    expanded = false;
+    hamburger.style.transform = "rotate(0deg)";
+    patty1.style.transform = "rotate(0deg)";
+    patty1.style.top = "12px";
+    patty2.style.top = "19px";
+    // animate slide in nav menu
+    mobileNav.style.transform = "translate(80vw)";
+    mobileNav.style.width = 0;
+    setTimeout(() => {
+      mobileNav.style.display = "none";
+    }, 600);
+  }
+});
 
 const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png",
@@ -32,7 +74,6 @@ function getNext() {
 
 // rotate event right
 next.addEventListener("click", () => {
-  modal.style.display = "none";
   if (img1.classList.contains("middle1")) {
     // img1 is in the middle
     setTimeout(() => {
@@ -98,75 +139,10 @@ next.addEventListener("click", () => {
     }, 400);
   }
 });
-// rotate event left
-// back.addEventListener("click", () => {
-//   if (img1.classList.contains("middle1")) {
-//     console.log("img1 has middle");
-//     img3.style.zIndex = "-4";
-//     img1.classList.add("left1");
-//     img1.classList.remove("middle1");
-//     img2.classList.add("middle2");
-//     img2.classList.remove("right2");
-//     img3.classList.add("right3");
-//     img3.classList.remove("left3");
-//     count3--;
-//     setTimeout(() => {
-//       if (count3 < 0) {
-//         count3 = mensCuts.length - 1;
-//         img3.src = mensCuts[count3];
-//       } else {
-//         img3.src = mensCuts[count3];
-//       }
-//     }, 300);
-//   } else if (img1.classList.contains("right1")) {
-//     console.log("img1 has right");
-//     img2.style.zIndex = "-4";
-//     img1.classList.add("middle1");
-//     img1.classList.remove("right1");
-//     img2.classList.add("right2");
-//     img2.classList.remove("left2");
-//     img3.classList.add("left3");
-//     img3.classList.remove("middle3");
-//     count2--;
-//     setTimeout(() => {
-//       if (count2 < 0) {
-//         count2 = mensCuts.length - 1;
-//         img2.src = mensCuts[count2];
-//       } else {
-//         img2.src = mensCuts[count2];
-//       }
-//     }, 300);
-//   } else {
-//     console.log("img1 has nothing or left");
-//     img1.style.zIndex = "-4";
-//     img1.classList.add("right1");
-//     img1.classList.remove("left1");
-//     img2.classList.add("left2");
-//     img2.classList.remove("middle2");
-//     img3.classList.add("middle3");
-//     img3.classList.remove("right3");
-//     count1--;
-//     setTimeout(() => {
-//       if (count1 < 0) {
-//         count1 = mensCuts.length - 1;
-//         img1.src = mensCuts[count1];
-//       } else {
-//         img1.src = mensCuts[count1];
-//       }
-//     }, 400);
-//     setTimeout(() => {
-//       img1.style.zIndex = "0";
-//     }, 1000);
-//   }
-// });
 
-let modal = document.querySelector(".modal");
 let middle1 = document.querySelector(".middle1");
 let middle2 = document.querySelector(".middle2");
 let middle3 = document.querySelector(".middle3");
-div2.addEventListener("click", () => {
-  modal.style.display = "block";
-});
 
 // GSAP
 
@@ -181,8 +157,8 @@ const navbarOffController = new ScrollMagic.Controller();
 // sticky navbar
 const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
   position: "fixed",
-  height: "10vh",
-  zIndex: 100,
+  height: "8vh",
+  zIndex: 3,
   display: "flex",
 });
 const navbarScene = new ScrollMagic.Scene({
@@ -192,7 +168,7 @@ const navbarScene = new ScrollMagic.Scene({
 })
   .setTween(tweenNavbar)
   .addTo(navbarController);
-// stickey navbar end
+// sticky navbar end
 
 // hide sticky navbar
 const tweenNavbarOff = TweenMax.to(
@@ -212,19 +188,16 @@ const navbarOffScene = new ScrollMagic.Scene({
 // hide sticky navbar end
 
 // sticky services header
-const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
-  fontSize: "25px",
-  width: "15%",
-  display: "flex",
-  paddingLeft: "8px",
-  margin: "0.5rem 0 0 0",
-  y: -65,
+const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".2", {
+  x: 130,
 });
 const sceneHeader = new ScrollMagic.Scene({
   triggerElement: "#servicesHeaderDiv",
+  // triggerHook: "onLeave",
   triggerHook: "onCenter",
   duration: ".service_5",
-  offset: 190,
+  // offset: -280,
+  offset: 230,
 })
   .setTween(tweenHeader)
   .setPin("#servicesHeaderDiv")
@@ -235,14 +208,13 @@ const sceneHeader = new ScrollMagic.Scene({
 let services = document.getElementsByClassName("service");
 for (let i = 0; i < services.length; i++) {
   const tween = TweenMax.from(services[i], ".7", {
-    // width: '0',
     opacity: "0",
     display: "flex",
     transform: "scale(.5)",
   });
   const scene = new ScrollMagic.Scene({
     triggerElement: services[i],
-    offset: "-200px",
+    offset: "-100px",
     reverse: false,
   })
     .setTween(tween)
@@ -253,7 +225,14 @@ for (let i = 0; i < services.length; i++) {
 // change scroll location title
 for (let i = 0; i < services.length; i++) {
   let where = document.querySelector("#where");
-  let locations = ["Men's cuts", "Color", "Womens Cuts", "Styles"];
+  let locations = [
+    "Men's cuts",
+    "Color",
+    "Cuts",
+    "Styles",
+    "Extensions",
+    "Add ons",
+  ];
 
   const whereTween = new TweenMax.to("#where", ".7", {
     opacity: 1,

@@ -16,6 +16,7 @@ font-family: 'Handlee', cursive;
   margin: 0;
   padding: 0;
   font-family: "Handlee", cursive;
+  scroll-behavior: smooth;
 }
 a {
   cursor: pointer;
@@ -25,13 +26,15 @@ a {
   border-bottom: 4px solid gold;
 }
 #hamburger {
+  cursor: pointer;
+  margin: 2rem;
   position: relative;
   height: 36px;
   width: 36px;
   border: 1px solid black;
   border-radius: 50px;
   transition-duration: 0.3s;
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 #patty1,
 #patty2 {
@@ -40,21 +43,64 @@ a {
   position: relative;
   transition-duration: 0.3s;
   left: 3px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 #patty1 {
-  background-color: red;
   top: 12px;
 }
 #patty2 {
-  background-color: blue;
   top: 19px;
 }
 .navDiv {
   display: flex;
+  z-index: 4;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 10vh;
+  background-color: black;
+}
+.mobileHeader a {
+  color: gold;
+  font-size: 30px;
+  padding: 1rem;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 24px;
+}
+.mobileNavMenu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+  position: fixed;
+  top: 10vh;
+  left: 100vw;
+  z-index: 2;
+  width: 0;
+  border-top: 2px solid gold;
+  transform: translateX(80vw);
+  transition-timing-function: cubic-bezier(0.39, 0.23, 0.21, 1.16);
+  background-color: black;
+  transition-delay: 0.2s;
+  transition-duration: 0.3s;
+}
+.mobileNavMenu a:hover {
+  color: gold;
+}
+.mobileNavMenu a {
+  color: #fff;
+  display: flex;
+  margin: 10px 15px 5px 30px;
+  font-size: 18px;
+  font-weight: 100;
+  text-decoration: none;
+  margin: 1.4rem 0;
 }
 .navDiv nav {
-  /* display: flex; */
   display: none;
   flex-direction: row;
   width: 100%;
@@ -62,6 +108,7 @@ a {
   justify-content: flex-end;
   align-items: center;
   background-color: black;
+  transition-duration: 0.3s;
 }
 .navDiv nav div a {
   color: #fff;
@@ -123,15 +170,41 @@ a {
   margin-right: 0.5rem;
 }
 .videoDiv {
-  /* height: 80vh; */
   height: 100vh;
+}
+#vid {
+  display: none;
 }
 video {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: absolute;
   object-fit: fill;
   z-index: -3;
+}
+.downarrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+  position: relative;
+  top: -20vh;
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
+  animation-iteration-count: infinite;
+}
+.downarrow img {
+  margin: 1rem 0.5rem;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .overlay {
   background: linear-gradient(
@@ -140,79 +213,95 @@ video {
     rgba(0, 0, 0, 1) 100%
   );
   background-image: url("./resources/shan.jpg");
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   width: 100vw;
   /* height: 90vh; */
   height: 100vh;
   position: absolute;
   z-index: -2;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .title {
   font-family: "Dancing Script", cursive;
   display: block;
   position: absolute;
-  top: 35vh;
-  left: 10vw;
+  top: 50vh;
+  /* left: 10vw; */
+  left: 7vw;
   width: 50%;
-  font-size: 72px;
+  /* font-size: 72px; */
+  font-size: 42px;
   color: #fff;
+  color: gold;
+  z-index: 1;
+  text-shadow: 4px 1px 9px black;
+}
+.titleUnderline {
+  position: relative;
+  top: 58vh;
+  left: 5vw;
+  width: 0;
+  background-color: #fff;
+  height: 3px;
+}
+.services_section {
+  /* margin-top: 40vh; */
 }
 .servicesHeaderWrapper {
-  position: relative;
-  top: 140px;
   margin-bottom: 8rem;
+  /* width: 100%; */
 }
 #servicesHeaderDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  z-index: 4;
+  position: relative;
+  z-index: 3;
+  margin-top: 40vh;
 }
 #services_header {
-  display: flex;
-  font-size: 42px;
-  /* margin-top: 1rem; */
-  padding-left: 8rem;
-  max-width: 87%;
+  font-size: 20px;
+  width: 6rem;
+  position: fixed;
+  top: 10vh;
+  left: -8rem;
 }
 #underline {
-  display: flex;
+  position: fixed;
   height: 4px;
-  width: 60%;
-  margin-left: 8%;
+  width: 5rem;
+  top: 15vh;
+  left: -8rem;
   background-color: gold;
 }
 #where {
   padding-left: 2rem;
   opacity: 0;
   width: 10vw;
+  display: none;
 }
 .service {
   display: flex;
-  height: 120vh;
+  height: 110vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
 }
 .service p {
   font-family: "Handlee", cursive;
 }
-.service:nth-child(even) {
+.service:nth-child(odd) {
   background-color: #ddd;
 }
 .service:last-child {
   position: relative;
 }
+#service_section_header {
+  border-bottom: 1px solid gold;
+}
 .service_1 {
   display: flex;
   flex-direction: column;
-  /* align-content: flex-end; */
-}
-#mensCutsHeader {
-  border-bottom: 1px solid gold;
+  align-items: flex-end;
 }
 .service_1_div {
   display: flex;
@@ -230,29 +319,42 @@ video {
   display: none;
   background-color: slategray;
 }
+.mobileImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mobileImg img {
+  width: 90%;
+}
 .prices {
-  height: 10rem;
-  width: 10rem;
+  position: relative;
+  top: -10vh;
+  z-index: 1;
+  min-height: 10rem;
+  min-width: 10rem;
   padding: 8px;
+  background-color: #fff;
   border: 3px solid gold;
+  opacity: 0.8;
 }
 .prices h4 {
-  margin-top: 2rem;
+  margin-top: 8%;
   font-size: 20px;
   font-weight: 500;
 }
 .prices ul li {
+  font-size: 20px;
   margin-top: 1.2rem;
   list-style: none;
 }
-#next,
-#back {
+#next {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   align-self: center;
   position: relative;
-  top: 0%;
+  right: 50%;
   min-height: 60px;
   min-width: 80px;
   background-image: url("./resources/icons/next.svg");
@@ -260,19 +362,12 @@ video {
   cursor: pointer;
   transition-duration: 0.3s;
 }
-/* #back {
-  left: 10rem;
-  transform: rotate(180deg);
-} */
-#next {
-  right: 10rem;
-}
 #next span:nth-child(2) {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
 .carosel {
-  height: 80vh;
+  /* height: 80vh; */
   width: 60%;
   position: relative;
   display: none;
@@ -290,9 +385,6 @@ video {
 .div1 {
   left: 10rem;
   display: none;
-}
-.div2 {
-  /* width: auto; */
 }
 .div3 {
   display: none;
@@ -324,7 +416,6 @@ video {
   /* height: 300px; */
   /* width: initial; */
   transform: translateX(9rem) scale(1);
-  cursor: pointer;
 }
 .right1 {
   transform: translateX(18rem) scale(0.8);
@@ -337,7 +428,6 @@ video {
   filter: blur(0px);
   /* height: 300px;
   width: initial; */
-  cursor: pointer;
   transform: translateX(0) scale(1);
 }
 .right2 {
@@ -352,27 +442,14 @@ video {
   /* height: 300px;
   width: initial; */
   transform: translateX(-7rem) scale(1);
-  cursor: pointer;
 }
 .right3 {
   transform: translateX(0) scale(0.8);
 }
-.service_2 {
-  margin: 4rem 0;
-  display: flex;
-  flex-direction: row;
-}
-#colorImg {
-  width: 23vw;
-}
-.service_5 {
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-}
 footer {
   padding: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: black;
 }
@@ -412,16 +489,22 @@ footer a:hover {
   margin: 2rem 0;
 }
 /* media queries */
-@media screen and (max-width: 738px) {
-  nav div:first-child {
-    flex-grow: 3;
+@media screen and (min-width: 411px) {
+  .service {
+    height: 100vh;
   }
-  nav div:first-child a {
-    color: red;
+  .service_1 {
+    align-items: center;
   }
-  footer {
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* align-items: center; */
+  .mobileImg img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobileImg {
+    display: none;
+  }
+  .carosel {
+    display: flex;
   }
 }
