@@ -16,6 +16,7 @@ font-family: 'Handlee', cursive;
   margin: 0;
   padding: 0;
   font-family: "Handlee", cursive;
+  scroll-behavior: smooth;
 }
 a {
   cursor: pointer;
@@ -27,7 +28,6 @@ a {
 #hamburger {
   cursor: pointer;
   margin: 2rem;
-  /* padding: 1rem; */
   position: relative;
   height: 36px;
   width: 36px;
@@ -44,6 +44,7 @@ a {
   transition-duration: 0.3s;
   left: 3px;
   background-color: #fff;
+  border-radius: 10px;
 }
 #patty1 {
   top: 12px;
@@ -86,6 +87,9 @@ a {
   background-color: black;
   transition-delay: 0.2s;
   transition-duration: 0.3s;
+}
+.mobileNavMenu a:hover {
+  color: gold;
 }
 .mobileNavMenu a {
   color: #fff;
@@ -168,13 +172,26 @@ a {
 .videoDiv {
   height: 100vh;
 }
+#vid {
+  display: none;
+}
 video {
   width: 100vw;
-  /* height: 90vh; */
   height: 100vh;
   position: absolute;
   object-fit: fill;
   z-index: -3;
+}
+.downarrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+  position: relative;
+  top: -20vh;
+}
+.downarrow img {
+  margin: 1rem 0.5rem;
 }
 .overlay {
   background: linear-gradient(
@@ -212,38 +229,41 @@ video {
   top: 58vh;
   left: 5vw;
   width: 0;
-  background-color: black;
+  background-color: #fff;
   height: 3px;
 }
+.services_section {
+  /* margin-top: 40vh; */
+}
 .servicesHeaderWrapper {
-  position: relative;
-  top: 140px;
   margin-bottom: 8rem;
+  /* width: 100%; */
 }
 #servicesHeaderDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  z-index: 4;
+  position: relative;
+  z-index: 3;
+  margin-top: 40vh;
 }
 #services_header {
-  display: flex;
-  font-size: 42px;
-  /* margin-top: 1rem; */
-  padding-left: 8rem;
-  max-width: 87%;
+  font-size: 20px;
+  width: 6rem;
+  position: fixed;
+  top: 10vh;
+  left: -8rem;
 }
 #underline {
-  display: flex;
+  position: fixed;
   height: 4px;
-  width: 60%;
-  margin-left: 8%;
+  width: 5rem;
+  top: 15vh;
+  left: -8rem;
   background-color: gold;
 }
 #where {
   padding-left: 2rem;
   opacity: 0;
   width: 10vw;
+  display: none;
 }
 .service {
   display: flex;
@@ -251,7 +271,7 @@ video {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem;
+  padding: 1rem;
 }
 .service p {
   font-family: "Handlee", cursive;
@@ -262,13 +282,13 @@ video {
 .service:last-child {
   position: relative;
 }
+#service_section_header {
+  border-bottom: 1px solid gold;
+}
 .service_1 {
   display: flex;
   flex-direction: column;
-  /* align-content: flex-end; */
-}
-#mensCutsHeader {
-  border-bottom: 1px solid gold;
+  align-items: flex-end;
 }
 .service_1_div {
   display: flex;
@@ -286,14 +306,27 @@ video {
   display: none;
   background-color: slategray;
 }
+.mobileImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mobileImg img {
+  width: 90%;
+}
 .prices {
-  height: 10rem;
+  position: relative;
+  top: -10vh;
+  z-index: 1;
+  min-height: 10rem;
   width: 10rem;
   padding: 8px;
+  background-color: #fff;
   border: 3px solid gold;
+  opacity: 0.8;
 }
 .prices h4 {
-  margin-top: 2rem;
+  margin-top: 8%;
   font-size: 20px;
   font-weight: 500;
 }
@@ -412,14 +445,6 @@ video {
 }
 .right3 {
   transform: translateX(0) scale(0.8);
-}
-.service_2 {
-  margin: 4rem 0;
-  display: flex;
-  flex-direction: row;
-}
-#colorImg {
-  width: 23vw;
 }
 .service_5 {
   display: flex;

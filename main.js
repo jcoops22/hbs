@@ -193,19 +193,16 @@ const navbarOffScene = new ScrollMagic.Scene({
 // hide sticky navbar end
 
 // sticky services header
-const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".5", {
-  fontSize: "25px",
-  width: "15%",
-  display: "flex",
-  paddingLeft: "8px",
-  margin: "0.5rem 0 0 0",
-  y: -65,
+const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".2", {
+  x: 130,
 });
 const sceneHeader = new ScrollMagic.Scene({
   triggerElement: "#servicesHeaderDiv",
+  // triggerHook: "onLeave",
   triggerHook: "onCenter",
   duration: ".service_5",
-  offset: 190,
+  // offset: -280,
+  offset: 230,
 })
   .setTween(tweenHeader)
   .setPin("#servicesHeaderDiv")
@@ -223,7 +220,7 @@ for (let i = 0; i < services.length; i++) {
   });
   const scene = new ScrollMagic.Scene({
     triggerElement: services[i],
-    offset: "-200px",
+    offset: "-100px",
     reverse: false,
   })
     .setTween(tween)
@@ -234,7 +231,14 @@ for (let i = 0; i < services.length; i++) {
 // change scroll location title
 for (let i = 0; i < services.length; i++) {
   let where = document.querySelector("#where");
-  let locations = ["Men's cuts", "Color", "Womens Cuts", "Styles"];
+  let locations = [
+    "Men's cuts",
+    "Color",
+    "Cuts",
+    "Styles",
+    "Extensions",
+    "Add ons",
+  ];
 
   const whereTween = new TweenMax.to("#where", ".7", {
     opacity: 1,
