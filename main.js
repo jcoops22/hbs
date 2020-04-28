@@ -8,7 +8,6 @@ let div1 = document.querySelector(".div1");
 let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
 let next = document.querySelector("#next");
-let back = document.querySelector("#back");
 let titleUnderline = document.querySelector(".titleUnderline");
 // nav bar hamburger
 let hamburger = document.getElementById("hamburger");
