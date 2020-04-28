@@ -35,34 +35,38 @@ const slide_title = TweenMax.from(".title", 0.3, {
 const underline_title = TweenMax.to(titleUnderline, 0.3, {
   width: "80vw",
 }).delay(0.5);
-hamburger.addEventListener("click", () => {
-  if (!expanded) {
-    expanded = true;
-    // animate hamburger
-    hamburger.style.transform = "rotate(137deg)";
-    patty1.style.transform = "rotate(-90deg)";
-    patty1.style.top = "17px";
-    patty2.style.top = "14px";
-    // animate slide in nav menu
-    mobileNav.style.display = "flex";
-    setTimeout(() => {
-      mobileNav.style.transform = "translate(-80vw)";
-      mobileNav.style.width = "80vw";
-    }, 100);
-  } else {
-    expanded = false;
-    hamburger.style.transform = "rotate(0deg)";
-    patty1.style.transform = "rotate(0deg)";
-    patty1.style.top = "12px";
-    patty2.style.top = "19px";
-    // animate slide in nav menu
-    mobileNav.style.transform = "translate(80vw)";
-    mobileNav.style.width = 0;
-    setTimeout(() => {
-      mobileNav.style.display = "none";
-    }, 600);
-  }
-});
+hamburger.addEventListener(
+  "click",
+  () => {
+    if (!expanded) {
+      expanded = true;
+      // animate hamburger
+      hamburger.style.transform = "rotate(137deg)";
+      patty1.style.transform = "rotate(-90deg)";
+      patty1.style.top = "17px";
+      patty2.style.top = "14px";
+      // animate slide in nav menu
+      mobileNav.style.display = "flex";
+      setTimeout(() => {
+        mobileNav.style.transform = "translate(-80vw)";
+        mobileNav.style.width = "80vw";
+      }, 100);
+    } else {
+      expanded = false;
+      hamburger.style.transform = "rotate(0deg)";
+      patty1.style.transform = "rotate(0deg)";
+      patty1.style.top = "12px";
+      patty2.style.top = "19px";
+      // animate slide in nav menu
+      mobileNav.style.transform = "translate(80vw)";
+      mobileNav.style.width = 0;
+      setTimeout(() => {
+        mobileNav.style.display = "none";
+      }, 600);
+    }
+  },
+  { passive: true }
+);
 
 const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png",
@@ -92,72 +96,76 @@ function getNext() {
 }
 
 // rotate event right
-next.addEventListener("click", () => {
-  if (img1.classList.contains("middle1")) {
-    // img1 is in the middle
-    setTimeout(() => {
-      img1.style.zIndex = "-4";
-      img2.style.zIndex = "-5";
-      img3.style.zIndex = "-4";
-    }, 300);
-    setTimeout(() => {
-      count++;
-      if (count >= mensCuts.length) {
-        count = 0;
+next.addEventListener(
+  "click",
+  () => {
+    if (img1.classList.contains("middle1")) {
+      // img1 is in the middle
+      setTimeout(() => {
+        img1.style.zIndex = "-4";
+        img2.style.zIndex = "-5";
+        img3.style.zIndex = "-4";
+      }, 300);
+      setTimeout(() => {
+        count++;
+        if (count >= mensCuts.length) {
+          count = 0;
+          img2.src = mensCuts[count];
+        }
         img2.src = mensCuts[count];
-      }
-      img2.src = mensCuts[count];
-      img1.classList.add("right1");
-      img1.classList.remove("middle1");
-      img2.classList.add("left2");
-      img2.classList.remove("right2");
-      img3.classList.add("middle3");
-      img3.classList.remove("left3");
-    }, 400);
-  } else if (img1.classList.contains("right1")) {
-    // img3 is in the middle
-    setTimeout(() => {
-      img1.style.zIndex = "-4";
-      img2.style.zIndex = "0";
-      img3.style.zIndex = "-9";
-    }, 300);
-    setTimeout(() => {
-      count++;
-      if (count >= mensCuts.length) {
-        count = 0;
+        img1.classList.add("right1");
+        img1.classList.remove("middle1");
+        img2.classList.add("left2");
+        img2.classList.remove("right2");
+        img3.classList.add("middle3");
+        img3.classList.remove("left3");
+      }, 400);
+    } else if (img1.classList.contains("right1")) {
+      // img3 is in the middle
+      setTimeout(() => {
+        img1.style.zIndex = "-4";
+        img2.style.zIndex = "0";
+        img3.style.zIndex = "-9";
+      }, 300);
+      setTimeout(() => {
+        count++;
+        if (count >= mensCuts.length) {
+          count = 0;
+          img1.src = mensCuts[count];
+        }
         img1.src = mensCuts[count];
-      }
-      img1.src = mensCuts[count];
-      img1.classList.add("left1");
-      img1.classList.remove("right1");
-      img2.classList.add("middle2");
-      img2.classList.remove("left2");
-      img3.classList.add("right3");
-      img3.classList.remove("middle3");
-    }, 400);
-  } else {
-    // img2 is in the middle
-    setTimeout(() => {
-      img1.style.zIndex = "2";
-      img3.style.zIndex = "-8";
-      img2.style.zIndex = "1";
-    }, 300);
-    setTimeout(() => {
-      count++;
-      if (count >= mensCuts.length) {
-        count = 0;
+        img1.classList.add("left1");
+        img1.classList.remove("right1");
+        img2.classList.add("middle2");
+        img2.classList.remove("left2");
+        img3.classList.add("right3");
+        img3.classList.remove("middle3");
+      }, 400);
+    } else {
+      // img2 is in the middle
+      setTimeout(() => {
+        img1.style.zIndex = "2";
+        img3.style.zIndex = "-8";
+        img2.style.zIndex = "1";
+      }, 300);
+      setTimeout(() => {
+        count++;
+        if (count >= mensCuts.length) {
+          count = 0;
+          img3.src = mensCuts[count];
+        }
         img3.src = mensCuts[count];
-      }
-      img3.src = mensCuts[count];
-      img1.classList.add("middle1");
-      img1.classList.remove("left1");
-      img2.classList.add("right2");
-      img2.classList.remove("middle2");
-      img3.classList.add("left3");
-      img3.classList.remove("right3");
-    }, 400);
-  }
-});
+        img1.classList.add("middle1");
+        img1.classList.remove("left1");
+        img2.classList.add("right2");
+        img2.classList.remove("middle2");
+        img3.classList.add("left3");
+        img3.classList.remove("right3");
+      }, 400);
+    }
+  },
+  { passive: true }
+);
 
 let middle1 = document.querySelector(".middle1");
 let middle2 = document.querySelector(".middle2");
@@ -283,14 +291,14 @@ let navItems = document.querySelectorAll(".navDiv nav div a");
 // console.log(navItems);
 
 // navbar hover
-for (let i = 1; i < navItems.length; i++) {
-  navItems[i].addEventListener("mouseover", (e) => {
-    e.target.classList.add("active");
-  });
-  navItems[i].addEventListener("mouseout", (e) => {
-    e.target.classList.remove("active");
-  });
-}
+// for (let i = 1; i < navItems.length; i++) {
+//   navItems[i].addEventListener("mouseover", (e) => {
+//     e.target.classList.add("active");
+//   });
+//   navItems[i].addEventListener("mouseout", (e) => {
+//     e.target.classList.remove("active");
+//   });
+// }
 //   .to(".aboutOpen li", 0.2, {
 //     visibility: "visible",
 //     ease: Power1.easeOut,
