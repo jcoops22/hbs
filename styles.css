@@ -310,23 +310,13 @@ video {
   justify-content: space-around;
   align-items: center;
 }
-.modal {
-  position: absolute;
-  opacity: 0.6;
-  top: 170vh;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: none;
-  background-color: slategray;
-}
 .mobileImg {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .mobileImg img {
-  width: 90%;
+  width: 95%;
 }
 .prices {
   position: relative;

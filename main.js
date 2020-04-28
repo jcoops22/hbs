@@ -59,6 +59,13 @@ const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut3_npcccq.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut1_vfanvm.jpg",
 ];
+const color = [
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086566/HBS/color/redorangehair_yzpmpn.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/rainbow_nsd7ue.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/redhair_l1uium.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/blackhair_t2pocr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/greenhair_vetnjs.jpg",
+];
 const rotateClasses = ["left", "middle", "right"];
 let count = 2;
 
