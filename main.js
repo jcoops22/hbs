@@ -8,6 +8,8 @@ let div1 = document.querySelector(".div1");
 let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
 let next = document.querySelector("#next");
+let overlay = document.querySelector(".overlay");
+let overlayInd = 0;
 let titleUnderline = document.querySelector(".titleUnderline");
 // nav bar hamburger
 let hamburger = document.getElementById("hamburger");
@@ -15,6 +17,17 @@ let patty1 = document.getElementById("patty1");
 let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
+
+changebackground = () => {
+  overlayInd >= mensCuts.length - 1 ? (overlayInd = 0) : overlayInd++;
+  overlay.style.backgroundImage = `url(${mensCuts[overlayInd]})`;
+
+  console.log("heeayrere");
+  console.log(mensCuts[0]);
+};
+setInterval(() => {
+  changebackground();
+}, 4000);
 
 const slide_title = TweenMax.from(".title", 0.3, {
   x: "100vw",
