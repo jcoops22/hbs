@@ -213,7 +213,7 @@ video {
     rgba(0, 0, 0, 1) 100%
   );
   background-image: url("./resources/shan.jpg");
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   width: 100vw;
   /* height: 90vh; */
