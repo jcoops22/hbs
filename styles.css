@@ -189,9 +189,22 @@ video {
   margin: 3rem;
   position: relative;
   top: -20vh;
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
+  animation-iteration-count: infinite;
 }
 .downarrow img {
   margin: 1rem 0.5rem;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .overlay {
   background: linear-gradient(
@@ -267,7 +280,7 @@ video {
 }
 .service {
   display: flex;
-  height: 120vh;
+  height: 110vh;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -276,7 +289,7 @@ video {
 .service p {
   font-family: "Handlee", cursive;
 }
-.service:nth-child(even) {
+.service:nth-child(odd) {
   background-color: #ddd;
 }
 .service:last-child {
@@ -319,7 +332,7 @@ video {
   top: -10vh;
   z-index: 1;
   min-height: 10rem;
-  width: 10rem;
+  min-width: 10rem;
   padding: 8px;
   background-color: #fff;
   border: 3px solid gold;
@@ -331,17 +344,17 @@ video {
   font-weight: 500;
 }
 .prices ul li {
+  font-size: 20px;
   margin-top: 1.2rem;
   list-style: none;
 }
-#next,
-#back {
+#next {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   align-self: center;
   position: relative;
-  top: 0%;
+  right: 50%;
   min-height: 60px;
   min-width: 80px;
   background-image: url("./resources/icons/next.svg");
@@ -349,19 +362,12 @@ video {
   cursor: pointer;
   transition-duration: 0.3s;
 }
-/* #back {
-  left: 10rem;
-  transform: rotate(180deg);
-} */
-#next {
-  right: 10rem;
-}
 #next span:nth-child(2) {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
 .carosel {
-  height: 80vh;
+  /* height: 80vh; */
   width: 60%;
   position: relative;
   display: none;
@@ -379,9 +385,6 @@ video {
 .div1 {
   left: 10rem;
   display: none;
-}
-.div2 {
-  /* width: auto; */
 }
 .div3 {
   display: none;
@@ -413,7 +416,6 @@ video {
   /* height: 300px; */
   /* width: initial; */
   transform: translateX(9rem) scale(1);
-  cursor: pointer;
 }
 .right1 {
   transform: translateX(18rem) scale(0.8);
@@ -426,7 +428,6 @@ video {
   filter: blur(0px);
   /* height: 300px;
   width: initial; */
-  cursor: pointer;
   transform: translateX(0) scale(1);
 }
 .right2 {
@@ -441,19 +442,14 @@ video {
   /* height: 300px;
   width: initial; */
   transform: translateX(-7rem) scale(1);
-  cursor: pointer;
 }
 .right3 {
   transform: translateX(0) scale(0.8);
 }
-.service_5 {
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-}
 footer {
   padding: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: black;
 }
@@ -493,16 +489,22 @@ footer a:hover {
   margin: 2rem 0;
 }
 /* media queries */
-@media screen and (max-width: 738px) {
-  nav div:first-child {
-    flex-grow: 3;
+@media screen and (min-width: 411px) {
+  .service {
+    height: 100vh;
   }
-  nav div:first-child a {
-    color: red;
+  .service_1 {
+    align-items: center;
   }
-  footer {
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    /* align-items: center; */
+  .mobileImg img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobileImg {
+    display: none;
+  }
+  .carosel {
+    display: flex;
   }
 }

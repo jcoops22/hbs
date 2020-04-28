@@ -88,70 +88,23 @@
   </video>
 </div>
   <div class="downarrow">
-    <img  src="./resources/Icons/downarrow.svg" alt="downarrow" width="58px">
+    <a href="#ss">
+      <img  src="./resources/Icons/downarrow.svg" alt="downarrow" width="48px">
+    </a>
   </div>
 <!-- services -->
-  <section class="services_section">
+  <section id="ss" class="services_section">
     <!-- header -->
       <div id="servicesHeaderDiv">
         <h2 id="services_header">Services</h2>
         <div id="underline"></div>
         <p id="where"></p>
       </div>
-    <!-- view current image  in a window/modal view-->
-    <div class="modal"></div>
     <!-- service one  (mens cuts)-->
     <div class="service service_1">
       <h2 id="service_section_header">Mens Haircuts</h2>
       <div class="service_1_div">
-        <div class="mobileImg">
-          <img class="middle2 img2"
-            src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg"
-            alt="male haircut">
-        </div>
-        <div class="prices">
-          <h4>Men's Cuts</h4>
-          <ul>
-            <li>$25 dollars</li>
-          </ul>
-        </div>
-        <div class="carosel">
-          <div class="caroselDivs">
-          <div class="div1">
-            <img class="left1 img1" src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png" alt="male haircut">
-          </div>
-          <div class="div2">
-            <img class="middle2 img2" src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg" alt="male haircut">
-          </div>
-          <div class="div3">
-            <img class="right3 img3" src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg" alt="male haircut">
-          </div>
-          </div>
-          <div id="next">
-            <span>See more</span>
-            <span>(click)</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- service two (color) -->
-    <div class="service service_1">
-      <h2 id="service_section_header">Color</h2>
-      <div class="service_1_div">
-        <div class="mobileImg">
-          <img class="images" src="./resources/color/color.png" alt="rainbow colored hair">
-        </div>
-        <div class="prices">
-          <h4>Color</h4>
-          <h5>($50 per hour)</h5>
-          <ul>
-            <li>Balayage $150 +</li>
-            <li>Baby-lights $175 +</li>
-            <li>Solid $130 +</li>
-            <li>Roots Service $95 +</li>
-            <li>Color Correction $200 +</li>
-          </ul>
-        </div>
+        <!-- carosel -->
         <div class="carosel">
           <div class="caroselDivs">
             <div class="div1">
@@ -175,12 +128,91 @@
             <span>(click)</span>
           </div>
         </div>
+        <div class="mobileImg">
+          <img class="middle2 img2"
+            src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg"
+            alt="male haircut">
+        </div>
+        <div class="prices">
+          <h4>Men's Cuts</h4>
+          <ul>
+            <li>$25 dollars</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- service two (color) -->
+    <div class="service service_1">
+      <h2 id="service_section_header">Color</h2>
+      <div class="service_1_div">
+        <!-- carosel -->
+        <div class="carosel">
+          <div class="caroselDivs">
+            <div class="div1">
+              <img class="left1 img1"
+                src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png"
+                alt="male haircut">
+            </div>
+            <div class="div2">
+              <img class="middle2 img2"
+                src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg"
+                alt="male haircut">
+            </div>
+            <div class="div3">
+              <img class="right3 img3"
+                src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg"
+                alt="male haircut">
+            </div>
+          </div>
+          <div id="next">
+            <span>See more</span>
+            <span>(click)</span>
+          </div>
+        </div>
+        <div class="mobileImg">
+          <img class="images" src="./resources/color/rainbow.jpg" alt="rainbow colored hair">
+        </div>
+        <div class="prices">
+          <h4>Color</h4>
+          <h5>($50 per hour)</h5>
+          <ul>
+            <li>Balayage $150 +</li>
+            <li>Baby-lights $175 +</li>
+            <li>Solid $130 +</li>
+            <li>Roots Service $95 +</li>
+            <li>Color Correction $200 +</li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- service three (style)-->
       <div class="service service_1">
         <h2 id="service_section_header">Style</h2>
         <div class="service_1_div">
+          <!-- carosel -->
+          <div class="carosel">
+            <div class="caroselDivs">
+              <div class="div1">
+                <img class="left1 img1"
+                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png"
+                  alt="male haircut">
+              </div>
+              <div class="div2">
+                <img class="middle2 img2"
+                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg"
+                  alt="male haircut">
+              </div>
+              <div class="div3">
+                <img class="right3 img3"
+                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg"
+                  alt="male haircut">
+              </div>
+            </div>
+            <div id="next">
+              <span>See more</span>
+              <span>(click)</span>
+            </div>
+          </div>
           <div class="mobileImg">
             <img class="images" src="./resources/style/cut.png" alt="female haircut">
           </div>
@@ -191,6 +223,13 @@
               <li>Up-do $65 +</li>
             </ul>
           </div>
+        </div>
+      </div>
+    <!-- service four (extensions)-->
+      <div class="service service_1">
+        <h2 id="service_section_header">Extensions</h2>
+        <div class="service_1_div">
+          <!-- carosel -->
           <div class="carosel">
             <div class="caroselDivs">
               <div class="div1">
@@ -214,14 +253,8 @@
               <span>(click)</span>
             </div>
           </div>
-        </div>
-      </div>
-    <!-- service four (extensions)-->
-      <div class="service service_1">
-        <h2 id="service_section_header">Extensions</h2>
-        <div class="service_1_div">
           <div class="mobileImg">
-            <img class="images" src="./resources/style/style.png" alt="healthy hair">
+            <img class="images" src="./resources/pinkhair.jpg" alt="healthy hair">
           </div>
           <div class="prices">
             <h4>Extensions</h4>
@@ -230,6 +263,13 @@
               <li>Move-up 100 +</li>
             </ul>
           </div>
+        </div>
+      </div>
+      <!-- service five (add ons) -->
+      <div class="service service_1">
+        <h2 id="service_section_header">Additional Services</h2>
+        <div class="service_1_div">
+          <!-- carosel -->
           <div class="carosel">
             <div class="caroselDivs">
               <div class="div1">
@@ -253,12 +293,6 @@
               <span>(click)</span>
             </div>
           </div>
-        </div>
-      </div>
-      <!-- service five (add ons) -->
-      <div class="service service_1">
-        <h2 id="service_section_header">Additional Services</h2>
-        <div class="service_1_div">
           <div class="mobileImg">
             <img class="images" src="./resources/addons.jpg" alt="healthy hair">
           </div>
@@ -269,39 +303,12 @@
               <li>Toner 30 +</li>
             </ul>
           </div>
-          <div class="carosel">
-            <div class="caroselDivs">
-              <div class="div1">
-                <img class="left1 img1"
-                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363201/HBS/mensCuts/mensCut_dapqh8.png"
-                  alt="male haircut">
-              </div>
-              <div class="div2">
-                <img class="middle2 img2"
-                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut4_gcyc2p.jpg"
-                  alt="male haircut">
-              </div>
-              <div class="div3">
-                <img class="right3 img3"
-                  src="https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg"
-                  alt="male haircut">
-              </div>
-            </div>
-            <div id="next">
-              <span>See more</span>
-              <span>(click)</span>
-            </div>
-          </div>
         </div>
       </div>
-    <!-- <div class="service service_5">
-      <p>Products</p>
-      <img class="images" width="400px"  src="./resources/products/kmurph.jpg" alt="kevin murphy">
-      <p>Shandel is a licensed seller for Kevin Murphy products</p>
-    </div> -->
   </section>
+  <!-- price disclaimer -->
   <p style="margin: 1rem">*All prices subject to consultation</p>
-</div>
+<!-- footer section -->
 <footer id="footer">
   <div id="footerContact">
     <h3>Contact Shandel:</h3>

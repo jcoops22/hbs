@@ -74,7 +74,6 @@ function getNext() {
 
 // rotate event right
 next.addEventListener("click", () => {
-  modal.style.display = "none";
   if (img1.classList.contains("middle1")) {
     // img1 is in the middle
     setTimeout(() => {
@@ -141,13 +140,9 @@ next.addEventListener("click", () => {
   }
 });
 
-let modal = document.querySelector(".modal");
 let middle1 = document.querySelector(".middle1");
 let middle2 = document.querySelector(".middle2");
 let middle3 = document.querySelector(".middle3");
-div2.addEventListener("click", () => {
-  modal.style.display = "block";
-});
 
 // GSAP
 
@@ -213,7 +208,6 @@ const sceneHeader = new ScrollMagic.Scene({
 let services = document.getElementsByClassName("service");
 for (let i = 0; i < services.length; i++) {
   const tween = TweenMax.from(services[i], ".7", {
-    // width: '0',
     opacity: "0",
     display: "flex",
     transform: "scale(.5)",
