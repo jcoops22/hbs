@@ -68,7 +68,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 10vh;
+  height: 4rem;
   background-color: black;
 }
 .mobileHeader a {
@@ -86,7 +86,7 @@ body {
   align-items: center;
   padding-top: 1rem;
   position: fixed;
-  top: 10vh;
+  top: 4rem;
   left: 100vw;
   z-index: 2;
   width: 0;
@@ -113,7 +113,7 @@ body {
   display: none;
   flex-direction: row;
   width: 100%;
-  height: 10vh;
+  height: 4rem;
   justify-content: flex-end;
   align-items: center;
   background-color: black;
@@ -152,7 +152,7 @@ body {
 .scrolledNav nav {
   display: flex;
   width: 100%;
-  height: 10vh;
+  height: 4rem;
   justify-content: flex-end;
   align-items: center;
 }
@@ -179,14 +179,14 @@ body {
   margin-right: 0.5rem;
 }
 .videoDiv {
-  height: 100vh;
+  height: 40rem;
 }
 #vid {
   display: none;
 }
 video {
   width: 100vw;
-  height: 100vh;
+  height: 40rem;
   position: absolute;
   object-fit: fill;
   z-index: -3;
@@ -197,7 +197,7 @@ video {
   align-items: center;
   margin: 3rem;
   position: relative;
-  top: -20vh;
+  top: -8rem;
   cursor: pointer;
   animation-name: pulse;
   animation-duration: 2s;
@@ -238,7 +238,7 @@ video {
   font-family: "Dancing Script", cursive;
   display: block;
   position: absolute;
-  top: 50vh;
+  top: 20rem;
   /* left: 10vw; */
   left: 7vw;
   width: 50%;
@@ -251,10 +251,11 @@ video {
 }
 .titleUnderline {
   position: relative;
-  top: 58vh;
+  top: 24rem;
   left: 5vw;
   width: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #000;
   height: 3px;
 }
 .services_section {
