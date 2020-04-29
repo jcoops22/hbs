@@ -223,9 +223,9 @@ video {
   );
   /* background-image: url("./resources/shan.jpg"); */
   background-image: url("./resources/istockphoto-1191833337-1024x1024.jpg");
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-clip: border-box;
   width: 100vw;
   /* height: 90vh; */
