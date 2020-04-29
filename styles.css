@@ -273,14 +273,14 @@ video {
   font-size: 20px;
   width: 6rem;
   position: fixed;
-  top: 10vh;
+  top: 4.3rem;
   left: -8rem;
 }
 #underline {
   position: fixed;
   height: 4px;
   width: 5rem;
-  top: 15vh;
+  top: 6rem;
   left: -8rem;
   background-color: gold;
 }
