@@ -18,16 +18,16 @@ let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
 
-changebackground = () => {
-  overlayInd >= mensCuts.length - 1 ? (overlayInd = 0) : overlayInd++;
-  overlay.style.backgroundImage = `url(${mensCuts[overlayInd]})`;
+// changebackground = () => {
+//   overlayInd >= mensCuts.length - 1 ? (overlayInd = 0) : overlayInd++;
+//   overlay.style.backgroundImage = `url(${mensCuts[overlayInd]})`;
 
-  console.log("heeayrere");
-  console.log(mensCuts[0]);
-};
-setInterval(() => {
-  changebackground();
-}, 4000);
+//   console.log("heeayrere");
+//   console.log(mensCuts[0]);
+// };
+// setInterval(() => {
+//   changebackground();
+// }, 4000);
 
 const slide_title = TweenMax.from(".title", 0.3, {
   x: "100vw",

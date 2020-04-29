@@ -23,6 +23,14 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
 .active {
   border-bottom: 4px solid gold;
 }
@@ -214,7 +222,7 @@ video {
     rgba(0, 0, 0, 1) 100%
   );
   background-image: url("./resources/shan.jpg");
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-clip: border-box;
