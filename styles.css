@@ -229,7 +229,7 @@ video {
   background-clip: border-box;
   width: 100vw;
   /* height: 90vh; */
-  height: 100vh;
+  height: 100%;
   position: absolute;
   z-index: -2;
   opacity: 0.8;
@@ -267,7 +267,6 @@ video {
 #servicesHeaderDiv {
   position: relative;
   z-index: 3;
-  margin-top: 40vh;
 }
 #services_header {
   font-size: 20px;
@@ -292,7 +291,7 @@ video {
 }
 .service {
   display: flex;
-  /* height: 110vh; */
+  min-height: 40rem;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -332,7 +331,7 @@ video {
 }
 .prices {
   position: relative;
-  top: -10vh;
+  top: -4rem;
   z-index: 1;
   min-height: 10rem;
   min-width: 10rem;
@@ -493,9 +492,6 @@ footer a:hover {
 }
 /* media queries */
 @media screen and (min-width: 411px) {
-  .service {
-    height: 100vh;
-  }
   .service_1 {
     align-items: center;
   }
