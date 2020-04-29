@@ -221,7 +221,8 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
-  background-image: url("./resources/shan.jpg");
+  /* background-image: url("./resources/shan.jpg"); */
+  background-image: url("./resources/istockphoto-1191833337-1024x1024.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
