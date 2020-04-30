@@ -223,7 +223,7 @@ video {
   );
 
   background-image: url("./resources/salonChairs.jpg");
-  background-size: contain;
+  background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
