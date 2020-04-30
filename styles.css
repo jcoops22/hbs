@@ -221,7 +221,6 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
-
   background-image: url("./resources/salonChairs.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -236,27 +235,26 @@ video {
 }
 .titleDiv {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-direction: column;
   width: 100%;
   justify-content: flex-start;
-
   position: relative;
   top: 8rem;
 }
 .titleDiv img {
   width: 40px;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 .title {
   font-family: "Dancing Script", cursive;
-  margin-left: 0.7rem;
+  margin: 0 0.7rem;
   font-size: 42px;
   color: gold;
   text-shadow: 4px 1px 9px black;
 }
 .titleUnderline {
-  position: relative;
-  top: 8rem;
+  /* position: relative;
+  top: 8rem; */
   width: 0;
   background-color: gold;
   box-shadow: 3px 4px 3px 3px #ccc;
