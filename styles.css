@@ -239,8 +239,9 @@ video {
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
-  top: 8rem;
+  padding-top: 8rem;
+  /* position: relative;
+  top: 8rem; */
 }
 .titleDiv img {
   width: 2rem;
