@@ -239,6 +239,7 @@ video {
   /* align-items: center; */
   /* justify-content: flex-start; */
   margin-top: -20rem;
+  border: 1px solid red;
 }
 .titleDiv img {
   width: 2rem;
