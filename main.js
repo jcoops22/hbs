@@ -48,7 +48,7 @@ const underline_title = TweenMax.to(titleUnderline, 0.3, {
 }).delay(0.5);
 hamburger.addEventListener(
   "click",
-  () => {
+  (e) => {
     if (!expanded) {
       expanded = true;
       // animate hamburger
