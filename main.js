@@ -43,9 +43,9 @@ const rotateDryer = TweenMax.fromTo(
 const slide_title = TweenMax.from(".title", 0.3, {
   x: "100vw",
 }).delay(0.5);
-const underline_title = TweenMax.to(titleUnderline, 0.3, {
-  width: "80vw",
-}).delay(0.5);
+// const underline_title = TweenMax.to(titleUnderline, 0.3, {
+//   width: "80vw",
+// }).delay(0.5);
 hamburger.addEventListener(
   "click",
   (e) => {

@@ -227,7 +227,6 @@ video {
   /* background-repeat: no-repeat; */
   background-position: center;
   width: 100vw;
-  /* height: 90vh; */
   height: 100%;
   position: relative;
   z-index: -2;
@@ -235,13 +234,11 @@ video {
 }
 .titleDiv {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: 100%;
-  align-items: center;
-  justify-content: flex-start;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
   margin-top: -20rem;
-  /* position: relative;
-  top: 8rem; */
 }
 .titleDiv img {
   width: 2rem;
