@@ -237,6 +237,7 @@ video {
   display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
   justify-content: flex-start;
   position: relative;
   top: 8rem;
