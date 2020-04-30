@@ -16,6 +16,7 @@ let hamburger = document.getElementById("hamburger");
 let patty1 = document.getElementById("patty1");
 let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
+let blowdryer = document.querySelector(".titleDiv img");
 let expanded = false;
 
 // changebackground = () => {
@@ -28,6 +29,16 @@ let expanded = false;
 // setInterval(() => {
 //   changebackground();
 // }, 4000);
+const rotateDryer = TweenMax.fromTo(
+  blowdryer,
+  0.3,
+  {
+    transform: "rotate(180deg)",
+  },
+  {
+    transform: "rotate(0deg)",
+  }
+).delay(1);
 
 const slide_title = TweenMax.from(".title", 0.3, {
   x: "100vw",
