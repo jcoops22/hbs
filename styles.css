@@ -229,7 +229,7 @@ video {
   width: 100vw;
   /* height: 90vh; */
   height: 100%;
-  position: absolute;
+  position: relative;
   z-index: -2;
   opacity: 0.8;
 }
@@ -239,7 +239,7 @@ video {
   width: 100%;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 8rem;
+  margin-top: -20rem;
   /* position: relative;
   top: 8rem; */
 }
