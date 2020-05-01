@@ -234,10 +234,10 @@ video {
 }
 .titleDiv {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   width: 100%;
-  /* align-items: center; */
-  /* justify-content: flex-start; */
+  align-items: center;
+  justify-content: flex-start;
   margin-top: -20rem;
   border: 1px solid red;
 }
