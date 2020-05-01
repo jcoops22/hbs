@@ -248,7 +248,7 @@ video {
 .title {
   font-family: "Dancing Script", cursive;
   margin: 0 0.7rem;
-  font-size: 3rem;
+  font-size: 2.7rem;
   color: gold;
   text-shadow: 4px 1px 9px black;
 }
@@ -494,6 +494,11 @@ footer a:hover {
   margin: 2rem 0;
 }
 /* media queries */
+@media screen and (min-width: 360px) {
+  .title {
+    font-size: 3rem;
+  }
+}
 @media screen and (min-width: 411px) {
   .service_1 {
     align-items: center;
