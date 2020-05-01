@@ -128,6 +128,9 @@ body {
   text-decoration: none;
   /* transition-duration: 0.3s; */
 }
+.navDiv nav div a:hover {
+  color: gold;
+}
 .navDiv nav div:first-child {
   flex-grow: 6;
   width: 20%;
@@ -253,9 +256,8 @@ video {
   text-shadow: 4px 1px 9px black;
 }
 .titleUnderline {
-  /* position: relative;
-  top: 8rem; */
   width: 0;
+  max-width: 320px;
   background-color: gold;
   box-shadow: 3px 4px 3px 3px #ccc;
   height: 3px;
@@ -287,9 +289,9 @@ video {
   background-color: gold;
 }
 #where {
-  padding-left: 2rem;
+  padding-left: 1rem;
   opacity: 0;
-  width: 10vw;
+  /* width: 10vw; */
   display: none;
 }
 .service {
@@ -330,12 +332,12 @@ video {
   justify-content: center;
 }
 .mobileImg img {
-  width: 95%;
+  width: 9%;
 }
 .prices {
   position: relative;
   top: -4rem;
-  z-index: 1;
+  z-index: 10;
   min-height: 10rem;
   min-width: 10rem;
   padding: 8px;
@@ -353,21 +355,27 @@ video {
   margin-top: 1.2rem;
   list-style: none;
 }
-.next {
+#next,
+#next_2,
+#next_3,
+#next_4,
+#next_5 {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   align-self: center;
-  position: relative;
-  right: 50%;
+  position: absolute;
+  top: 28rem;
+  left: 94%;
   min-height: 60px;
   min-width: 80px;
   background-image: url("./resources/icons/next.svg");
   background-repeat: no-repeat;
   cursor: pointer;
   transition-duration: 0.3s;
+  z-index: 3;
 }
-#next span:nth-child(2) {
+.seeMore span:nth-child(2) {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
@@ -386,6 +394,7 @@ video {
   align-content: center;
   justify-content: center;
   transition-duration: 1s;
+  max-width: 555px;
 }
 .div1 {
   left: 10rem;
@@ -410,7 +419,6 @@ video {
 .right3 {
   filter: blur(4px);
   align-self: center;
-  /* width: initial; */
 }
 .left1 {
   transform: translateX(0) scale(0.8);
@@ -436,17 +444,15 @@ video {
   transform: translateX(0) scale(1);
 }
 .right2 {
-  transform: translateX(7rem) scale(0.8);
+  transform: translateX(9rem) scale(0.8);
 }
 .left3 {
-  transform: translateX(-14rem) scale(0.8);
+  transform: translateX(-18rem) scale(0.8);
 }
 .middle3 {
   align-self: center;
   filter: blur(0px);
-  /* height: 300px;
-  width: initial; */
-  transform: translateX(-7rem) scale(1);
+  transform: translateX(-9rem) scale(1);
 }
 .right3 {
   transform: translateX(0) scale(0.8);
@@ -492,26 +498,4 @@ footer a:hover {
 }
 .googleMaps {
   margin: 2rem 0;
-}
-/* media queries */
-@media screen and (min-width: 360px) {
-  .title {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 411px) {
-  .service_1 {
-    align-items: center;
-  }
-  .mobileImg img {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mobileImg {
-    display: none;
-  }
-  .carosel {
-    display: flex;
-  }
 }

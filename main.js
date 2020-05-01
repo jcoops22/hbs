@@ -210,7 +210,7 @@ const navbarScene = new ScrollMagic.Scene({
 
 // hide sticky navbar
 const tweenNavbarOff = TweenMax.to(
-  [".scrolledNav", "#services_header", "#underline"],
+  [".scrolledNav", "#services_header", "#underline", "#where"],
   ".3",
   {
     opacity: "0",
@@ -263,16 +263,9 @@ for (let i = 0; i < services.length; i++) {
 // change scroll location title
 for (let i = 0; i < services.length; i++) {
   let where = document.querySelector("#where");
-  let locations = [
-    "Men's cuts",
-    "Color",
-    "Cuts",
-    "Styles",
-    "Extensions",
-    "Add ons",
-  ];
+  let locations = ["Men's cuts", "Color", "Styles", "Extensions", "Add ons"];
 
-  const whereTween = new TweenMax.to("#where", ".7", {
+  const whereTween = new TweenMax.to("#where", "0.2", {
     opacity: 1,
   });
   const scene = new ScrollMagic.Scene({
@@ -283,7 +276,7 @@ for (let i = 0; i < services.length; i++) {
   })
     .on("progress", (event) => {
       if (event.progress === 0) {
-        event.target.triggerElement().classList.contains("service_1")
+        event.target.triggerElement().classList.contains("top")
           ? (where.innerHTML = locations[0])
           : (where.innerHTML = locations[i - 1]);
       } else if (event.progress === 1) {

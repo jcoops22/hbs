@@ -1,0 +1,51 @@
+/* mobile small */
+@media screen and (min-width: 360px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+/* mobile large */
+@media screen and (min-width: 411px) {
+  .service_1 {
+    align-items: center;
+  }
+  .mobileImg img {
+    width: 100%;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .mobileHeader,
+  #hamburger {
+    display: none;
+  }
+  .navDiv nav {
+    display: flex;
+  }
+  .titleDiv {
+    top: -29rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .titleUnderline {
+    max-width: 400px;
+  }
+  .downarrow {
+    top: -4rem;
+  }
+  .mobileImg {
+    display: none;
+  }
+  .carosel {
+    display: flex;
+    min-height: 555px;
+  }
+  .prices {
+    top: -12rem;
+    right: 10rem;
+  }
+  #where {
+    display: block;
+  }
+}
