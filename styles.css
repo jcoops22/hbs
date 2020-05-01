@@ -200,7 +200,7 @@ video {
   top: -8rem;
   cursor: pointer;
   animation-name: pulse;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
   animation-iteration-count: infinite;
 }
