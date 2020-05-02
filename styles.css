@@ -195,10 +195,7 @@ video {
   z-index: -3;
 }
 .downarrow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3rem;
+  text-align: center;
   position: relative;
   top: -8rem;
   cursor: pointer;
@@ -207,15 +204,15 @@ video {
   animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
   animation-iteration-count: infinite;
 }
-.downarrow img {
-  margin: 1rem 0.5rem;
-}
 @keyframes pulse {
   0% {
-    transform: scale(1.3);
+    transform: translateY(4px);
+  }
+  50% {
+    /* transform: translateY(-4px); */
   }
   100% {
-    transform: scale(1);
+    transform: translateY(-4px);
   }
 }
 .overlay {
@@ -246,7 +243,6 @@ video {
 }
 .titleDiv img {
   width: 2rem;
-  /* margin-left: 5%; */
 }
 .title {
   font-family: "Dancing Script", cursive;
@@ -311,14 +307,14 @@ video {
 .service:last-child {
   position: relative;
 }
-.service_section_header {
-  margin: 3rem 0;
-  border-bottom: 1px solid gold;
-}
 .service_1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+.service_section_header {
+  margin: 3rem 0;
+  border-bottom: 1px solid gold;
 }
 .service_1_div {
   display: flex;
@@ -375,12 +371,18 @@ video {
   transition-duration: 0.3s;
   z-index: 3;
 }
+#next:hover,
+#next_2:hover,
+#next_3:hover,
+#next_4:hover,
+#next_5:hover {
+  background-image: url("./resources/Icons/nextGold.svg");
+}
 .seeMore span:nth-child(2) {
   margin-top: 1rem;
   font-size: 0.8rem;
 }
 .carosel {
-  /* height: 80vh; */
   width: 60%;
   position: relative;
   display: none;
@@ -426,8 +428,6 @@ video {
 .middle1 {
   align-self: center;
   filter: blur(0px);
-  /* height: 300px; */
-  /* width: initial; */
   transform: translateX(9rem) scale(1);
 }
 .right1 {
@@ -439,9 +439,7 @@ video {
 .middle2 {
   align-self: center;
   filter: blur(0px);
-  /* height: 300px;
-  width: initial; */
-  transform: translateX(0) scale(1);
+  transform: translateX(0rem) scale(1);
 }
 .right2 {
   transform: translateX(9rem) scale(0.8);

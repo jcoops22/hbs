@@ -195,7 +195,7 @@ const navbarOffController = new ScrollMagic.Controller();
 // sticky navbar
 const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
   position: "fixed",
-  height: "8vh",
+  height: "4rem",
   zIndex: 3,
   display: "flex",
 });
@@ -252,7 +252,7 @@ for (let i = 0; i < services.length; i++) {
   });
   const scene = new ScrollMagic.Scene({
     triggerElement: services[i],
-    offset: "-100px",
+    offset: "-300px",
     reverse: false,
   })
     .setTween(tween)

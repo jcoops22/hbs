@@ -19,11 +19,17 @@
   #hamburger {
     display: none;
   }
+  .navDiv {
+    position: static;
+  }
   .navDiv nav {
     display: flex;
   }
   .titleDiv {
-    top: -29rem;
+    top: -35rem;
+  }
+  .titleDiv img {
+    width: 3rem;
   }
   .title {
     font-size: 4rem;
@@ -32,10 +38,16 @@
     max-width: 400px;
   }
   .downarrow {
-    top: -4rem;
+    top: -9rem;
   }
   .mobileImg {
     display: none;
+  }
+  .service {
+    /* height: 30rem; */
+  }
+  .service_1_div {
+    /* height: 20rem; */
   }
   .carosel {
     display: flex;
@@ -47,5 +59,19 @@
   }
   #where {
     display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .prices {
+    top: -26rem;
+    right: 75%;
+  }
+  #next,
+  #next_2,
+  #next_3,
+  #next_4,
+  #next_5 {
+    top: 16rem;
+    left: 150%;
   }
 }
