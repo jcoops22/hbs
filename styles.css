@@ -150,7 +150,7 @@ body {
   display: none;
   width: 100%;
   background-color: black;
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 .scrolledNav nav {
   display: flex;
@@ -328,7 +328,7 @@ video {
   justify-content: center;
 }
 .mobileImg img {
-  width: 9%;
+  width: 90%;
 }
 .prices {
   position: relative;
