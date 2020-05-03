@@ -47,7 +47,8 @@
     /* height: 30rem; */
   }
   .service_1_div {
-    /* height: 20rem; */
+    /* max-height: 100%; */
+    margin-bottom: -10rem;
   }
   .carosel {
     display: flex;

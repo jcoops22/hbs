@@ -132,7 +132,7 @@ body {
   color: gold;
 }
 .navDiv nav div:first-child {
-  flex-grow: 6;
+  margin-right: auto;
   width: 20%;
 }
 .navDiv nav div:first-child a {
@@ -166,6 +166,10 @@ body {
   font-size: 18px;
   text-decoration: none;
 }
+.scrolledNav nav div a:hover {
+  color: gold;
+}
+
 .scrolledNav nav div:first-child {
   flex-grow: 6;
   width: 20%;
@@ -314,7 +318,7 @@ video {
 }
 .service_section_header {
   margin: 3rem 0;
-  border-bottom: 1px solid gold;
+  border-bottom: 3px solid gold;
 }
 .service_1_div {
   display: flex;
@@ -348,8 +352,9 @@ video {
 }
 .prices ul li {
   font-size: 20px;
-  margin-top: 1.2rem;
-  list-style: none;
+  margin: 1.2rem 0 0 1rem;
+
+  list-style: url("./resources/Icons/star.svg");
 }
 #next,
 #next_2,
