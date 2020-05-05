@@ -371,7 +371,7 @@ video {
   left: 94%;
   min-height: 60px;
   min-width: 80px;
-  background-image: url("./resources/icons/next.svg");
+  background-image: url("./resources/Icons/next.svg");
   background-repeat: no-repeat;
   cursor: pointer;
   transition-duration: 0.3s;
