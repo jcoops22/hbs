@@ -32,7 +32,8 @@ body {
   margin: 0;
 }
 .active {
-  border-bottom: 4px solid gold;
+  /* border-bottom: 4px solid gold; */
+  text-decoration: overline;
 }
 #hamburger {
   cursor: pointer;

@@ -1,0 +1,25 @@
+.about_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about_container img {
+  width: 100%;
+}
+.about_content {
+  border: 3px solid #fff;
+  background-color: #ddd;
+  padding: 2rem;
+}
+.about_content h1 {
+  /* margin: 1rem 0; */
+  font-family: "Dancing Script", cursive;
+}
+.about_content a {
+  color: #d5a848;
+  text-decoration: underline;
+}
+.about_content a:visited {
+  color: #d5a848;
+  text-decoration: underline;
+}
