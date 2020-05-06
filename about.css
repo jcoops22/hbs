@@ -1,16 +1,14 @@
 .about_landing {
   width: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-image: url("./resources/salonTools.jpg");
 }
 .about_carosel {
-  border: 1px solid red;
+  height: 25rem;
+}
+.caroselImg {
+  border: 4px solid gold;
 }
 #shanImage {
-  margin-top: 4rem;
+  margin-top: 3rem;
   width: 100%;
 }
 .about_container {
@@ -22,8 +20,7 @@
   width: 100%;
 }
 .about_content {
-  border: 3px solid #fff;
-  /* background-color: #ddd; */
+  background-color: #fff;
   padding: 2rem;
 }
 .about_content h1 {

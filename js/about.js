@@ -54,7 +54,6 @@ hamburger.addEventListener(
 // about carosel
 let shanPics = [
   "./resources/shan.jpg",
-  "./resources/shan1.jpg",
   "./resources/shan2.jpg",
   "./resources/shan3.jpg",
 ];
