@@ -13,8 +13,8 @@ font-family: 'Handlee', cursive;
 
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   font-family: "Handlee", cursive;
   scroll-behavior: smooth;
   overscroll-behavior: none;
@@ -78,7 +78,7 @@ body {
 .mobileNavMenu {
   display: none;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
   padding-top: 1rem;
   position: fixed;
@@ -100,11 +100,11 @@ body {
 }
 .mobileNavMenu a {
   color: #fff;
-  display: flex;
-  margin: 10px 15px 5px 30px;
   font-size: 18px;
   font-weight: 100;
   text-decoration: none;
+}
+.mobileNavMenu div {
   margin: 1.4rem 0;
 }
 .navDiv nav {
@@ -180,7 +180,8 @@ body {
   font-size: 24px;
 }
 .active {
-  /* border-bottom: 1px solid gold; */
+  display: flex;
+  color: gold;
   list-style: url("./resources/Icons/navstar.svg");
 }
 .follow img {
