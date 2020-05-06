@@ -50,3 +50,22 @@ hamburger.addEventListener(
   },
   { passive: true }
 );
+
+// about carosel
+let shanPics = [
+  "./resources/shan.jpg",
+  "./resources/shan1.jpg",
+  "./resources/shan2.jpg",
+  "./resources/shan3.jpg",
+];
+let counter = 0;
+let carosel = document.querySelector("#shanImage");
+console.log(carosel.src);
+
+changePic = () => {
+  counter >= shanPics.length - 1 ? (counter = 0) : counter++;
+  carosel.src = shanPics[counter];
+};
+setInterval(() => {
+  changePic();
+}, 3000);

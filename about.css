@@ -6,6 +6,9 @@
   background-size: contain;
   background-image: url("./resources/salonTools.jpg");
 }
+.about_carosel {
+  border: 1px solid red;
+}
 #shanImage {
   margin-top: 4rem;
   width: 100%;
