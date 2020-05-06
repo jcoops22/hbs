@@ -5,6 +5,19 @@ let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
 
+window.addEventListener("resize", () => {
+  expanded = false;
+  hamburger.style.transform = "rotate(0deg)";
+  patty1.style.transform = "rotate(0deg)";
+  patty1.style.top = "12px";
+  patty2.style.top = "19px";
+  // animate slide in nav menu
+  mobileNav.style.transform = "translate(80vw)";
+  mobileNav.style.width = 0;
+  setTimeout(() => {
+    mobileNav.style.display = "none";
+  }, 600);
+});
 hamburger.addEventListener(
   "click",
   (e) => {

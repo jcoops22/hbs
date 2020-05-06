@@ -29,6 +29,8 @@ let expanded = false;
 // setInterval(() => {
 //   changebackground();
 // }, 4000);
+
+// rotate the header icon
 const rotateDryer = TweenMax.fromTo(
   blowdryer,
   0.3,
@@ -46,6 +48,22 @@ const slide_title = TweenMax.from(".title", 0.3, {
 const underline_title = TweenMax.to(titleUnderline, 0.3, {
   width: "80vw",
 }).delay(1);
+
+// hide open hamburger on resize
+window.addEventListener("resize", () => {
+  expanded = false;
+  hamburger.style.transform = "rotate(0deg)";
+  patty1.style.transform = "rotate(0deg)";
+  patty1.style.top = "12px";
+  patty2.style.top = "19px";
+  // animate slide in nav menu
+  mobileNav.style.transform = "translate(80vw)";
+  mobileNav.style.width = 0;
+  setTimeout(() => {
+    mobileNav.style.display = "none";
+  }, 600);
+});
+// animate hamburger
 hamburger.addEventListener(
   "click",
   (e) => {

@@ -117,14 +117,17 @@ body {
   background-color: black;
   transition-duration: 0.3s;
 }
+.navDiv nav div {
+  text-align: center;
+  width: 8rem;
+  transition-duration: 0.3s;
+}
 .navDiv nav div a {
   color: #fff;
-  /* padding-right: 2rem; */
-  margin-right: 2rem;
   font-size: 18px;
   font-weight: 100;
   text-decoration: none;
-  /* transition-duration: 0.3s; */
+  transition-duration: 0.3s;
 }
 .navDiv nav div a:hover {
   color: gold;
@@ -180,7 +183,6 @@ body {
   font-size: 24px;
 }
 .active {
-  display: flex;
   color: gold;
   list-style: url("./resources/Icons/navstar.svg");
 }
@@ -286,7 +288,7 @@ video {
   position: fixed;
   height: 4px;
   width: 5rem;
-  top: 6rem;
+  top: 7rem;
   left: -8rem;
   background-color: gold;
 }
@@ -503,4 +505,10 @@ footer a:hover {
 }
 .googleMaps {
   margin: 2rem 0;
+}
+.copyrightDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
