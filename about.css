@@ -23,17 +23,23 @@
   background-color: #fff;
   padding: 2rem;
 }
+.aboutHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.aboutHeader img {
+  width: 0.8rem;
+}
 .about_content h1 {
-  /* margin: 1rem 0; */
   text-shadow: 4px 1px 9px gold;
   color: #30afb5;
   font-family: "Dancing Script", cursive;
 }
 .about_content a {
   color: #30afb5;
-  /* border-bottom: 1px solid #d5a848; */
   border-bottom: 1px solid gold;
-  /* text-decoration: underline; */
 }
 .about_content a:visited {
   /* color: #d5a848; */
