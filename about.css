@@ -20,18 +20,26 @@
 }
 .about_content {
   border: 3px solid #fff;
-  background-color: #ddd;
+  /* background-color: #ddd; */
   padding: 2rem;
 }
 .about_content h1 {
   /* margin: 1rem 0; */
+  text-shadow: 4px 1px 9px gold;
+  color: #30afb5;
   font-family: "Dancing Script", cursive;
 }
 .about_content a {
-  color: #d5a848;
-  text-decoration: underline;
+  color: #30afb5;
+  /* border-bottom: 1px solid #d5a848; */
+  border-bottom: 1px solid gold;
+  /* text-decoration: underline; */
 }
 .about_content a:visited {
-  color: #d5a848;
+  /* color: #d5a848; */
+  color: #30afb5;
   text-decoration: underline;
+}
+.about_content ul li {
+  list-style: url("./resources/Icons/navstar.svg");
 }
