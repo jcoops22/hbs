@@ -33,8 +33,9 @@
   width: 0.8rem;
 }
 .about_content h1 {
-  text-shadow: 4px 1px 9px gold;
-  color: #30afb5;
+  text-shadow: 4px 1px 9px black;
+  /* color: #30afb5; */
+  color: gold;
   font-family: "Dancing Script", cursive;
 }
 .about_content a {
