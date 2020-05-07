@@ -1,0 +1,37 @@
+.products_container {
+}
+.products_container section {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.products_header_div {
+  height: 20rem;
+  background-position: center;
+  background-size: contain;
+  background-image: url("./resources/products/kmurph.jpg");
+}
+.header_wrapper {
+  position: relative;
+  z-index: 2;
+}
+.products_row {
+  /* display: flex; */
+  /* justify-content: space-around; */
+  width: 100%;
+}
+.header_wrapper img {
+  width: 0.8rem;
+}
+.products_header {
+  margin: 0;
+  padding-top: 4rem;
+  color: gold;
+}
+.product_overlay {
+  margin-bottom: -20rem;
+  background-color: #111;
+  opacity: 0.7;
+  height: 20rem;
+  position: relative;
+  top: -20rem;
+}
