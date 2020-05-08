@@ -2,12 +2,16 @@
   width: 100%;
 }
 .about_carosel {
-  height: 25rem;
+  /* height: 25rem; */
 }
 .caroselImg {
   border: 4px solid gold;
+  /* border-right: 4px solid gold; */
+  /* border-left: 4px solid gold; */
 }
 #shanImage {
+  height: 25rem;
+  opacity: 1;
   margin-top: 3rem;
   width: 100%;
 }
@@ -20,6 +24,7 @@
   width: 100%;
 }
 .about_content {
+  margin-top: 1rem;
   background-color: #fff;
   padding: 2rem;
 }

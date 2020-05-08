@@ -68,3 +68,23 @@ changePic = () => {
 setInterval(() => {
   changePic();
 }, 3000);
+
+// fade in pictures
+let pic = document.querySelector("#shanImage");
+const fadePicIn = new TweenMax.from(pic, 1, {
+  opacity: 0,
+});
+// animate title onload
+let title = document.querySelector(".about_content h1");
+const slideTitleUp = new TweenMax.from(title, 0.8, {
+  y: 300,
+  ease: Back.easeOut.config(1.7),
+});
+// animate stars onload
+let stars = document.querySelectorAll(".aboutHeader img");
+
+for (var i = 0; i < stars.length; i++) {
+  const slideInStars = new TweenMax.from(stars[i], 0.1, {
+    x: 300,
+  }).delay(i - 0.9);
+}
