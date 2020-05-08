@@ -65,6 +65,7 @@ changePic = () => {
   counter >= shanPics.length - 1 ? (counter = 0) : counter++;
   carosel.src = shanPics[counter];
 };
+changePic();
 setInterval(() => {
   changePic();
 }, 3000);

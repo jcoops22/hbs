@@ -5,12 +5,13 @@
   /* height: 25rem; */
 }
 .caroselImg {
+  background-color: black;
   border: 4px solid gold;
   /* border-right: 4px solid gold; */
   /* border-left: 4px solid gold; */
 }
 #shanImage {
-  height: 25rem;
+  height: 26rem;
   opacity: 1;
   margin-top: 3rem;
   width: 100%;
@@ -38,6 +39,7 @@
   width: 0.8rem;
 }
 .about_content h1 {
+  font-size: 3rem;
   text-shadow: 4px 1px 9px black;
   /* color: #30afb5; */
   color: gold;
@@ -52,6 +54,14 @@
   color: #30afb5;
   text-decoration: underline;
 }
+.about_content ul {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
 .about_content ul li {
   list-style: url("./resources/Icons/navstar.svg");
+}
+.about_content p {
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
