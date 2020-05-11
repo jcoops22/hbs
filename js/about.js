@@ -61,14 +61,17 @@ let counter = 0;
 let carosel = document.querySelector("#shanImage");
 console.log(carosel.src);
 
+carosel.src = shanPics[counter];
 changePic = () => {
-  counter >= shanPics.length - 1 ? (counter = 0) : counter++;
-  carosel.src = shanPics[counter];
+  setInterval(() => {
+    counter >= shanPics.length - 1 ? (counter = 0) : counter++;
+    carosel.src = shanPics[counter];
+  }, 3000);
 };
 changePic();
-setInterval(() => {
-  changePic();
-}, 3000);
+// setInterval(() => {
+//   changePic();
+// }, 3000);
 
 // fade in pictures
 let pic = document.querySelector("#shanImage");
@@ -84,8 +87,12 @@ const slideTitleUp = new TweenMax.from(title, 0.8, {
 // animate stars onload
 let stars = document.querySelectorAll(".aboutHeader img");
 
-for (var i = 0; i < stars.length; i++) {
-  const slideInStars = new TweenMax.from(stars[i], 0.1, {
-    x: 300,
-  }).delay(i - 0.9);
-}
+const slideInStar1 = new TweenMax.from(stars[0], 0.1, {
+  x: 300,
+}).delay(1);
+const slideInStar2 = new TweenMax.from(stars[1], 0.1, {
+  x: 300,
+}).delay(1.3);
+const slideInStar3 = new TweenMax.from(stars[2], 0.1, {
+  x: 300,
+}).delay(1.6);
