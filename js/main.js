@@ -88,32 +88,46 @@ hamburger.addEventListener(
 );
 
 const mensCuts = [
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250714/HBS/mensCuts/mensCuts7_yzpxwa.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCut5_q96v5b.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts8_g8zamd.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens6_yfltpz.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens3_mlvuiw.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens5_k4wnok.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens2_zkxdua.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309908/HBS/mensCuts/mens1_zjstqx.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCut6_ivkedn.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250714/HBS/mensCuts/mensCuts7_yzpxwa.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts8_g8zamd.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts9_iiaqdj.jpg",
 ];
 const color = [
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color4_wss56i.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color3_r8n6f4.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color2_apkclg.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309815/HBS/color/color1_ht258m.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250923/HBS/color/darkred_mllqrb.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250923/HBS/color/darkblue_soere1.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250922/HBS/color/lightrainbow_orcftz.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086566/HBS/color/redorangehair_yzpmpn.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/rainbow_nsd7ue.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/redhair_l1uium.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/greenhair_vetnjs.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/blackhair_t2pocr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/greenhair_vetnjs.jpg",
 ];
 const styles = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252489/HBS/style/style8_igy5ui.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252487/HBS/style/style6_ooxfj9.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252488/HBS/style/style9_q0djtp.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252487/HBS/style/style5_e5yquf.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252486/HBS/style/style7_vhenih.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252485/HBS/style/style4_arlhle.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252484/HBS/style/style1_fnhmaw.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252484/HBS/style/style3_zevifx.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589252484/HBS/style/style2_zdbjfq.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589315496/HBS/style/style1_ptqkwr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589315497/HBS/style/style2_rlonhy.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589315497/HBS/style/style4_yrptkq.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589315497/HBS/style/style3_xbykec.jpg",
 ];
 const ext = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589251047/HBS/extensions/extensions_k4frzo.jpg",
@@ -133,6 +147,7 @@ const add = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589254004/HBS/addons/addon1_rlvi92.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589251249/HBS/addons/addon_kdxol7.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588087030/HBS/addons/addons_aejepw.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309622/HBS/addons/addon1_nr0re6.jpg",
 ];
 
 // count for carosel

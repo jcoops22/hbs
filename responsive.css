@@ -25,6 +25,10 @@
   .navDiv nav {
     display: flex;
   }
+  .navDiv nav div:first-child,
+  .scrolledNav nav div:first-child {
+    width: 30%;
+  }
   .titleDiv {
     top: -35rem;
   }
@@ -52,7 +56,7 @@
   }
   .prices {
     top: -12rem;
-    right: 15rem;
+    right: 45%;
   }
   #where {
     display: block;
