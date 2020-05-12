@@ -31,6 +31,7 @@ const rotateDryer = TweenMax.fromTo(
   }
 ).delay(1);
 
+// Title animations
 const slide_title = TweenMax.from(".title", 0.3, {
   x: "100vw",
 }).delay(0.5);
@@ -233,6 +234,19 @@ addNext.addEventListener("click", () =>
   caroselSpin(add, "caroselDivsAdd", add_count)
 );
 
+// get lazy images
+lazyLoad = (arr) => {
+  let scrollTop = window.pageYOffset;
+  arr.forEach((img) => {
+    console.log("image", img.offsetTop);
+    console.log("window", window.innerHeight + scrollTop);
+    if (img.offsetTop < window.innerHeight + scrollTop) {
+      img.src = img.dataset.src;
+      img.classList.remove("lazy");
+    }
+  });
+};
+
 // GSAP
 
 // constroller for navbar fade in
@@ -306,6 +320,13 @@ for (let i = 0; i < services.length; i++) {
     offset: "-300px",
     reverse: false,
   })
+    // lazload
+    .on("progress", (event) => {
+      if (event.progress === 1) {
+        let imgs = document.querySelectorAll("img.lazy");
+        lazyLoad(imgs);
+      }
+    })
     .setTween(tween)
     .addTo(controller);
 }

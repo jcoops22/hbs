@@ -59,6 +59,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .header {
+    max-width: 224px;
+  }
   .prices {
     top: -26rem;
     right: 65%;
