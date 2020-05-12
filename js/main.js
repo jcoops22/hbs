@@ -19,17 +19,6 @@ let mobileNav = document.querySelector(".mobileNavMenu");
 let blowdryer = document.querySelector(".titleDiv img");
 let expanded = false;
 
-// changebackground = () => {
-//   overlayInd >= mensCuts.length - 1 ? (overlayInd = 0) : overlayInd++;
-//   overlay.style.backgroundImage = `url(${mensCuts[overlayInd]})`;
-
-//   console.log("heeayrere");
-//   console.log(mensCuts[0]);
-// };
-// setInterval(() => {
-//   changebackground();
-// }, 4000);
-
 // rotate the header icon
 const rotateDryer = TweenMax.fromTo(
   blowdryer,
@@ -103,6 +92,7 @@ const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut2_hdmaaq.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut3_npcccq.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1586363200/HBS/mensCuts/mensCut1_vfanvm.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086566/HBS/color/redorangehair_yzpmpn.jpg",
 ];
 const color = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086566/HBS/color/redorangehair_yzpmpn.jpg",
@@ -111,94 +101,93 @@ const color = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/blackhair_t2pocr.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1588086565/HBS/color/greenhair_vetnjs.jpg",
 ];
-const rotateClasses = ["left", "middle", "right"];
-let count = 2;
+const styles = [];
 
-function getNext() {
-  if (count >= mensCuts.length - 1) {
-    count = 0;
-    return count;
+// count for carosel
+let cuts_count = { count: 2 };
+let color_count = { count: 2 };
+
+// carosel spin function
+caroselSpin = (arr, section, counter) => {
+  let imgs = document.querySelectorAll(`.${section} img`);
+
+  if (imgs[0].classList.contains("middle1")) {
+    // imgs[0] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "-4";
+      imgs[1].style.zIndex = "-5";
+      imgs[2].style.zIndex = "-4";
+    }, 300);
+    setTimeout(() => {
+      counter.count++;
+      if (counter.count >= arr.length) {
+        counter.count = 0;
+        imgs[1].src = arr[counter.count];
+      }
+      imgs[1].src = arr[counter.count];
+      imgs[0].classList.add("right1");
+      imgs[0].classList.remove("middle1");
+      imgs[1].classList.add("left2");
+      imgs[1].classList.remove("right2");
+      imgs[2].classList.add("middle3");
+      imgs[2].classList.remove("left3");
+    }, 400);
+  } else if (imgs[0].classList.contains("right1")) {
+    // imgs[2] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "-4";
+      imgs[1].style.zIndex = "0";
+      imgs[2].style.zIndex = "-9";
+    }, 300);
+    setTimeout(() => {
+      counter.count++;
+      if (counter.count >= arr.length) {
+        counter.count = 0;
+        imgs[0].src = arr[counter.count];
+      }
+      imgs[0].src = arr[counter.count];
+      imgs[0].classList.add("left1");
+      imgs[0].classList.remove("right1");
+      imgs[1].classList.add("middle2");
+      imgs[1].classList.remove("left2");
+      imgs[2].classList.add("right3");
+      imgs[2].classList.remove("middle3");
+    }, 400);
   } else {
-    count++;
-    return count;
+    // imgs[1] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "2";
+      imgs[2].style.zIndex = "-8";
+      imgs[1].style.zIndex = "1";
+    }, 300);
+    setTimeout(() => {
+      counter.count++;
+      if (counter.count >= arr.length) {
+        counter.count = 0;
+        imgs[2].src = arr[counter.count];
+      }
+      imgs[2].src = arr[counter.count];
+      imgs[0].classList.add("middle1");
+      imgs[0].classList.remove("left1");
+      imgs[1].classList.add("right2");
+      imgs[1].classList.remove("middle2");
+      imgs[2].classList.add("left3");
+      imgs[2].classList.remove("right3");
+    }, 400);
   }
-}
+};
+// end rotate carosel function
 
-// rotate event right
-next.addEventListener(
-  "click",
-  () => {
-    if (img1.classList.contains("middle1")) {
-      // img1 is in the middle
-      setTimeout(() => {
-        img1.style.zIndex = "-4";
-        img2.style.zIndex = "-5";
-        img3.style.zIndex = "-4";
-      }, 300);
-      setTimeout(() => {
-        count++;
-        if (count >= mensCuts.length) {
-          count = 0;
-          img2.src = mensCuts[count];
-        }
-        img2.src = mensCuts[count];
-        img1.classList.add("right1");
-        img1.classList.remove("middle1");
-        img2.classList.add("left2");
-        img2.classList.remove("right2");
-        img3.classList.add("middle3");
-        img3.classList.remove("left3");
-      }, 400);
-    } else if (img1.classList.contains("right1")) {
-      // img3 is in the middle
-      setTimeout(() => {
-        img1.style.zIndex = "-4";
-        img2.style.zIndex = "0";
-        img3.style.zIndex = "-9";
-      }, 300);
-      setTimeout(() => {
-        count++;
-        if (count >= mensCuts.length) {
-          count = 0;
-          img1.src = mensCuts[count];
-        }
-        img1.src = mensCuts[count];
-        img1.classList.add("left1");
-        img1.classList.remove("right1");
-        img2.classList.add("middle2");
-        img2.classList.remove("left2");
-        img3.classList.add("right3");
-        img3.classList.remove("middle3");
-      }, 400);
-    } else {
-      // img2 is in the middle
-      setTimeout(() => {
-        img1.style.zIndex = "2";
-        img3.style.zIndex = "-8";
-        img2.style.zIndex = "1";
-      }, 300);
-      setTimeout(() => {
-        count++;
-        if (count >= mensCuts.length) {
-          count = 0;
-          img3.src = mensCuts[count];
-        }
-        img3.src = mensCuts[count];
-        img1.classList.add("middle1");
-        img1.classList.remove("left1");
-        img2.classList.add("right2");
-        img2.classList.remove("middle2");
-        img3.classList.add("left3");
-        img3.classList.remove("right3");
-      }, 400);
-    }
-  },
-  { passive: true }
-);
-
-let middle1 = document.querySelector(".middle1");
-let middle2 = document.querySelector(".middle2");
-let middle3 = document.querySelector(".middle3");
+let cutNext = document.querySelector("#next");
+cutNext.addEventListener("click", () => {
+  caroselSpin(mensCuts, "caroselDivs", cuts_count);
+});
+let colorNext = document.querySelector("#next_2");
+colorNext.addEventListener("click", () => {
+  caroselSpin(color, "caroselDivsColor", color_count);
+});
+// let styleNext = document.querySelector("#next_3");
+// styleNext.addEventListener("click", caroselSpin());
 
 // GSAP
 
@@ -305,29 +294,3 @@ for (let i = 0; i < services.length; i++) {
     .addTo(controller);
 }
 // change scroll location title end
-
-// navbar tweens
-
-let navHover = new TimelineMax({ paused: true });
-let navItems = document.querySelectorAll(".navDiv nav div a");
-// console.log(navItems);
-
-// navbar hover
-// for (let i = 1; i < navItems.length; i++) {
-//   navItems[i].addEventListener("mouseover", (e) => {
-//     e.target.classList.add("active");
-//   });
-//   navItems[i].addEventListener("mouseout", (e) => {
-//     e.target.classList.remove("active");
-//   });
-// }
-//   .to(".aboutOpen li", 0.2, {
-//     visibility: "visible",
-//     ease: Power1.easeOut,
-//   });
-// events
-
-// navbar events
-// about.addEventListener("mouseout", () => {
-//   tlhover.reverse();
-// });
