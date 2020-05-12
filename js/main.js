@@ -104,7 +104,6 @@ const mensCuts = [
 const color = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color4_wss56i.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color3_r8n6f4.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color2_apkclg.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309815/HBS/color/color1_ht258m.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250923/HBS/color/darkred_mllqrb.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250923/HBS/color/darkblue_soere1.jpg",
@@ -253,8 +252,8 @@ addNext.addEventListener("click", () =>
 lazyLoad = (arr) => {
   let scrollTop = window.pageYOffset;
   arr.forEach((img) => {
-    console.log("image", img.offsetTop);
-    console.log("window", window.innerHeight + scrollTop);
+    // console.log("image", img.offsetTop);
+    // console.log("window", window.innerHeight + scrollTop);
     if (img.offsetTop < window.innerHeight + scrollTop) {
       img.src = img.dataset.src;
       img.classList.remove("lazy");
