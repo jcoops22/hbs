@@ -43,9 +43,6 @@
   .mobileImg {
     display: none;
   }
-  .service {
-    /* height: 30rem; */
-  }
   .service_1_div {
     margin-bottom: -10rem;
   }
@@ -55,7 +52,7 @@
   }
   .prices {
     top: -12rem;
-    right: 10rem;
+    right: 15rem;
   }
   #where {
     display: block;
