@@ -19,6 +19,14 @@ let mobileNav = document.querySelector(".mobileNavMenu");
 let blowdryer = document.querySelector(".titleDiv img");
 let expanded = false;
 
+// assist with "Follow" keyframes
+let spans = document.querySelectorAll(".follow a span");
+let del = 0;
+spans.forEach((span) => {
+  span.style.animationDelay = del + "s";
+  del += Math.random() + 0.3;
+});
+// assist with "Follow" keyframes
 // rotate the header icon
 const rotateDryer = TweenMax.fromTo(
   blowdryer,

@@ -195,9 +195,38 @@ body {
   color: gold;
   list-style: url("./resources/Icons/navstar.svg");
 }
+.follow p {
+  color: #fff;
+  margin: 0;
+}
+.follow a span {
+  animation: instaShine 8.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+  margin-right: -0.3rem;
+  /* animation-name: instaShine;
+  animation-duration: 5.3s;
+  animation-iteration-count: infinite; */
+}
 .follow img {
   margin-right: 0.5rem;
 }
+@keyframes instaShine {
+  20% {
+    color: #fa7e1e;
+  }
+  40% {
+    color: #d62976;
+  }
+  60% {
+    color: #962fbf;
+  }
+  80% {
+    color: #4f5bd5;
+  }
+  100% {
+    /* color: #feda75; */
+  }
+}
+
 .videoDiv {
   height: 40rem;
 }
@@ -262,6 +291,7 @@ video {
   width: 2rem;
 }
 .title {
+  cursor: default;
   font-family: "Dancing Script", cursive;
   margin: 0 0.7rem;
   font-size: 2.7rem;
@@ -571,7 +601,7 @@ footer a:hover {
   margin: 8px 0 8px 2rem;
 }
 #footerContact p:nth-child(3):after {
-  content: url("./resources/Icons/instagram.svg");
+  content: url("./resources/Icons/instagramold.svg");
   margin: 0.5rem;
   height: 20px;
   width: 20px;
