@@ -51,6 +51,15 @@ hamburger.addEventListener(
   { passive: true }
 );
 
+// assist with "Follow" keyframes
+let spans = document.querySelectorAll(".follow a span");
+let del = 0;
+spans.forEach((span) => {
+  span.style.animationDelay = del + "s";
+  del += Math.random() + 0.3;
+});
+// assist with "Follow" keyframes End
+
 // about carosel
 let shanPics = [
   "./resources/shan.jpg",
@@ -58,41 +67,45 @@ let shanPics = [
   "./resources/shan3.jpg",
 ];
 let counter = 0;
-let carosel = document.querySelector("#shanImage");
-console.log(carosel.src);
+// let carosel = document.querySelector("#shanImage");
+// console.log(carosel.src);
 
-carosel.src = shanPics[counter];
-changePic = () => {
-  setInterval(() => {
-    counter >= shanPics.length - 1 ? (counter = 0) : counter++;
-    carosel.src = shanPics[counter];
-  }, 3000);
-};
-changePic();
+// carosel.src = shanPics[counter];
+// changePic = () => {
+//   setInterval(() => {
+//     counter >= shanPics.length - 1 ? (counter = 0) : counter++;
+//     carosel.src = shanPics[counter];
+//   }, 3000);
+// };
+// changePic();
 // setInterval(() => {
 //   changePic();
 // }, 3000);
 
 // fade in pictures
-let pic = document.querySelector("#shanImage");
-const fadePicIn = new TweenMax.from(pic, 1, {
-  opacity: 0,
-});
+// let pic = document.querySelector("#shanImage");
+// const fadePicIn = new TweenMax.from(pic, 1, {
+//   opacity: 0,
+// });
+
 // animate title onload
 let title = document.querySelector(".about_content h1");
 const slideTitleUp = new TweenMax.from(title, 0.8, {
+  opacity: 0,
   y: 300,
   ease: Back.easeOut.config(1.7),
-});
+}).delay(1);
+
 // animate stars onload
-let stars = document.querySelectorAll(".aboutHeader img");
+// let stars = document.querySelectorAll(".aboutHeader img");
+let stars = document.querySelectorAll("img[alt=star]");
 
 const slideInStar1 = new TweenMax.from(stars[0], 0.1, {
   x: 300,
-}).delay(1);
+}).delay(1.2);
 const slideInStar2 = new TweenMax.from(stars[1], 0.1, {
   x: 300,
 }).delay(1.3);
 const slideInStar3 = new TweenMax.from(stars[2], 0.1, {
   x: 300,
-}).delay(1.6);
+}).delay(1.4);

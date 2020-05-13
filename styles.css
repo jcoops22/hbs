@@ -10,6 +10,8 @@ font-family: 'Handlee', cursive;
 /* Photo by Shari Sirotnak on Unsplash */
 /* Photo by Guilherme Petri on Unsplash */
 /* Photo by Lauren Fleischmann on Unsplash */
+/* Replace gold  with: 
+#e0bc75 */
 
 * {
   box-sizing: border-box;
@@ -68,7 +70,7 @@ body {
   background-color: black;
 }
 .mobileHeader a {
-  color: gold;
+  color: #e0bc75;
   font-size: 30px;
   padding: 1rem;
   margin: 0;
@@ -91,7 +93,7 @@ body {
   left: 100vw;
   z-index: 2;
   width: 0;
-  border-top: 2px solid gold;
+  border-top: 2px solid #e0bc75;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   transform: translateX(80vw);
@@ -101,7 +103,7 @@ body {
   transition-duration: 0.3s;
 }
 .mobileNavMenu a:hover {
-  color: gold;
+  color: #e0bc75;
 }
 .mobileNavMenu a {
   color: #fff;
@@ -135,14 +137,14 @@ body {
   transition-duration: 0.3s;
 }
 .navDiv nav div a:hover {
-  color: gold;
+  color: #e0bc75;
 }
 .navDiv nav div:first-child {
   margin-right: auto;
   width: 20%;
 }
 .navDiv nav div:first-child a {
-  color: gold;
+  color: #e0bc75;
   font-size: 30px;
   padding: 1rem;
   margin: 0;
@@ -176,15 +178,14 @@ body {
   text-decoration: none;
 }
 .scrolledNav nav div a:hover {
-  color: gold;
+  color: #e0bc75;
 }
-
 .scrolledNav nav div:first-child {
   margin-right: auto;
   width: 20%;
 }
 .scrolledNav nav div:first-child a {
-  color: gold;
+  color: #e0bc75;
   font-size: 30px;
   padding: 1rem;
   margin: 0;
@@ -192,7 +193,7 @@ body {
   font-size: 24px;
 }
 .active {
-  color: gold;
+  color: #e0bc75;
   list-style: url("./resources/Icons/navstar.svg");
 }
 .follow p {
@@ -202,9 +203,6 @@ body {
 .follow a span {
   animation: instaShine 8.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
   margin-right: -0.3rem;
-  /* animation-name: instaShine;
-  animation-duration: 5.3s;
-  animation-iteration-count: infinite; */
 }
 .follow img {
   margin-right: 0.5rem;
@@ -267,7 +265,7 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
-  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg");
+  /* background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg"); */
   background-size: contain;
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -295,13 +293,13 @@ video {
   font-family: "Dancing Script", cursive;
   margin: 0 0.7rem;
   font-size: 2.7rem;
-  color: gold;
+  color: #e0bc75;
   text-shadow: 4px 1px 9px black;
 }
 .titleUnderline {
   width: 0;
   max-width: 320px;
-  background-color: gold;
+  background-color: #e0bc75;
   box-shadow: 3px 4px 3px 3px #ccc;
   height: 3px;
 }
@@ -329,7 +327,7 @@ video {
   width: 5rem;
   top: 7rem;
   left: -8rem;
-  background-color: gold;
+  background-color: #e0bc75;
 }
 #where {
   padding-left: 1rem;
@@ -360,9 +358,9 @@ video {
   align-items: flex-end;
 }
 .service_section_header {
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 3rem 0 0;
-  border-bottom: 3px solid gold;
+  border-bottom: 3px solid #e0bc75;
 }
 .service_1_div {
   display: flex;
@@ -386,7 +384,7 @@ video {
   min-width: 10rem;
   padding: 8px;
   background-color: #fff;
-  border: 3px solid gold;
+  border: 3px solid #e0bc75;
   opacity: 0.8;
 }
 .prices h4 {
@@ -429,7 +427,7 @@ video {
 #next_4:hover,
 #next_5:hover {
   animation-name: none;
-  background-image: url("./resources/Icons/nextGold.svg");
+  /* background-image: url("./resources/Icons/nextGold.svg"); */
 }
 .seeMore span:nth-child(2) {
   margin-top: 1rem;
@@ -585,10 +583,10 @@ footer h3 {
   color: white;
 }
 footer a {
-  color: gold;
+  color: #e0bc75;
 }
 footer a:visited {
-  color: gold;
+  color: #e0bc75;
 }
 footer a:hover {
   text-decoration: underline;
@@ -607,7 +605,7 @@ footer a:hover {
   width: 20px;
 }
 #footerAddress p {
-  color: gold;
+  color: #e0bc75;
 }
 .googleMaps {
   margin: 2rem 0;
