@@ -3,6 +3,15 @@
   .title {
     font-size: 3rem;
   }
+  .starsDiv {
+    margin-top: 2rem;
+  }
+  .caroselImg {
+    background-image: url("./resources/shan/salonbg.jpg");
+  }
+  .caroselImg img {
+    padding: 0 1rem;
+  }
 }
 /* mobile large */
 @media screen and (min-width: 411px) {

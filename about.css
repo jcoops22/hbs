@@ -12,9 +12,10 @@
 }
 .caroselImg {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 .caroselImg img {
+  /* margin: 0 1rem; */
   transition-duration: 0.3s;
   max-width: 100%;
 }
@@ -32,7 +33,6 @@
   margin-bottom: -368px;
   height: 368px;
   width: 100%;
-  /* background-color: #30afb5; */
   background-color: black;
   opacity: 0.5;
 }
