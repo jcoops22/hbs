@@ -265,7 +265,7 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
-  /* background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg"); */
+  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg");
   background-size: contain;
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -347,7 +347,7 @@ video {
   font-family: "Handlee", cursive;
 }
 .service:nth-child(odd) {
-  background-color: #ded;
+  background-color: #eee;
 }
 .service:last-child {
   position: relative;

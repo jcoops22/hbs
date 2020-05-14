@@ -5,6 +5,12 @@ let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
 
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth > 748) {
+    clearInterval(slide);
+    resetImages();
+  }
+});
 window.addEventListener("resize", () => {
   // stop the slide function
   if (window.innerWidth > 748) {
@@ -69,7 +75,7 @@ spans.forEach((span) => {
 let counter = 0;
 let shanImages = document.querySelectorAll(".caroselImg img");
 
-const fadePicIn = new TweenMax.from(shanImages[counter], 1, {
+const fadePicIn = new TweenMax.from(".caroselImg", 1, {
   opacity: 0,
 });
 
@@ -88,6 +94,8 @@ const slide = setInterval(() => {
   // slide pic
   changePic();
 }, 3000);
+
+// reset images to original position
 resetImages = () => {
   shanImages.forEach((img) => {
     img.style.transform = `translateX(0)`;
