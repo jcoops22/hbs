@@ -422,18 +422,24 @@ video {
   margin: 1.2rem 0 0 1rem;
   list-style: url("./resources/Icons/star.svg");
 }
-#next,
+.controls {
+  position: relative;
+  top: -10rem;
+  width: 230%;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+#next_1,
 #next_2,
 #next_3,
 #next_4,
-#next_5 {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  align-self: center;
-  position: absolute;
-  top: 28rem;
-  left: 140%;
+#next_5,
+#back_1,
+#back_2,
+#back_3,
+#back_4,
+#back_5 {
   min-height: 50px;
   min-width: 50px;
   background-image: url("./resources/Icons/next.svg");
@@ -441,18 +447,13 @@ video {
   cursor: pointer;
   transition-duration: 0.3s;
   z-index: 3;
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
-  animation-iteration-count: infinite;
 }
-#next:hover,
-#next_2:hover,
-#next_3:hover,
-#next_4:hover,
-#next_5:hover {
-  animation-name: none;
-  /* background-image: url("./resources/Icons/nextGold.svg"); */
+#back_1,
+#back_2,
+#back_3,
+#back_4,
+#back_5 {
+  transform: rotate(180deg);
 }
 .seeMore span:nth-child(2) {
   margin-top: 1rem;

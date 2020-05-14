@@ -237,7 +237,7 @@ caroselSpin = (arr, section, counter) => {
 };
 // end rotate carosel function
 
-let cutNext = document.querySelector("#next");
+let cutNext = document.querySelector("#next_1");
 cutNext.addEventListener("click", () => {
   caroselSpin(mensCuts, "caroselDivs", cuts_count);
 });
