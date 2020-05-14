@@ -6,6 +6,12 @@ let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
 
 window.addEventListener("resize", () => {
+  // stop the slide function
+  if (window.innerWidth > 748) {
+    clearInterval(slide);
+    resetImages();
+  }
+  // hamburger
   expanded = false;
   hamburger.style.transform = "rotate(0deg)";
   patty1.style.transform = "rotate(0deg)";
@@ -58,40 +64,35 @@ spans.forEach((span) => {
   span.style.animationDelay = del + "s";
   del += Math.random() + 0.3;
 });
-// assist with "Follow" keyframes End
 
 // fade in pictures
 let counter = 0;
 let shanImages = document.querySelectorAll(".caroselImg img");
-// console.log(shanImages[0]);
-// console.log(shanImages[1]);
-// console.log(shanImages[2]);
 
 const fadePicIn = new TweenMax.from(shanImages[counter], 1, {
   opacity: 0,
 });
-// fadePicIn.pause();
 
-// about carosel
-let shanPics = [
-  "./resources/shan/hairshow.jpg",
-  "./resources/shan/hairshow1.jpg",
-  "./resources/shan/hairshow2.jpg",
-];
 // change pic function
 changePic = () => {
   // check the counter
-  counter >= shanImages.length - 1 ? (counter = 0) : counter++;
+  counter >= shanImages.length - 2 ? (counter = 0) : counter++;
+  // slide the images
   shanImages.forEach((img) => {
     img.style.transform = `translateX(-${counter}00%)`;
   });
 };
 
 // call the change pic function
-setInterval(() => {
+const slide = setInterval(() => {
   // slide pic
   changePic();
 }, 3000);
+resetImages = () => {
+  shanImages.forEach((img) => {
+    img.style.transform = `translateX(0)`;
+  });
+};
 
 // animate title onload
 let title = document.querySelector(".about_content h1");

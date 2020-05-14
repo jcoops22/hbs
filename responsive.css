@@ -67,6 +67,12 @@
   #where {
     display: block;
   }
+  /* About */
+  .caroselImg {
+    background-image: url("./resources/shan/salonbg.jpg");
+    background-size: contain;
+    align-items: center;
+  }
 }
 @media screen and (min-width: 1024px) {
   .header {
