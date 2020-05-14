@@ -43,6 +43,11 @@
 img[alt="star"] {
   width: 1rem;
 }
+.about_hr {
+  width: 100%;
+  margin: 3rem auto;
+  opacity: 0.5;
+}
 .about_content {
   margin: 0;
   background-color: #fff;

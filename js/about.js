@@ -104,14 +104,15 @@ resetImages = () => {
 
 // animate title onload
 let title = document.querySelector(".about_content h1");
-const slideTitleUp = new TweenMax.from(title, 0.8, {
+let content = document.querySelector(".about_content div:nth-child(4)");
+console.log(content);
+const slideTitleUp = new TweenMax.from([title, content], 0.8, {
   opacity: 0,
   y: 300,
   ease: Back.easeOut.config(1.7),
 }).delay(1);
 
 // animate stars onload
-// let stars = document.querySelectorAll(".aboutHeader img");
 let stars = document.querySelectorAll("img[alt=star]");
 
 const slideInStar1 = new TweenMax.from(stars[0], 0.1, {

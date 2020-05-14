@@ -21,6 +21,9 @@
   .mobileImg img {
     width: 100%;
   }
+  .starsDiv {
+    margin-top: 4rem;
+  }
 }
 /* Tablet */
 @media screen and (min-width: 768px) {
