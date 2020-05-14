@@ -430,6 +430,11 @@ video {
   display: flex;
   justify-content: space-between;
 }
+.controls button {
+  outline-color: lightgrey;
+  padding: 1rem;
+  border: none;
+}
 #next_1,
 #next_2,
 #next_3,
