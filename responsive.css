@@ -77,10 +77,14 @@
     display: block;
   }
   /* About */
+  .about_content h1 {
+    font-size: 4.2rem;
+  }
   .caroselImg {
     background-image: url("./resources/shan/salonbg.jpg");
     background-size: contain;
     align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1024px) {

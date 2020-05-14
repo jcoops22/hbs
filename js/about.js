@@ -115,11 +115,11 @@ const slideTitleUp = new TweenMax.from(title, 0.8, {
 let stars = document.querySelectorAll("img[alt=star]");
 
 const slideInStar1 = new TweenMax.from(stars[0], 0.1, {
-  x: 300,
+  x: 1000,
 }).delay(1.2);
 const slideInStar2 = new TweenMax.from(stars[1], 0.1, {
-  x: 300,
+  x: 1000,
 }).delay(1.3);
 const slideInStar3 = new TweenMax.from(stars[2], 0.1, {
-  x: 300,
+  x: 1000,
 }).delay(1.4);
