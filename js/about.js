@@ -4,9 +4,11 @@ let patty1 = document.getElementById("patty1");
 let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let expanded = false;
+let profilePic = document.querySelector("#profilePicSection img");
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.innerWidth > 748) {
+  if (window.innerWidth > 768) {
+    profilePic.src = profilePic.dataset.src;
     clearInterval(slide);
     resetImages();
   }
@@ -14,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   // stop the slide function
   if (window.innerWidth > 748) {
+    profilePic.src = profilePic.dataset.src;
     clearInterval(slide);
     resetImages();
   }
@@ -105,7 +108,6 @@ resetImages = () => {
 // animate title onload
 let title = document.querySelector(".about_content h1");
 let content = document.querySelector(".about_content div:nth-child(4)");
-console.log(content);
 const slideTitleUp = new TweenMax.from([title, content], 0.8, {
   opacity: 0,
   y: 300,

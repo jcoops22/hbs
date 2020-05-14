@@ -19,13 +19,8 @@
   transition-duration: 0.3s;
   max-width: 100%;
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+#profilePicSection {
+  display: none;
 }
 .overlay_about {
   position: relative;
