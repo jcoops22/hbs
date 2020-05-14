@@ -126,7 +126,7 @@ body {
 .navDiv nav div {
   text-align: center;
   width: 8rem;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 .navDiv nav div a {
   color: #fff;
@@ -358,7 +358,6 @@ video {
 #where {
   padding-left: 1rem;
   opacity: 0;
-  /* width: 10vw; */
   display: none;
 }
 .service {

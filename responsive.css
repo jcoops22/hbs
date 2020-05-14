@@ -65,14 +65,12 @@
   .service_1 {
     padding: 5rem 0;
   }
-  .service_1_div {
-    margin-bottom: -10rem;
-  }
   .carosel {
     display: flex;
     min-height: 555px;
   }
   .prices {
+    display: none;
     top: -12rem;
     right: 45%;
   }
@@ -98,16 +96,12 @@
   .header {
     max-width: 224px;
   }
-  .prices {
-    top: -26rem;
-    right: 65%;
-  }
   #next,
   #next_2,
   #next_3,
   #next_4,
   #next_5 {
-    top: 16rem;
+    top: 20rem;
     left: 150%;
   }
 }
