@@ -60,33 +60,38 @@ spans.forEach((span) => {
 });
 // assist with "Follow" keyframes End
 
+// fade in pictures
+let counter = 0;
+let shanImages = document.querySelectorAll(".caroselImg img");
+// console.log(shanImages[0]);
+// console.log(shanImages[1]);
+// console.log(shanImages[2]);
+
+const fadePicIn = new TweenMax.from(shanImages[counter], 1, {
+  opacity: 0,
+});
+// fadePicIn.pause();
+
 // about carosel
 let shanPics = [
-  "./resources/shan.jpg",
-  "./resources/shan2.jpg",
-  "./resources/shan3.jpg",
+  "./resources/shan/hairshow.jpg",
+  "./resources/shan/hairshow1.jpg",
+  "./resources/shan/hairshow2.jpg",
 ];
-let counter = 0;
-// let carosel = document.querySelector("#shanImage");
-// console.log(carosel.src);
+// change pic function
+changePic = () => {
+  // check the counter
+  counter >= shanImages.length - 1 ? (counter = 0) : counter++;
+  shanImages.forEach((img) => {
+    img.style.transform = `translateX(-${counter}00%)`;
+  });
+};
 
-// carosel.src = shanPics[counter];
-// changePic = () => {
-//   setInterval(() => {
-//     counter >= shanPics.length - 1 ? (counter = 0) : counter++;
-//     carosel.src = shanPics[counter];
-//   }, 3000);
-// };
-// changePic();
-// setInterval(() => {
-//   changePic();
-// }, 3000);
-
-// fade in pictures
-// let pic = document.querySelector("#shanImage");
-// const fadePicIn = new TweenMax.from(pic, 1, {
-//   opacity: 0,
-// });
+// call the change pic function
+setInterval(() => {
+  // slide pic
+  changePic();
+}, 3000);
 
 // animate title onload
 let title = document.querySelector(".about_content h1");
