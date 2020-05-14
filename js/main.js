@@ -18,6 +18,7 @@ let patty2 = document.getElementById("patty2");
 let mobileNav = document.querySelector(".mobileNavMenu");
 let blowdryer = document.querySelector(".titleDiv img");
 let expanded = false;
+let nav_underline = document.querySelectorAll(".nav_underline");
 
 // assist with "Follow" keyframes
 let spans = document.querySelectorAll(".follow a span");
@@ -27,6 +28,7 @@ spans.forEach((span) => {
   del += Math.random() + 0.3;
 });
 // assist with "Follow" keyframes
+
 // rotate the header icon
 const rotateDryer = TweenMax.fromTo(
   blowdryer,
