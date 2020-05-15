@@ -1,269 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HairByShandel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <html lang="en">
+    <meta name="Description"
+      content="HairByShandel Shandel is a stylist, providing color, cuts, styles, extensions and more for men and women and kids. Located in Ogden, Utah">
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./about.css" />
     <link rel="stylesheet" href="./products.css" />
-    <link rel="stylesheet" href="./responsive.css" />
-    <link rel="icon" href="./resources/Icons/favicon.svg" />
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="icon" href="./resources/Icons/favicon.svg">
     <script src="./frameworks/scrollmagic/minified/ScrollMagic.min.js"></script>
     <script src="./frameworks/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
     <script src="./frameworks/minified/TweenMax.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Dancing+Script|Handlee|Orbitron&display=swap"
-      rel="stylesheet"
-    />
-    <title>Products</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Handlee|Orbitron&display=swap" rel="stylesheet">
   </head>
+  <!-- navbar -->
+  <div class="navDiv">
+    <!-- MOBILE VIEW -->
+    <div class="mobileHeader">
+      <a href="./index.html">HairByShandel <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"></a>
+    </div>
+    <div id="hamburger">
+      <div id="patty1"></div>
+      <div id="patty2"></div>
+    </div>
+    <!-- nav menu items -->
+    <div class="mobileNavMenu">
+      <div class="about active">
+        <li>
+          <a style="color: #e0bc75;" href="./index.html">Services</a>
+        </li>
+      </div>
+      <div class="about">
+        <a href="./about.html">About</a>
+      </div>
+      <div class="products">
+        <a href="./products.html">Products</a>
+      </div>
+      <div class="follow">
+        <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+          <img src="./resources/Icons/instagram.svg" width="20px" alt="instagram icon">
+          Follow</a>
+      </div>
+    </div>
+    <!-- TABLET VIEW -->
+    <nav>
+      <div class="header">
+        <a href="./index.html"> HairByShandel <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"></a>
+      </div>
+      <div class="about active">
+        <li>
+          <a style="color: #e0bc75;" href="./index.html">Services</a>
+        </li>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="about">
+        <a href="./about.html">About</a>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="products">
+        <a href="./products.html">Products</a>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="follow">
+        <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+          <img src="./resources/Icons/instagram.svg" width="20px" alt="instagram icon">
+          <span style="color: #fa7e1e;">F</span>
+          <span style="color: #d62976;">o</span>
+          <span style="color: #962fbf;">l</span>
+          <span style="color: #4f5bd5;">l</span>
+          <span style="color: #fa7e1e;">o</span>
+          <span style="color: #d62976;">w</span>
+        </a>
+        <div class="nav_underline insta_underline"></div>
+      </div>
+    </nav>
+  </div>
+  <!-- scrolled nav bar TABLET VIEW -->
+  <div class="scrolledNav">
+    <nav>
+      <div class="header">
+        <a href="./index.html"> HairByShandel <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"></a>
+      </div>
+      <div class="about active">
+        <li>
+          <a style="color: #e0bc75;" href="./index.html">Services</a>
+        </li>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="about">
+        <a href="./about.html">About</a>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="products">
+        <a href="./products.html">Products</a>
+        <div class="nav_underline"></div>
+      </div>
+      <div class="follow">
+        <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+          <img src="./resources/Icons/instagram.svg" width="20px" alt="instagram icon">
+          <span style="color: #fa7e1e;">F</span>
+          <span style="color: #d62976;">o</span>
+          <span style="color: #962fbf;">l</span>
+          <span style="color: #4f5bd5;">l</span>
+          <span style="color: #fa7e1e;">o</span>
+          <span style="color: #d62976;">w</span>
+        </a>
+        <p>see more <img src="./resources/Icons/uparrow.svg" alt="arrow to instagram link" width="20px"></p>
+      </div>
+    </nav>
+  </div>
+  <!-- end navbars -->
   <body>
-    <!-- navbar -->
-    <div class="navDiv">
-      <!-- MOBILE VIEW -->
-      <div class="mobileHeader">
-        <a href="./index.html"
-          >HairByShandel
-          <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"
-        /></a>
-      </div>
-      <div id="hamburger">
-        <div id="patty1"></div>
-        <div id="patty2"></div>
-      </div>
-      <!-- nav menu items -->
-      <div class="mobileNavMenu">
-        <div class="about active">
-          <li>
-            <a style="color: #e0bc75;" href="./index.html">Services</a>
-          </li>
-        </div>
-        <div class="about">
-          <a href="./about.html">About</a>
-        </div>
-        <div class="products">
-          <a href="./products.html">Products</a>
-        </div>
-        <div class="follow">
-          <a href="https://www.instagram.com/hairbyshandel/">
-            <img
-              src="./resources/Icons/instagram.svg"
-              target="_blank"
-              rel="noopener noreferrer"
-              width="20px"
-              alt="instagram icon"
-            />
-            Follow</a
-          >
-        </div>
-      </div>
-      <!-- TABLET VIEW -->
-      <nav>
-        <div class="header">
-          <a href="./index.html">
-            HairByShandel
-            <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"
-          /></a>
-        </div>
-        <div class="about" id="">
-          <a href="./index.html">Services</a>
-        </div>
-        <div class="about">
-          <a href="./about.html">About</a>
-        </div>
-        <div class="about active">
-          <li>
-            <a href="./products.html" style="color: #e0bc75;">Products</a>
-          </li>
-        </div>
-        <div class="follow">
-          <a
-            href="https://www.instagram.com/hairbyshandel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="./resources/Icons/instagram.svg"
-              width="20px"
-              alt="instagram icon"
-            />
-            <span style="color: #fa7e1e;">F</span>
-            <span style="color: #d62976;">o</span>
-            <span style="color: #962fbf;">l</span>
-            <span style="color: #4f5bd5;">l</span>
-            <span style="color: #fa7e1e;">o</span>
-            <span style="color: #d62976;">w</span>
-          </a>
-        </div>
-      </nav>
-    </div>
-    <!-- scrolled nav bar TABLET VIEW -->
-    <div class="scrolledNav">
-      <nav>
-        <div class="header">
-          <a href="./index.html">
-            HairByShandel
-            <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"
-          /></a>
-        </div>
-        <div class="about active">
-          <a href="./index.html">Services</a>
-        </div>
-        <div class="about">
-          <a href="./about.html">About</a>
-        </div>
-        <div class="about active">
-          <li>
-            <a href="./products.html" style="color: #e0bc75;">Products</a>
-          </li>
-        </div>
-        <div class="follow">
-          <a
-            href="https://www.instagram.com/hairbyshandel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="./resources/Icons/instagram.svg"
-              width="20px"
-              alt="instagram icon"
-            />
-            <span style="color: #fa7e1e;">F</span>
-            <span style="color: #d62976;">o</span>
-            <span style="color: #962fbf;">l</span>
-            <span style="color: #4f5bd5;">l</span>
-            <span style="color: #fa7e1e;">o</span>
-            <span style="color: #d62976;">w</span>
-          </a>
-          <p>
-            see more
-            <img
-              src="./resources/Icons/uparrow.svg"
-              alt="arrow to instagram link"
-              width="20px"
-            />
-          </p>
-        </div>
-      </nav>
-    </div>
-    <!-- end navbars -->
-    <!-- products -->
-    <div class="products_container">
-      <div class="products_header_div">
-        <div class="header_wrapper">
-          <div class="products_row">
-            <h1 class="products_header">Products</h1>
-            <img src="./resources/Icons/navstar.svg" alt="star" />
-            <img src="./resources/Icons/navstar.svg" alt="star" />
-            <img src="./resources/Icons/navstar.svg" alt="star" />
-          </div>
-          <div class="product_header_underline"></div>
-        </div>
-      </div>
+    <div class="product_container">
+      <h1>Products Page Here</h1>
       <div class="product_overlay"></div>
-      <p class="order_paragraph">
-        Order your product from Shandel online!
-        <a
-          href="https://shop.saloninteractive.com/store/HairbyShandel"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button id="order_now">
-            Order Online
-          </button></a
-        >
-      </p>
-      <hr style="width: 80%;" />
-      <div class="products_images_div">
-        <div class="img_1">
-          <h4>Kevin Murphy</h4>
-          <p>color.me line</p>
-          <img
-            src="./resources/products/kevinmurphy.jpeg"
-            alt="kevin murphy hair sav"
-          />
-        </div>
-        <div class="img_2">
-          <h4>Framar (tools/accessories)</h4>
-          <img
-            src="./resources/products/framar.jpeg"
-            alt="some quality product"
-          />
-        </div>
+      <div class="content">
+        <p>dafd;lfkjdsflksjdf;lksdfjsdl;kjsdl;fkdjsf</p>
+        <p>dafd;lfkjdsflksjdf;lksdfjsdl;kjsdl;fkdjsf</p>
+        <p>dafd;lfkjdsflksjdf;lksdfjsdl;kjsdl;fkdjsf</p>
+        <p>dafd;lfkjdsflksjdf;lksdfjsdl;kjsdl;fkdjsf</p>
       </div>
-      <section>
-        <h3>Commited to quality...</h3>
-        <text>
-          Shandel uses only top of the line quality products for your hair.
-          Shandel is a
-          <u>
-            licensed
-          </u>
-          seller of
-          <a
-            href="https://shop.saloninteractive.com/store/HairbyShandel/brands/1324"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Kevin Murphy</a
-          >
-
-          products. You can purchase any Kevin Murphy products at the salon or
-          have them ordered just for you! Check out HairByShandel's online store
-          <a href="https://shop.saloninteractive.com/store/HairbyShandel"
-            >here</a
-          >!
-        </text>
-      </section>
     </div>
-    <!-- footer section -->
-    <footer id="footer">
-      <div id="footerContact">
-        <h3>Contact Shandel:</h3>
-        <p>
-          Email:
-          <a href="mailto: hairbyshandel@gmail.com?subject=Getting In Touch"
-            >hairbyshandel@gmail.com</a
-          >
-        </p>
-        <p>
-          HairByShandel on
-          <a
-            href="https://www.instagram.com/hairbyshandel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram</a
-          >
-        </p>
-      </div>
-      <div id="footerAddress">
-        <h3>Address:</h3>
-        <p>2271 N 400 E</p>
-        <p>Ogden, UT</p>
-        <p>84414</p>
-        <div class="googleMaps">
-          <iframe
-            title="google maps"
-            width="300"
-            height="150"
-            frameborder="0"
-            style="border: 0;"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4Yr1TokMU4cRGdf7yNGllhU&key=AIzaSyBhgkuFckBTFwJOwnnsOffUff7-lGKa8SM"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-      <div class="copyrightDiv">
-        <p style="font-size: 0.8rem;">
-          <img
-            style="margin-right: 0.5rem;"
-            src="./resources/Icons/copyright.svg"
-            alt="copyright"
-            width="13"
-          />2020 HairByShandel
-        </p>
-      </div>
-    </footer>
     <script src="./js/products.js"></script>
   </body>
 </html>

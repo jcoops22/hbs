@@ -50,3 +50,35 @@ hamburger.addEventListener(
   },
   { passive: true }
 );
+
+// overlay effect
+let overlay = document.querySelector(".product_overlay");
+let header = document.querySelector(".product_container h1");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 0) {
+    overlay.style.opacity = 0;
+    header.style.opacity = 0;
+  } else {
+    overlay.style.opacity = "0.7";
+    header.style.opacity = 1;
+  }
+});
+// end overlay effect
+
+// sticky navbar
+const navbarOffController = new ScrollMagic.Controller();
+const navbarController = new ScrollMagic.Controller();
+const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
+  position: "fixed",
+  height: "4rem",
+  zIndex: 3,
+  display: "flex",
+});
+const navbarScene = new ScrollMagic.Scene({
+  triggerElement: "#servicesHeaderDiv",
+  triggerHook: "onCenter",
+  offset: 190,
+})
+  .setTween(tweenNavbar)
+  .addTo(navbarController);
+// sticky navbar end
