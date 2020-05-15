@@ -7,7 +7,6 @@ let img3 = document.querySelector(".div3 img");
 let div1 = document.querySelector(".div1");
 let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
-let next = document.querySelector("#next");
 let overlay = document.querySelector(".overlay");
 let overlayInd = 0;
 let titleUnderline = document.querySelector(".titleUnderline");
@@ -96,6 +95,55 @@ hamburger.addEventListener(
   },
   { passive: true }
 );
+
+// show and hide the prices box
+let show = document.querySelector("#show_prices_div input");
+let prices_div = document.querySelector(".hidden_prices_div");
+let ind = 0;
+priceHTML = [
+  `<h4>Men's Cuts <img src="./resources/Icons/clippers.svg" alt="clippers" width="20px"></h4>
+    <ul>
+      <li>Haircut $25</li>
+    </ul>
+  `,
+  `<h4>Color <img src="./resources/Icons/colorbrush.svg" alt="color brush" width="20px"></h4>
+    <h5>($50 per hour)</h5>
+    <ul>
+      <li>Balayage $150 +</li>
+      <li>Baby-lights $175 +</li>
+      <li>Solid $130 +</li>
+      <li>Roots Service $95 +</li>
+      <li>Color Correction $200 +</li>
+    </ul>
+  `,
+  `<h4>Style <img src="./resources/Icons/scissors.svg" alt="shears" width="20px"></h4>
+      <ul>
+        <li>Blowout $50 +</li>
+        <li>Up-do $65 +</li>
+      </ul>
+  `,
+  `<h4>Extensions <img src="./resources/Icons/extensions.svg" alt="extensions" width="20px"></h4>
+    <ul>
+      <li>Installation $150 +</li>
+      <li>Move-up $100 +</li>
+    </ul>
+  `,
+  `<h4>Add-on's <img src="./resources/Icons/toner.svg" alt="shiney hair icon" width="20px"></h4>
+    <ul>
+      <li>Shine $30 +</li>
+      <li>Toner $30 +</li>
+    </ul>
+  `,
+];
+// show prices on check
+show.addEventListener("click", () => {
+  if (show.checked) {
+    prices_div.innerHTML = priceHTML[ind];
+    prices_div.style.top = "4rem";
+  } else {
+    prices_div.style.top = "-100rem";
+  }
+});
 
 const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
@@ -237,7 +285,7 @@ caroselSpin = (arr, section, counter) => {
 };
 // end rotate carosel function
 
-let cutNext = document.querySelector("#next");
+let cutNext = document.querySelector("#next_1");
 cutNext.addEventListener("click", () => {
   caroselSpin(mensCuts, "caroselDivs", cuts_count);
 });
@@ -299,7 +347,14 @@ const navbarScene = new ScrollMagic.Scene({
 
 // hide sticky navbar
 const tweenNavbarOff = TweenMax.to(
-  [".scrolledNav", "#services_header", "#underline", "#where"],
+  [
+    ".scrolledNav",
+    "#services_header",
+    "#underline",
+    "#where",
+    "#show_prices_div",
+    ".hidden_prices_div",
+  ],
   ".3",
   {
     opacity: "0",
@@ -315,9 +370,13 @@ const navbarOffScene = new ScrollMagic.Scene({
 // hide sticky navbar end
 
 // sticky services header
-const tweenHeader = TweenMax.to(["#services_header", "#underline"], ".2", {
-  x: 130,
-});
+const tweenHeader = TweenMax.to(
+  ["#services_header", "#underline", "#show_prices_div"],
+  ".2",
+  {
+    x: 130,
+  }
+);
 const sceneHeader = new ScrollMagic.Scene({
   triggerElement: "#servicesHeaderDiv",
   // triggerHook: "onLeave",
@@ -375,8 +434,20 @@ for (let i = 0; i < services.length; i++) {
         event.target.triggerElement().classList.contains("top")
           ? (where.innerHTML = locations[0])
           : (where.innerHTML = locations[i - 1]);
+        prices_div.style.opacity = 0;
+        ind = i - 1;
+        setTimeout(() => {
+          prices_div.innerHTML = priceHTML[ind];
+          prices_div.style.opacity = 1;
+        }, 300);
       } else if (event.progress === 1) {
         where.innerHTML = locations[i];
+        prices_div.style.opacity = 0;
+        ind = i;
+        setTimeout(() => {
+          prices_div.innerHTML = priceHTML[ind];
+          prices_div.style.opacity = 1;
+        }, 300);
       }
     })
     .setTween(whereTween)
