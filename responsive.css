@@ -107,4 +107,8 @@
     top: 20rem;
     left: 150%;
   }
+  .hidden_prices_div {
+    width: 18rem;
+    left: calc(100% - 18.1rem);
+  }
 }

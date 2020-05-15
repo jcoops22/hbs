@@ -50,6 +50,10 @@ const underline_title = TweenMax.to(titleUnderline, 0.3, {
 
 // hide open hamburger on resize
 window.addEventListener("resize", () => {
+  if (window.innerWidth < 768) {
+    show.checked = false;
+    prices_div.style.top = "-100rem";
+  }
   expanded = false;
   hamburger.style.transform = "rotate(0deg)";
   patty1.style.transform = "rotate(0deg)";
@@ -434,12 +438,17 @@ for (let i = 0; i < services.length; i++) {
         event.target.triggerElement().classList.contains("top")
           ? (where.innerHTML = locations[0])
           : (where.innerHTML = locations[i - 1]);
-        prices_div.style.opacity = 0;
-        ind = i - 1;
-        setTimeout(() => {
-          prices_div.innerHTML = priceHTML[ind];
-          prices_div.style.opacity = 1;
-        }, 300);
+        // hide prices div when scrolled to the top
+        if (event.target.triggerElement().classList.contains("top")) {
+          prices_div.style.opacity = 0;
+        } else {
+          prices_div.style.opacity = 0;
+          ind = i - 1;
+          setTimeout(() => {
+            prices_div.innerHTML = priceHTML[ind];
+            prices_div.style.opacity = 1;
+          }, 300);
+        }
       } else if (event.progress === 1) {
         where.innerHTML = locations[i];
         prices_div.style.opacity = 0;
