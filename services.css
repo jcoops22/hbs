@@ -14,7 +14,8 @@
 }
 .services_overlay {
   transition-duration: 0.7s;
-  height: 40rem;
+  /* height: 40rem; */
+  height: 120vh;
   width: 100%;
   position: absolute;
   top: 0;
@@ -47,4 +48,6 @@
   .services_overlay {
     height: 65rem;
   }
+}
+@media screen and (min-width: 768px) {
 }
