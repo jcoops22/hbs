@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<head>
+  <title>HairByShandel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <html lang="en">
+  <meta name="Description"
+    content="HairByShandel Shandel is a stylist, providing color, cuts, styles, extensions and more for men and women and kids. Located in Ogden, Utah">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./services.css" />
+  <link rel="stylesheet" href="./responsive.css">
+  <link rel="icon" href="./resources/Icons/favicon.svg">
+  <script src="./frameworks/scrollmagic/minified/ScrollMagic.min.js"></script>
+  <script src="./frameworks/scrollmagic/minified/plugins/animation.gsap.min.js"></script>
+  <script src="./frameworks/minified/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Handlee|Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- navbar -->
+<div class="navDiv">
+  <!-- MOBILE VIEW -->
+  <div class="mobileHeader">
+    <a href="./index.html">HairByShandel <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"></a>
+  </div>
+  <div id="hamburger">
+    <div id="patty1"></div>
+    <div id="patty2"></div>
+  </div>
+  <!-- nav menu items -->
+  <div class="mobileNavMenu">
+    <div class="about active">
+      <li>
+        <a style="color: #e0bc75;" href="./services.html">Services</a>
+      </li>
+    </div>
+    <div class="about">
+      <a href="./about.html">About</a>
+    </div>
+    <div class="products">
+      <a href="./products.html">Products</a>
+    </div>
+    <div class="follow">
+      <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+        <img src="./resources/Icons/instagram.svg" width="20px" alt="instagram icon">
+        Follow</a>
+    </div>
+  </div>
+  
+</div>
+<!-- scrolled nav bar TABLET VIEW -->
+<div class="scrolledNav">
+  <nav>
+    <div class="header">
+      <a href="./index.html"> HairByShandel <img src="./resources/Icons/cutandcomb.svg" alt="comb" width="26px"></a>
+    </div>
+    <div class="about active">
+      <li>
+        <a style="color: #e0bc75;" href="./services.html">Services</a>
+      </li>
+      <div class="nav_underline"></div>
+    </div>
+    <div class="about">
+      <a href="./about.html">About</a>
+      <div class="nav_underline"></div>
+    </div>
+    <div class="products">
+      <a href="./products.html">Products</a>
+      <div class="nav_underline"></div>
+    </div>
+    <div class="follow">
+      <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+        <img src="./resources/Icons/instagram.svg" width="20px" alt="instagram icon">
+        <span style="color: #fa7e1e;">F</span>
+        <span style="color: #d62976;">o</span>
+        <span style="color: #962fbf;">l</span>
+        <span style="color: #4f5bd5;">l</span>
+        <span style="color: #fa7e1e;">o</span>
+        <span style="color: #d62976;">w</span>
+      </a>
+      <p>see more <img src="./resources/Icons/uparrow.svg" alt="arrow to instagram link" width="20px"></p>
+    </div>
+  </nav>
+</div>
+<!-- end navbars -->
+<div class="services_banner">
+  <h1>Services</h1>
+  <p>View various haircare services offered by Shandel.</p>
+  <p>View various haircare services offered by Shandel.</p>
+  <p>View various haircare services offered by Shandel.</p>
+</div>
+<div class="services_overlay"></div>
+<div class="services_downarrow downarrow">
+  <a href="#ss">
+    <img src="./resources/Icons/downarrow.svg" alt="downarrow" width="48px">
+  </a>
+</div>
+<!-- services -->
+<section id="ss" class="services_section">
+  <!-- header -->
+  <div id="servicesHeaderDiv">
+    <h2 id="services_header">Services</h2>
+    <div id="underline"></div>
+    <p id="where"></p>
+    <div id="show_prices_div">
+      <label for="prices">Show Prices</label>
+      <input type="checkbox" name="prices">
+    </div>
+  </div>
+  <div class="hidden_prices_div">
+  </div>
+  <!-- service one  (mens cuts)-->
+  <div class="service service_1 top">
+    <h2 class="service_section_header">Mens Haircuts</h2>
+    <div class="service_1_div">
+      <!-- carosel -->
+      <div class="carosel">
+        <div class="floral">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+        </div>
+        <div class="caroselDivs">
+          <div class="div1">
+            <img class="left1 img1 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg"
+              src="" alt="male haircut">
+          </div>
+          <div class="div2">
+            <img class="middle2 img2 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg"
+              src="" alt="male haircut">
+          </div>
+          <div class="div3">
+            <img class="right3 img3 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg"
+              src="" alt="male haircut">
+          </div>
+        </div>
+        <section class="controls">
+          <button id="back_1"></button>
+          <button id="next_1"></button>
+        </section>
+      </div>
+      <!-- mobile image -->
+      <div class="mobileImg">
+        <img class="middle2 img2"
+          src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg"
+          alt="male haircut">
+      </div>
+      <div class="prices">
+        <h4>Men's Cuts <img src="./resources/Icons/clippers.svg" alt="clippers" width="20px"></h4>
+        <ul>
+          <li>Haircut $25</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- service two (color) -->
+  <div class="service service_1">
+    <h2 class="service_section_header">Color</h2>
+    <div class="service_1_div">
+      <!-- carosel -->
+      <div class="carosel">
+        <div class="floral">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+        </div>
+        <div class="caroselDivsColor">
+          <div class="div1">
+            <img class="left1 img1 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color4_wss56i.jpg"
+              src="" alt="colorful hair">
+          </div>
+          <div class="div2">
+            <img class="middle2 img2 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color3_r8n6f4.jpg"
+              src="" alt="colorful hair">
+          </div>
+          <div class="div3">
+            <img class="right3 img3 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309815/HBS/color/color1_ht258m.jpg"
+              src="" alt="colorful hair">
+          </div>
+        </div>
+        <section class="controls">
+          <button id="back_2"></button>
+          <button id="next_2"></button>
+        </section>
+      </div>
+      <!-- mobile image -->
+      <div class="mobileImg">
+        <img class="images"
+          src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color3_r8n6f4.jpg"
+          alt="colorful hair">
+      </div>
+      <div class="prices">
+        <h4>Color <img src="./resources/Icons/colorbrush.svg" alt="color brush" width="20px"></h4>
+        <h5>($50 per hour)</h5>
+        <ul>
+          <li>Balayage $150 +</li>
+          <li>Baby-lights $175 +</li>
+          <li>Solid $130 +</li>
+          <li>Roots Service $95 +</li>
+          <li>Color Correction $200 +</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- service three (style)-->
+  <div class="service service_1">
+    <h2 class="service_section_header">Styles</h2>
+    <div class="service_1_div">
+      <!-- carosel -->
+      <div class="carosel">
+        <div class="floral">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+        </div>
+        <div class="caroselDivsStyle">
+          <div class="div1">
+            <img class="left1 img1 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589252489/HBS/style/style8_igy5ui.jpg"
+              src="" alt="stylish hair">
+          </div>
+          <div class="div2">
+            <img class="middle2 img2 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589252487/HBS/style/style6_ooxfj9.jpg"
+              src="" alt="stylish hair">
+          </div>
+          <div class="div3">
+            <img class="right3 img3 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589252488/HBS/style/style9_q0djtp.jpg"
+              src="" alt="stylish hair">
+          </div>
+        </div>
+        <section class="controls">
+          <button id="back_3"></button>
+          <button id="next_3"></button>
+        </section>
+      </div>
+      <!-- mobile image -->
+      <div class="mobileImg">
+        <img class="images"
+          src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589252487/HBS/style/style6_ooxfj9.jpg"
+          alt="stylish hair">
+      </div>
+      <div class="prices">
+        <h4>Style <img src="./resources/Icons/scissors.svg" alt="shears" width="20px"></h4>
+        <ul>
+          <li>Blowout $50 +</li>
+          <li>Up-do $65 +</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- service four (extensions)-->
+  <div class="service service_1">
+    <h2 class="service_section_header">Extensions</h2>
+    <div class="service_1_div">
+      <!-- carosel -->
+      <div class="carosel">
+        <div class="floral">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+        </div>
+        <div class="caroselDivsExt">
+          <div class="div1">
+            <img class="left1 img1 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589251047/HBS/extensions/extensions_k4frzo.jpg"
+              src="" alt="extensions">
+          </div>
+          <div class="div2">
+            <img class="middle2 img2 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589251045/HBS/extensions/ext6_lf2fc4.jpg"
+              src="" alt="extensions">
+          </div>
+          <div class="div3">
+            <img class="right3 img3 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589251044/HBS/extensions/ext_b02wit.jpg"
+              src="" alt="extensions">
+          </div>
+        </div>
+        <section class="controls">
+          <button id="back_4"></button>
+          <button id="next_4"></button>
+        </section>
+      </div>
+      <!-- mobile image -->
+      <div class="mobileImg">
+        <img class="images"
+          src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589251045/HBS/extensions/ext6_lf2fc4.jpg"
+          alt="hair extensions">
+      </div>
+      <div class="prices">
+        <h4>Extensions <img src="./resources/Icons/extensions.svg" alt="extensions" width="20px"></h4>
+        <ul>
+          <li>Installation $150 +</li>
+          <li>Move-up $100 +</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- service five (add ons) -->
+  <div class="service service_1">
+    <h2 class="service_section_header">Additional Services</h2>
+    <div class="service_1_div">
+      <!-- carosel -->
+      <div class="carosel">
+        <div class="floral">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+          <img src="./resources/Icons/floral.svg" alt="decoration">
+        </div>
+        <div class="caroselDivsAdd">
+          <div class="div1">
+
+            <img class="left1 img1 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589254012/HBS/addons/addon4_yhudkg.jpg"
+              src="" alt="add on services">
+          </div>
+          <div class="div2">
+
+            <img class="middle2 img2 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589254008/HBS/addons/addon3_ngasj2.jpg"
+              src="" alt="add on services">
+          </div>
+          <div class="div3">
+
+            <img class="right3 img3 lazy"
+              data-src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589254006/HBS/addons/addon6_dopctc.jpg"
+              src="" alt="add on services">
+          </div>
+        </div>
+        <section class="controls">
+          <button id="back_5"></button>
+          <button id="next_5"></button>
+        </section>
+      </div>
+      <!-- mobile image -->
+      <div class="mobileImg">
+        <img class="images"
+          src="https://res.cloudinary.com/drucvvo7f/image/upload/v1589254008/HBS/addons/addon3_ngasj2.jpg"
+          alt="shiny hair">
+      </div>
+      <div class="prices">
+        <h4>Add-on's <img src="./resources/Icons/toner.svg" alt="shiney hair icon" width="20px"></h4>
+        <ul>
+          <li>Shine $30 +</li>
+          <li>Toner $30 +</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- price disclaimer -->
+<p style="margin: 1rem">*All prices subject to consultation</p>
+<!-- footer section -->
+<footer id="footer">
+  <div id="footerContact">
+    <h3>Contact Shandel:</h3>
+    <p>Email:
+      <a href="mailto: hairbyshandel@gmail.com?subject=Getting In Touch">hairbyshandel@gmail.com</a>
+    </p>
+    <p>HairByShandel on <a href="https://www.instagram.com/hairbyshandel/" target="_blank" rel="noopener noreferrer">
+        Instagram</a></p>
+  </div>
+  <div id="footerAddress">
+    <h3>Address:</h3>
+    <p>2271 N 400 E</p>
+    <p>Ogden, UT</p>
+    <p>84414</p>
+    <div class="googleMaps">
+      <iframe title="google maps" width="300" height="150" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ4Yr1TokMU4cRGdf7yNGllhU&key=AIzaSyBhgkuFckBTFwJOwnnsOffUff7-lGKa8SM"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="copyrightDiv">
+    <p style="font-size: .8rem; "> <img style="margin-right: 0.5rem;" src="./resources/Icons/copyright.svg"
+        alt="copyright" width="13">2020 HairByShandel</p>
+  </div>
+</footer>
+<script src="./js/serivces.js"></script>
+</body>
+
+</html>
