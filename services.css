@@ -5,17 +5,15 @@
   /* border: 1px solid red; */
 }
 .services_banner h1 {
-  transition-duration: 0.7s;
   position: relative;
   z-index: 2;
   padding-left: 1rem;
   color: #e0bc75;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 .services_overlay {
-  transition-duration: 0.7s;
   /* height: 40rem; */
-  height: 120vh;
+  height: 150vh;
   width: 100%;
   position: absolute;
   top: 0;
@@ -25,16 +23,18 @@
   opacity: 0.8;
 }
 .services_downarrow {
-  transition-duration: 0.7s;
-  top: 0;
+  top: 3rem;
   z-index: 2;
 }
-/* media queries */
-@media screen and (min-width: 768px) {
-  .navDiv {
-    display: none;
-  }
+.services_banner h1,
+.services_overlay,
+.services_downarrow {
+  transition-duration: 0.6s;
 }
+.services_intro {
+  margin-top: 4rem;
+}
+/* media queries */
 @media screen and (min-width: 411px) {
   .services_banner {
     height: 40rem;
@@ -50,4 +50,20 @@
   }
 }
 @media screen and (min-width: 768px) {
+  .navDiv {
+    display: none;
+  }
+  .services_banner {
+    padding-top: 3rem;
+  }
+  .services_banner h1 {
+    font-size: 7rem;
+    margin-left: 20%;
+  }
+  .services_intro p {
+    margin-left: 8rem;
+  }
+  .services_downarrow {
+    /* top: 10rem; */
+  }
 }

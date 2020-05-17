@@ -83,7 +83,7 @@ let overlay = document.querySelector(".services_overlay");
 let services_h1 = document.querySelector(".services_banner h1");
 let downarrow = document.querySelector(".services_downarrow");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 50) {
+  if (window.pageYOffset > 10) {
     services_h1.style.opacity = 0;
     overlay.style.opacity = 0;
     downarrow.style.opacity = 0;
