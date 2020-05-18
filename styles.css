@@ -137,7 +137,7 @@ body {
   transition-duration: 0.3s;
 }
 .navDiv nav div a:hover {
-  color: #e0bc75;
+  /* color: #e0bc75; */
 }
 .navDiv nav div:hover .nav_underline {
   width: 70%;
@@ -160,7 +160,7 @@ body {
   margin-left: 15%;
   width: 0;
   height: 3px;
-  transition-delay: 0.1s;
+  /* transition-delay: 0.3s; */
   transition-timing-function: ease-out;
   background-color: #e0bc75;
 }
@@ -372,7 +372,15 @@ video {
   font-family: "Handlee", cursive;
 }
 .service:nth-child(odd) {
-  background-color: #eee;
+  /* background-color: #eee; */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(238, 238, 238, 1) 20%,
+    rgba(238, 238, 238, 1) 84%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 .service:last-child {
   position: relative;
