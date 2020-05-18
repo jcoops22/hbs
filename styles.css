@@ -140,7 +140,7 @@ body {
   /* color: #e0bc75; */
 }
 .navDiv nav div:hover .nav_underline {
-  width: 70%;
+  opacity: 1;
 }
 .navDiv nav div:first-child {
   margin-right: auto;
@@ -158,9 +158,10 @@ body {
 .scrolledNav .nav_underline {
   margin-right: auto;
   margin-left: 15%;
-  width: 0;
+  width: 70%;
   height: 3px;
-  /* transition-delay: 0.3s; */
+  opacity: 0;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
   background-color: #e0bc75;
 }
@@ -197,7 +198,7 @@ body {
   transition-duration: 0.1s;
 }
 .scrolledNav nav div:hover .nav_underline {
-  width: 70%;
+  opacity: 1;
 }
 .scrolledNav nav div a {
   color: #fff;
