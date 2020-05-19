@@ -33,7 +33,8 @@ window.addEventListener("scroll", () => {
 });
 // end serivices header/banner
 // show and hide the prices box
-let show = document.querySelector("#show_prices_div input");
+let show = document.querySelector("#show_prices_div span img");
+let checked = false;
 let prices_div = document.querySelector(".hidden_prices_div");
 let ind = 0;
 priceHTML = [
@@ -73,11 +74,20 @@ priceHTML = [
 ];
 // show prices on check
 show.addEventListener("click", () => {
-  if (show.checked) {
+  if (!checked) {
+    console.log("bawls");
+    checked = true;
     prices_div.innerHTML = priceHTML[ind];
     prices_div.style.top = "4rem";
+    show.style.transform = "scale(0)";
+    setTimeout(() => {
+      show.style.transform = "scale(1)";
+      show.src = "./resources/Icons/check.svg";
+    }, 300);
   } else {
+    checked = false;
     prices_div.style.top = "-100rem";
+    show.src = "./resources/Icons/circle.svg";
   }
 });
 

@@ -140,9 +140,14 @@
   z-index: 2;
 }
 #show_prices_div {
-  display: none;
+  display: flex;
   position: relative;
   left: -8rem;
+  align-items: center;
+}
+#show_prices_div img {
+  transition-duration: 0.3s;
+  margin-left: 0.3rem;
 }
 .prices {
   position: relative;
@@ -403,7 +408,10 @@
     min-height: 555px;
   }
   #show_prices_div {
-    display: block;
+    /* display: block; */
+  }
+  #show_prices_div span img {
+    width: 20px;
   }
   .prices {
     display: none;
