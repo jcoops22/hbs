@@ -1,0 +1,102 @@
+.videoDiv {
+  height: 40rem;
+}
+#vid {
+  display: none;
+}
+video {
+  width: 100vw;
+  height: 40rem;
+  position: absolute;
+  object-fit: fill;
+  z-index: -3;
+}
+.downarrow {
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
+  animation-iteration-count: infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: translateY(4px);
+  }
+  50% {
+    /* transform: translateY(-4px); */
+  }
+  100% {
+    transform: translateY(-4px);
+  }
+}
+.overlay {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 14%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg");
+  background-size: contain;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  z-index: -2;
+  opacity: 0.8;
+}
+.titleDiv {
+  position: relative;
+  top: -33rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+.titleDiv img {
+  width: 2rem;
+}
+.title {
+  cursor: default;
+  font-family: "Dancing Script", cursive;
+  margin: 0 0.7rem;
+  font-size: 2.7rem;
+  color: #e0bc75;
+  text-shadow: 4px 1px 9px black;
+}
+.titleUnderline {
+  width: 0;
+  max-width: 320px;
+  background-color: #e0bc75;
+  box-shadow: 3px 4px 3px 3px #ccc;
+  height: 3px;
+}
+
+/* media queries */
+@media screen and (min-width: 360px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 411px) {
+}
+@media screen and (min-width: 768px) {
+  .titleDiv {
+    top: -35rem;
+  }
+  .titleDiv img {
+    width: 3rem;
+  }
+  .title {
+    font-size: 4rem;
+  }
+  .titleUnderline {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+}

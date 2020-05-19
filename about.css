@@ -73,16 +73,6 @@ img[alt="star"] {
 }
 .about_content a {
   transition-duration: 0.2s;
-  color: #e0bc75;
-  border-bottom: 1px solid #30afb5;
-}
-.about_content a:visited {
-  color: #e0bc75;
-  text-decoration: underline;
-}
-.about_content a:hover {
-  color: #30afb5;
-  border-bottom: 1px solid #e0bc75;
 }
 .about_content ul {
   margin: 2rem 0;
@@ -95,4 +85,32 @@ img[alt="star"] {
 .about_content p {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+/* media queries */
+@media screen and (min-width: 360px) {
+  .starsDiv {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 411px) {
+  .starsDiv {
+    margin-top: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about_content h1 {
+    font-size: 4.2rem;
+  }
+  .caroselImg {
+    background-image: url("./resources/shan/salonbg.jpg");
+    background-size: contain;
+    align-items: center;
+    justify-content: center;
+  }
+  #profilePicSection {
+    display: block;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
 }

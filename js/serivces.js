@@ -1,5 +1,4 @@
 // REG JS
-let video = document.querySelector("#vid");
 // carosel
 let img1 = document.querySelector(".div1 img");
 let img2 = document.querySelector(".div2 img");
@@ -7,77 +6,15 @@ let img3 = document.querySelector(".div3 img");
 let div1 = document.querySelector(".div1");
 let div2 = document.querySelector(".div2");
 let div3 = document.querySelector(".div3");
-let overlayInd = 0;
-let titleUnderline = document.querySelector(".titleUnderline");
-// nav bar hamburger
-let hamburger = document.getElementById("hamburger");
-let patty1 = document.getElementById("patty1");
-let patty2 = document.getElementById("patty2");
-let mobileNav = document.querySelector(".mobileNavMenu");
-// let blowdryer = document.querySelector(".titleDiv img");
-let expanded = false;
-let nav_underline = document.querySelectorAll(".nav_underline");
 
-// assist with "Follow" keyframes
-let spans = document.querySelectorAll(".follow a span");
-let del = 0;
-spans.forEach((span) => {
-  span.style.animationDelay = del + "s";
-  del += Math.random() + 0.3;
-});
-// assist with "Follow" keyframes
-
-// hide open hamburger on resize
+// hide prices on resize
 window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
     show.checked = false;
     prices_div.style.top = "-100rem";
   }
-  expanded = false;
-  hamburger.style.transform = "rotate(0deg)";
-  patty1.style.transform = "rotate(0deg)";
-  patty1.style.top = "12px";
-  patty2.style.top = "19px";
-  // animate slide in nav menu
-  mobileNav.style.transform = "translate(80vw)";
-  mobileNav.style.width = 0;
-  setTimeout(() => {
-    mobileNav.style.display = "none";
-  }, 600);
 });
-// animate hamburger
-hamburger.addEventListener(
-  "click",
-  (e) => {
-    if (!expanded) {
-      expanded = true;
-      // animate hamburger
-      hamburger.style.transform = "rotate(137deg)";
-      patty1.style.transform = "rotate(-90deg)";
-      patty1.style.top = "17px";
-      patty2.style.top = "14px";
-      // animate slide in nav menu
-      mobileNav.style.display = "flex";
-      setTimeout(() => {
-        mobileNav.style.transform = "translate(-80vw)";
-        mobileNav.style.width = "80vw";
-      }, 100);
-    } else {
-      expanded = false;
-      hamburger.style.transform = "rotate(0deg)";
-      patty1.style.transform = "rotate(0deg)";
-      patty1.style.top = "12px";
-      patty2.style.top = "19px";
-      // animate slide in nav menu
-      mobileNav.style.transform = "translate(80vw)";
-      mobileNav.style.width = 0;
-      setTimeout(() => {
-        mobileNav.style.display = "none";
-      }, 600);
-    }
-  },
-  { passive: true }
-);
+
 // animate services header/banner
 let overlay = document.querySelector(".services_overlay");
 let services_h1 = document.querySelector(".services_banner h1");
@@ -86,6 +23,7 @@ window.addEventListener("scroll", () => {
   if (window.pageYOffset > 10) {
     services_h1.style.opacity = 0;
     overlay.style.opacity = 0;
+    overlay.style.pointerEvents = "none";
     downarrow.style.opacity = 0;
   } else {
     overlay.style.opacity = 0.7;
