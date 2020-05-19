@@ -62,13 +62,16 @@ video {
   align-items: center;
   width: 100%;
 }
+.testimonials .entry_wrapper {
+  border: 1px solid #e0bc75;
+  margin: 1rem;
+  padding: 0.3rem;
+}
 .testimonials .entry {
+  transition-duration: 0.3s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 1rem;
-  padding: 0.3rem;
-  border: 1px solid #e0bc75;
 }
 .testimonials .entry div {
   display: flex;
