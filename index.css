@@ -11,26 +11,6 @@ video {
   object-fit: fill;
   z-index: -3;
 }
-.downarrow {
-  text-align: center;
-  position: relative;
-  cursor: pointer;
-  animation-name: pulse;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.04, 1.17, 0.58, 1.53);
-  animation-iteration-count: infinite;
-}
-@keyframes pulse {
-  0% {
-    transform: translateY(4px);
-  }
-  50% {
-    /* transform: translateY(-4px); */
-  }
-  100% {
-    transform: translateY(-4px);
-  }
-}
 .overlay {
   background: linear-gradient(
     0deg,
@@ -75,7 +55,39 @@ video {
   box-shadow: 3px 4px 3px 3px #ccc;
   height: 3px;
 }
-
+.testimonials {
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.testimonials .entry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+  padding: 0.3rem;
+  border: 1px solid #e0bc75;
+}
+.testimonials .entry div {
+  display: flex;
+  align-items: center;
+}
+.testimonials_img_overlay {
+  height: 5rem;
+  min-width: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 1rem;
+}
+.testimonials_img_overlay img {
+  width: 7.4rem;
+  height: auto;
+  margin-left: -1rem;
+  margin-top: 1rem;
+}
 /* media queries */
 @media screen and (min-width: 360px) {
   .title {
@@ -83,6 +95,16 @@ video {
   }
 }
 @media screen and (min-width: 411px) {
+  .testimonials .entry {
+    width: 70%;
+  }
+  .testimonials_img_overlay {
+    max-width: 5rem;
+  }
+  .testimonial_user {
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 768px) {
   .titleDiv {
