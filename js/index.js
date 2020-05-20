@@ -8,25 +8,25 @@ const user = [
     name: "Michelle",
     quote: `"Shandel is the best!! My extensions are amazing!!!"`,
     pic:
-      "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918319/HBS/testimonials/user1_jv8fpv.jpg",
+      "https://res.cloudinary.com/drucvvo7f/image/upload/ar_1:1,b_rgb:262c35,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1589918351/HBS/testimonials/user4_hthrd4.jpg",
   },
   {
     name: "Lisa",
     quote: `"I love coming to Shandel. We have so much fun!"`,
     pic:
-      "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918379/HBS/testimonials/user2_jgagzm.jpg",
+      "https://res.cloudinary.com/drucvvo7f/image/upload/ar_1:1,b_rgb:262c35,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1589918379/HBS/testimonials/user2_jgagzm.jpg",
   },
   {
     name: "Josh",
     quote: `"My cut is always fresh. People say I got that Paul George hairline."`,
     pic:
-      "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918357/HBS/testimonials/user3_bm9nmg.jpg",
+      "https://res.cloudinary.com/drucvvo7f/image/upload/ar_1:1,b_rgb:262c35,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1589918357/HBS/testimonials/user3_bm9nmg.jpg",
   },
   {
     name: "Sheronda",
     quote: `"Girl had my hur lookin fly!"`,
     pic:
-      "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918351/HBS/testimonials/user4_hthrd4.jpg",
+      "https://res.cloudinary.com/drucvvo7f/image/upload/ar_1:1,b_rgb:262c35,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1589918319/HBS/testimonials/user1_jv8fpv.jpg",
   },
 ];
 

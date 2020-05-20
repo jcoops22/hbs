@@ -18,7 +18,7 @@ video {
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
   );
-  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/v1588303768/HBS/salonChairs_xvmmmn.jpg");
+  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/c_scale,e_auto_brightness,w_2232/v1587526178/salonChairs.jpg.jpg");
   background-size: contain;
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -103,10 +103,14 @@ video {
   overflow: hidden;
   margin: 1rem;
 }
-.testimonials_img_overlay .testimonial_profile_pic {
-  width: 6rem;
+.testimonial_profile_pic {
+  width: 5rem;
   height: auto;
-  margin-left: -1rem;
+  background-color: transparent;
+  /* margin-left: -1rem; */
+}
+.testimonial_user {
+  margin: 0;
 }
 /* media queries */
 @media screen and (min-width: 360px) {
