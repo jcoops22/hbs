@@ -43,6 +43,12 @@ changeQuote = () => {
   }, 300);
 };
 
+window.addEventListener("scroll", () => {
+  let scrolled = window.pageYOffset;
+  const background = document.querySelector(".overlay");
+  background.style.top = scrolled * 0.3 + "px";
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   changeQuote();
   setInterval(() => {

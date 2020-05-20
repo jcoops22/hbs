@@ -16,7 +16,8 @@ font-family: 'Handlee', cursive;
 
 * {
   box-sizing: border-box;
-  font-family: "Handlee", cursive;
+  /* font-family: "Handlee", cursive; */
+  font-family: "Titillium Web", sans-serif;
   scroll-behavior: smooth;
   overscroll-behavior: none;
 }
@@ -87,11 +88,6 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 24px;
 }
-.mobileHeader a img,
-.header a img {
-  margin-left: 0.5rem;
-  transform: rotate(30deg);
-}
 .mobileNavMenu {
   display: none;
   flex-direction: column;
@@ -159,6 +155,13 @@ body {
   margin: 0;
   font-family: "Dancing Script", cursive;
   font-size: 24px;
+}
+.header span {
+  font-size: 0.8rem;
+  color: #fff;
+  position: absolute;
+  margin-left: 0.5rem;
+  top: 1.5rem;
 }
 .navDiv .nav_underline,
 .scrolledNav .nav_underline {
@@ -248,11 +251,8 @@ body {
   60% {
     color: #962fbf;
   }
-  80% {
-    color: #4f5bd5;
-  }
   100% {
-    /* color: #feda75; */
+    color: #4f5bd5;
   }
 }
 /* footer section */
@@ -267,13 +267,7 @@ footer h3 {
   color: white;
   margin: 2rem 0;
 }
-#footer p {
-  color: white;
-}
 footer a {
-  color: #e0bc75;
-}
-footer a:visited {
   color: #e0bc75;
 }
 footer a:hover {
@@ -286,11 +280,39 @@ footer a:hover {
 #footerContact p {
   margin: 8px 0 8px 2rem;
 }
+.footer_instalink {
+  color: #fff;
+}
 #footerContact p:nth-child(3):after {
   content: url("./resources/Icons/instagramold.svg");
   margin: 0.5rem;
   height: 20px;
   width: 20px;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem;
+  border: 1px solid #e0bc75;
+}
+.hours h2 {
+  font-size: 1.3rem;
+  color: #fff;
+}
+.hours p {
+  color: #fff;
+}
+.hours_table {
+  display: flex;
+  flex-direction: column;
+}
+.hours_row {
+  display: flex;
+  justify-content: space-between;
+}
+.hours_row p:nth-child(even) {
+  color: #e0bc75;
 }
 #footerAddress p {
   color: #e0bc75;
@@ -303,6 +325,9 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+.copyrightDiv p {
+  color: #fff;
 }
 /* media queries */
 /* mobile small */
