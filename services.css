@@ -1,3 +1,6 @@
+.follow p {
+  display: none;
+}
 .services_banner {
   padding-top: 8rem;
   width: 100%;
@@ -149,6 +152,7 @@
   display: none;
 }
 #show_prices_div img {
+  cursor: pointer;
   transition-duration: 0.3s;
   margin-left: 0.3rem;
 }
@@ -382,6 +386,9 @@
     display: none;
     opacity: 0;
   }
+  .follow p {
+    display: block;
+  }
   .services_banner {
     padding-top: 3rem;
   }
@@ -396,7 +403,9 @@
     margin-left: 8rem;
     max-width: 50%;
   }
-
+  #show_prices_div label {
+    display: flex;
+  }
   .mobileImg {
     display: none;
   }

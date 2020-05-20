@@ -32,31 +32,20 @@ const user = [
 
 changeQuote = () => {
   entry.style.opacity = 0.3;
+  entry.style.filter = "blur(8px)";
   setTimeout(() => {
     user_name.textContent = user[counter].name;
     quote.textContent = user[counter].quote;
     profile_pic.src = user[counter].pic;
     counter >= user.length - 1 ? (counter = 0) : counter++;
     entry.style.opacity = 1;
+    entry.style.filter = "blur(0)";
   }, 300);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  let pic1;
-  let pic2;
-  let pic3;
-  let pic4;
-  pic1.src =
-    "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918319/HBS/testimonials/user1_jv8fpv.jpg";
-  pic2.src =
-    "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918379/HBS/testimonials/user2_jgagzm.jpg";
-  pic3.src =
-    "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918357/HBS/testimonials/user3_bm9nmg.jpg";
-  pic4.src =
-    "https://res.cloudinary.com/drucvvo7f/image/upload/v1589918351/HBS/testimonials/user4_hthrd4.jpg";
-
   changeQuote();
   setInterval(() => {
     changeQuote();
-  }, 3000);
+  }, 5000);
 });
