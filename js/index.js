@@ -43,10 +43,18 @@ changeQuote = () => {
   }, 300);
 };
 
+// show scroll up link/parralax effect
 window.addEventListener("scroll", () => {
   let scrolled = window.pageYOffset;
   const background = document.querySelector(".overlay");
   background.style.top = scrolled * 0.3 + "px";
+  // show scroll up
+  let arrow = document.querySelector("#scroll_up");
+  if (window.pageYOffset > 200) {
+    arrow.style.left = "calc(100% - 2.1rem)";
+  } else {
+    arrow.style.left = "100%";
+  }
 });
 
 document.addEventListener("DOMContentLoaded", () => {

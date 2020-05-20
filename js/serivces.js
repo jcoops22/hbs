@@ -78,7 +78,7 @@ show.addEventListener("click", () => {
     console.log("bawls");
     checked = true;
     prices_div.innerHTML = priceHTML[ind];
-    prices_div.style.top = "4rem";
+    prices_div.style.top = "3.5rem";
     show.style.transform = "scale(0)";
     setTimeout(() => {
       show.style.transform = "scale(1)";

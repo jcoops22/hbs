@@ -9,6 +9,7 @@
   /* border: 1px solid red; */
 }
 .services_banner h1 {
+  font-family: "Dancing Script", cursive;
   position: relative;
   z-index: 2;
   padding-left: 1rem;
