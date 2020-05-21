@@ -30,6 +30,7 @@ const user = [
   },
 ];
 
+// testimonial change quote function
 changeQuote = () => {
   entry.style.opacity = 0.3;
   entry.style.filter = "blur(8px)";
@@ -45,21 +46,42 @@ changeQuote = () => {
 
 // show scroll up link/parralax effect
 window.addEventListener("scroll", () => {
+  // parallax effect
   let scrolled = window.pageYOffset;
-  const background = document.querySelector(".overlay");
+  // const background = document.querySelector(".overlay");
+  const background = document.querySelector(".videoDiv");
   background.style.top = scrolled * 0.3 + "px";
-  // show scroll up
+
+  // show scroll up link
   let arrow = document.querySelector("#scroll_up");
-  if (window.pageYOffset > 200) {
+  if (window.pageYOffset > 500) {
     arrow.style.left = "calc(100% - 2.1rem)";
   } else {
     arrow.style.left = "100%";
   }
 });
 
+// testimonials function
 document.addEventListener("DOMContentLoaded", () => {
+  // change the testimonial quote
   changeQuote();
   setInterval(() => {
     changeQuote();
   }, 5000);
 });
+
+// run sub title animation
+const sub_title_controller = new ScrollMagic.Controller();
+const tween_sub_title = new TweenMax.to(".sub_title", 10, {
+  fontSize: "9vw",
+  y: 100,
+});
+const sub_title_scene = new ScrollMagic.Scene({
+  triggerElement: ".intro",
+  triggerHook: "onEnter",
+  duration: 400,
+  reverse: true,
+  offset: -100,
+})
+  .setTween(tween_sub_title)
+  .addTo(sub_title_controller);

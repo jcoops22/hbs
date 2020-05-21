@@ -332,9 +332,6 @@ footer a:hover {
 /* media queries */
 /* mobile small */
 @media screen and (min-width: 360px) {
-  .title {
-    font-size: 3rem;
-  }
 }
 /* mobile large */
 @media screen and (min-width: 411px) {

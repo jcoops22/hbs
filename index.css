@@ -1,6 +1,12 @@
 .videoDiv {
   height: 37rem;
   overflow: hidden;
+  margin-bottom: 8rem;
+  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/c_scale,e_auto_brightness,w_2232/v1587526178/salonChairs.jpg.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #vid {
   display: none;
@@ -13,21 +19,17 @@ video {
   z-index: -3;
 }
 .overlay {
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 14%,
     rgba(0, 0, 0, 1) 100%
-  );
-  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/c_scale,e_auto_brightness,w_2232/v1587526178/salonChairs.jpg.jpg");
-  background-size: contain;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: center;
+  ); */
+  background-color: #000;
   width: 100vw;
-  height: 100%;
+  height: 37rem;
   position: relative;
-  z-index: -2;
-  opacity: 0.8;
+  z-index: 0;
+  opacity: 0.5;
 }
 .titleDiv {
   position: relative;
@@ -78,7 +80,7 @@ video {
   margin: 2rem auto;
 }
 .testimonials {
-  height: 22rem;
+  height: 28rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,9 +90,12 @@ video {
 .preload {
   display: none;
 }
+.testimonials .test_sub_header {
+  margin: 2rem 0;
+  text-align: center;
+}
 .testimonials .entry_wrapper {
   border: 1px solid #e0bc75;
-  width: 70%;
   margin: 1rem;
   padding: 0.3rem;
   background-color: #fff;
@@ -144,11 +149,8 @@ video {
   .titleDiv {
     top: -35rem;
   }
-  .titleDiv img {
-    width: 3rem;
-  }
   .title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   #scroll_up span {
     display: initial;
@@ -166,6 +168,15 @@ video {
   }
   .intro_paragraph {
     margin: 4rem 0;
+  }
+  .testimonials h1 {
+    font-size: 2.6rem;
+  }
+  .testimonials .test_sub_header {
+    margin: 0 0 6rem 0;
+  }
+  .testimonials .entry_wrapper {
+    width: 60%;
   }
 }
 @media screen and (min-width: 1024px) {
