@@ -71,13 +71,7 @@ video {
   margin-left: 1rem;
 }
 .header_outline {
-  margin: 0 auto -5rem;
-  height: 7rem;
-  width: 27%;
-  position: relative;
-  top: -8rem;
-  border-left: 3px solid #e0bc75;
-  border-bottom: 3px solid #e0bc75;
+  display: none;
 }
 .intro_div {
   width: 100%;
@@ -141,6 +135,26 @@ video {
 .testimonial_user {
   margin: 0;
 }
+.outro {
+  margin: 4rem 0;
+  padding: 1rem;
+  /* border: 1px solid red; */
+}
+.outro h1 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.products_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.products_wrapper img {
+  width: 100%;
+  margin: 1rem 0;
+}
+.products_wrapper h2 {
+  margin: 1rem 0;
+}
 /* media queries */
 @media screen and (min-width: 360px) {
   .videoDiv {
@@ -164,7 +178,7 @@ video {
     top: -35rem;
   }
   .title {
-    font-size: 6rem;
+    font-size: 8vw;
   }
   #scroll_up span {
     display: initial;
@@ -176,6 +190,16 @@ video {
     font-size: 2.8rem;
     text-align: center;
   }
+  .header_outline {
+    display: block;
+    margin: 0 auto -5rem;
+    height: 7rem;
+    width: 16rem;
+    position: relative;
+    top: -8rem;
+    border-left: 3px solid #e0bc75;
+    border-bottom: 3px solid #e0bc75;
+  }
   .intro_div {
     max-width: 600px;
     margin: 0 auto;
@@ -183,8 +207,10 @@ video {
   .intro_paragraph {
     margin: 4rem 0;
   }
-  .testimonials h1 {
+  .testimonials h1,
+  .outro h1 {
     font-size: 2.6rem;
+    padding-bottom: 2rem;
   }
   .testimonials .test_sub_header {
     margin: 0 0 6rem 0;

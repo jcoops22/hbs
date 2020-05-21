@@ -278,6 +278,7 @@ footer a:hover {
   margin: 1.4rem 0;
 }
 #footerContact p {
+  font-size: 1rem;
   margin: 8px 0 8px 2rem;
 }
 .footer_instalink {
@@ -301,6 +302,7 @@ footer a:hover {
   color: #fff;
 }
 .hours p {
+  font-size: 1rem;
   color: #fff;
 }
 .hours_table {
@@ -315,6 +317,7 @@ footer a:hover {
   color: #e0bc75;
 }
 #footerAddress p {
+  font-size: 1rem;
   color: #e0bc75;
 }
 .googleMaps {
