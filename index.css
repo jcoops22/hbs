@@ -70,6 +70,15 @@ video {
 .intro h2 {
   margin-left: 1rem;
 }
+.header_outline {
+  margin: 0 auto -5rem;
+  height: 7rem;
+  width: 27%;
+  position: relative;
+  top: -8rem;
+  border-left: 3px solid #e0bc75;
+  border-bottom: 3px solid #e0bc75;
+}
 .intro_div {
   width: 100%;
 }
