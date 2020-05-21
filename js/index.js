@@ -80,7 +80,7 @@ const sub_title_scene = new ScrollMagic.Scene({
   triggerHook: "onEnter",
   duration: 400,
   reverse: true,
-  offset: -100,
+  offset: -170,
 })
   .setTween(tween_sub_title)
   .addTo(sub_title_controller);
