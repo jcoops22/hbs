@@ -2,11 +2,7 @@
   height: 37rem;
   overflow: hidden;
   margin-bottom: 8rem;
-  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/c_scale,e_auto_brightness,w_2232/v1587526178/salonChairs.jpg.jpg");
-  background-size: cover;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #000;
 }
 #vid {
   display: none;
@@ -19,17 +15,23 @@ video {
   z-index: -3;
 }
 .overlay {
-  /* background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 14%,
-    rgba(0, 0, 0, 1) 100%
-  ); */
   background-color: #000;
   width: 100vw;
-  height: 37rem;
+  height: 100%;
   position: relative;
   z-index: 0;
+  background-image: url("https://res.cloudinary.com/drucvvo7f/image/upload/c_scale,e_auto_brightness,w_2232/v1587526178/salonChairs.jpg.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.overlay_overlay {
+  background-color: #000;
+  width: 100vw;
+  height: 100%;
   opacity: 0.5;
+  position: relative;
 }
 .titleDiv {
   position: relative;
