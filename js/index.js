@@ -49,7 +49,6 @@ window.addEventListener("scroll", () => {
   // parallax effect
   let scrolled = window.pageYOffset;
   const background = document.querySelector(".overlay");
-  // const background = document.querySelector(".videoDiv");
   background.style.top = scrolled * 0.3 + "px";
 
   // show scroll up link
