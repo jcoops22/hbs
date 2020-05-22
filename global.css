@@ -88,6 +88,9 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 24px;
 }
+.mobileHeader span {
+  color: red;
+}
 .mobileNavMenu {
   display: none;
   flex-direction: column;
@@ -160,8 +163,12 @@ body {
   font-size: 0.8rem;
   color: #fff;
   position: absolute;
-  margin-left: 0.5rem;
+  left: -14rem;
   top: 1.5rem;
+  transition-duration: 0.3s;
+}
+.header:hover span {
+  left: 14rem;
 }
 .navDiv .nav_underline,
 .scrolledNav .nav_underline {
@@ -226,6 +233,13 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 24px;
 }
+.header img {
+  width: 1rem;
+  animation-name: slotate;
+  animation-duration: 20000s;
+  animation-timing-function: none;
+  animation-iteration-count: infinite;
+}
 .active {
   color: #e0bc75;
   list-style: url("./resources/Icons/navstar.svg");
@@ -253,6 +267,14 @@ body {
   }
   100% {
     color: #4f5bd5;
+  }
+}
+@keyframes slotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3600000deg);
   }
 }
 /* footer section */

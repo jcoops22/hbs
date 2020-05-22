@@ -26,10 +26,12 @@ window.addEventListener("scroll", () => {
     overlay.style.opacity = 0;
     overlay.style.pointerEvents = "none";
     downarrow.style.opacity = 0;
+    downarrow.style.pointerEvents = "none";
     underline.style.opacity = 0;
   } else {
     overlay.style.opacity = 0.7;
     services_h1.style.opacity = 1;
+    downarrow.style.pointerEvents = "initial";
     downarrow.style.opacity = 1;
     underline.style.opacity = 1;
   }
@@ -43,7 +45,7 @@ let show = document.querySelector("#show_prices_div span img");
 let checked = false;
 let prices_div = document.querySelector(".hidden_prices_div");
 let ind = 0;
-priceHTML = [
+let priceHTML = [
   `<h4>Men's Cuts <img src="./resources/Icons/clippers.svg" alt="clippers" width="20px"></h4>
     <ul>
       <li>Haircut $25</li>
