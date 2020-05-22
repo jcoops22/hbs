@@ -70,13 +70,16 @@ video {
 .intro h2 {
   margin-left: 1rem;
 }
-.header_outline {
+.header_outline,
+.test_header_outline,
+.outro_header_outline {
   display: none;
 }
 .intro_div {
   width: 100%;
 }
-.intro_paragraph {
+.intro_paragraph,
+.outro p {
   padding: 1rem;
 }
 .intro_hr {
@@ -130,19 +133,17 @@ video {
   width: 5rem;
   height: auto;
   background-color: transparent;
-  /* margin-left: -1rem; */
 }
 .testimonial_user {
   margin: 0;
 }
 .outro {
-  margin: 4rem 0;
+  margin: 4rem 0 8rem;
   padding: 1rem;
-  /* border: 1px solid red; */
 }
 .outro h1 {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 .products_wrapper {
   display: flex;
@@ -153,7 +154,7 @@ video {
   margin: 1rem 0;
 }
 .products_wrapper h2 {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 /* media queries */
 @media screen and (min-width: 360px) {
@@ -171,6 +172,13 @@ video {
   .testimonial_user {
     flex-basis: 100%;
     text-align: center;
+  }
+  .products_wrapper img {
+    width: 60%;
+    margin: 2rem auto;
+  }
+  .products_wrapper p {
+    width: 50%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -190,15 +198,27 @@ video {
     font-size: 2.8rem;
     text-align: center;
   }
-  .header_outline {
+  .header_outline,
+  .testi_header_outline,
+  .outro_header_outline {
     display: block;
-    margin: 0 auto -5rem;
-    height: 7rem;
-    width: 16rem;
-    position: relative;
-    top: -8rem;
     border-left: 3px solid #e0bc75;
     border-bottom: 3px solid #e0bc75;
+    margin: 0 auto;
+    height: 7rem;
+    width: 16rem;
+  }
+  .header_outline {
+    position: relative;
+    top: -8rem;
+    margin-bottom: -5rem;
+  }
+  .testi_header_outline {
+    position: absolute;
+  }
+  .outro_header_outline {
+    position: relative;
+    top: -10rem;
   }
   .intro_div {
     max-width: 600px;
@@ -209,6 +229,7 @@ video {
   }
   .testimonials h1,
   .outro h1 {
+    position: relative;
     font-size: 2.6rem;
     padding-bottom: 2rem;
   }
@@ -217,6 +238,19 @@ video {
   }
   .testimonials .entry_wrapper {
     width: 60%;
+  }
+  .products_wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  .products_wrapper img {
+    width: 40%;
+  }
+  .products_wrapper h2 {
+    margin-left: 1rem;
+  }
+  .products_wrapper p {
+    margin: 0 2rem;
   }
 }
 @media screen and (min-width: 1024px) {
