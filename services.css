@@ -422,6 +422,9 @@
   .services_downarrow {
     top: -3.5rem;
   }
+  .services_intro {
+    margin-top: 0rem;
+  }
   .services_intro h2 {
     margin-left: 20%;
   }

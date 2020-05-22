@@ -3,6 +3,19 @@
   flex-direction: column;
   align-items: center;
 }
+#scroll_up {
+  transition-duration: 0.5s;
+  position: fixed;
+  top: 30rem;
+  left: 100%;
+}
+#scroll_up img {
+  width: 2rem;
+  transform: scaleX(-1);
+}
+#scroll_up span {
+  display: none;
+}
 .about_landing {
   width: 100%;
 }
@@ -98,6 +111,9 @@ img[alt="star"] {
   }
 }
 @media screen and (min-width: 768px) {
+  #scroll_up span {
+    display: initial;
+  }
   .about_content h1 {
     font-size: 4.2rem;
   }

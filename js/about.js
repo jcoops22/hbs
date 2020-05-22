@@ -68,3 +68,14 @@ const slideInStar2 = new TweenMax.from(stars[1], 0.1, {
 const slideInStar3 = new TweenMax.from(stars[2], 0.1, {
   x: 1000,
 }).delay(1.4);
+
+// show scroll up link/parralax effect
+window.addEventListener("scroll", () => {
+  // show scroll up link
+  let arrow = document.querySelector("#scroll_up");
+  if (window.pageYOffset > 500) {
+    arrow.style.left = "calc(100% - 2.1rem)";
+  } else {
+    arrow.style.left = "100%";
+  }
+});

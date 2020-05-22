@@ -30,8 +30,9 @@ window.addEventListener("scroll", () => {
     underline.style.opacity = 0;
   } else {
     overlay.style.opacity = 0.7;
+    overlay.style.pointerEvents = "auto";
     services_h1.style.opacity = 1;
-    downarrow.style.pointerEvents = "initial";
+    downarrow.style.pointerEvents = "auto";
     downarrow.style.opacity = 1;
     underline.style.opacity = 1;
   }

@@ -236,8 +236,8 @@ body {
 .header img {
   width: 1rem;
   animation-name: slotate;
-  animation-duration: 20000s;
-  animation-timing-function: none;
+  animation-duration: 6s;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 .active {
@@ -257,13 +257,13 @@ body {
 }
 @keyframes instaShine {
   20% {
-    color: #fa7e1e;
+    color: #962fbf;
   }
   40% {
     color: #d62976;
   }
   60% {
-    color: #962fbf;
+    color: #fa7e1e;
   }
   100% {
     color: #4f5bd5;
@@ -274,7 +274,7 @@ body {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(3600000deg);
+    transform: rotate(360deg);
   }
 }
 /* footer section */
