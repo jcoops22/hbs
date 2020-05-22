@@ -147,7 +147,7 @@ video {
 }
 .products_wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .products_wrapper img {
   width: 100%;
@@ -173,12 +173,16 @@ video {
     flex-basis: 100%;
     text-align: center;
   }
+  .intro_paragraph {
+    padding: 1rem 2rem;
+  }
   .products_wrapper img {
     width: 60%;
     margin: 2rem auto;
   }
   .products_wrapper p {
-    width: 50%;
+    padding-left: 25%;
+    padding-right: 3rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -239,18 +243,27 @@ video {
   .testimonials .entry_wrapper {
     width: 60%;
   }
+  .outro {
+    margin-top: 11rem;
+  }
   .products_wrapper {
-    flex-wrap: nowrap;
+    width: 100%;
+    flex-direction: row;
     justify-content: space-between;
   }
   .products_wrapper img {
-    width: 40%;
+    width: 30%;
+    min-width: 308px;
   }
   .products_wrapper h2 {
     margin-left: 1rem;
   }
   .products_wrapper p {
+    border-left: 1px solid lightgrey;
     margin: 0 2rem;
+    width: 50vw;
+    height: 18rem;
+    padding: 4rem 1rem 0 4rem;
   }
 }
 @media screen and (min-width: 1024px) {
