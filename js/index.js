@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   changeQuote();
   setInterval(() => {
     changeQuote();
-  }, 5000);
+  }, 4000);
 });
 
 // run sub title animation

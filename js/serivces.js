@@ -18,6 +18,7 @@ window.addEventListener("resize", () => {
 // animate services header/banner
 let overlay = document.querySelector(".services_overlay");
 let services_h1 = document.querySelector(".services_banner h1");
+let underline = document.querySelector(".services_underline");
 let downarrow = document.querySelector(".services_downarrow");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 10) {
@@ -25,13 +26,18 @@ window.addEventListener("scroll", () => {
     overlay.style.opacity = 0;
     overlay.style.pointerEvents = "none";
     downarrow.style.opacity = 0;
+    underline.style.opacity = 0;
   } else {
     overlay.style.opacity = 0.7;
     services_h1.style.opacity = 1;
     downarrow.style.opacity = 1;
+    underline.style.opacity = 1;
   }
 });
 // end serivices header/banner
+const slide_underline = new TweenMax.from(".services_underline", 0.6, {
+  left: "200%",
+});
 // show and hide the prices box
 let show = document.querySelector("#show_prices_div span img");
 let checked = false;
@@ -334,7 +340,7 @@ const sceneHeader = new ScrollMagic.Scene({
   .addTo(controller);
 // sticky services header end
 
-// // slide in divs
+// slide in divs
 let services = document.getElementsByClassName("service");
 for (let i = 0; i < services.length; i++) {
   const tween = TweenMax.from(services[i], ".7", {
