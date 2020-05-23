@@ -1,3 +1,8 @@
+// tween underline
+let underline = document.querySelector(".products_underline");
+const slideIn = new TweenMax.from(underline, 0.3, {
+  left: "200%",
+});
 // overlay effect
 let overlay = document.querySelector(".product_overlay");
 let header = document.querySelector(".product_container h1");
@@ -6,10 +11,12 @@ window.addEventListener("scroll", () => {
     overlay.style.opacity = 0;
     overlay.style.pointerEvents = "none";
     header.style.opacity = 0;
+    underline.style.opacity = 0;
   } else {
     overlay.style.opacity = "0.7";
     overlay.style.pointerEvents = "auto";
     header.style.opacity = 1;
+    underline.style.opacity = 1;
   }
 });
 // end overlay effect
@@ -57,32 +64,39 @@ let items = [
     link: "https://shop.saloninteractive.com/store/HairbyShandel/product/14/6",
   },
   {
-    name: "Angel Rinse",
-    desc:
-      "rinse created to soothe and protect fine, damaged and colour-treated hair",
-    img: "./resources/products/angelrinse.jpeg",
-    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/14/6",
+    name: "ANTI.GRAVITY SPRAY",
+    desc: "Defy gravity, and go bigger. ",
+    img: "./resources/products/antigravity.jpg",
+    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/41/23",
   },
   {
-    name: "Angel Rinse",
+    name: "BODY.MASS",
     desc:
-      "rinse created to soothe and protect fine, damaged and colour-treated hair",
-    img: "./resources/products/angelrinse.jpeg",
-    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/14/6",
+      "helps strengthen the hair, while imparting a fullness and thickness that gives you beautiful body and bounce",
+    img: "./resources/products/bodymass.jpg",
+    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/62/40",
   },
   {
-    name: "Angel Rinse",
-    desc:
-      "rinse created to soothe and protect fine, damaged and colour-treated hair",
-    img: "./resources/products/angelrinse.jpeg",
-    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/14/6",
+    name: "EASY.RIDER",
+    desc: "a defining anti-frizz crème designed to de-frizz and activate curl",
+    img: "./resources/products/easyrider.jpg",
+    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/45/60",
   },
   {
-    name: "Angel Rinse",
+    name: "HYDRATE-ME.WASH",
     desc:
-      "rinse created to soothe and protect fine, damaged and colour-treated hair",
-    img: "./resources/products/angelrinse.jpeg",
-    link: "https://shop.saloninteractive.com/store/HairbyShandel/product/14/6",
+      "super-smoothing, hydrating wash that will replenish hair with much needed moisture",
+    img: "./resources/products/hydrateme.jpg",
+    link:
+      "https://shop.saloninteractive.com/store/HairbyShandel/product/26/1857",
+  },
+  {
+    name: "Detangling Brush",
+    desc:
+      "beautiful design and felixible bristles are perfect for both wet and dry hair",
+    img: "./resources/products/brushblue.jpg",
+    link:
+      "https://shop.saloninteractive.com/store/HairbyShandel/product/26182/29633",
   },
 ];
 let container = document.querySelector(".products_content");
