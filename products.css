@@ -134,9 +134,12 @@
     height: 5rem;
     border-radius: 5px;
     margin-left: 2rem;
+    font-size: 1rem;
+    background-color: #e0bc75;
   }
   .intro_paragraph button:hover {
-    background-color: #e0bc75;
+    transition-duration: 0.3s;
+    transform: scale(1.1);
   }
   .product_container h2 {
     text-align: center;
