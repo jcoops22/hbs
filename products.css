@@ -1,6 +1,8 @@
+.follow p {
+  display: none;
+}
 .product_container {
   padding-top: 10rem;
-  height: 200vh;
   width: 100%;
 }
 .product_container h1 {
@@ -33,11 +35,56 @@
   background-color: #fff;
   opacity: 0.7;
 }
-.content {
-  height: 40rem;
+.products_content {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  height: fit-content;
 }
-.content p {
-  height: 20rem;
-  width: 40%;
+.products_content .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+  margin: 2rem;
+}
+.item img {
+  width: auto;
+  height: 10rem;
+}
+.item .info {
+  flex-direction: column;
+  align-items: center;
+}
+.item .info .title {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+.item .info .desc {
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.item .info a {
+  width: 100%;
+  margin-left: 30%;
+}
+.products_content .item p {
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+@media screen and (min-width: 360px) {
+}
+@media screen and (min-width: 411px) {
+}
+@media screen and (min-width: 768px) {
+  .follow p {
+    display: block;
+  }
+  .navDiv {
+    display: none;
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
 }
