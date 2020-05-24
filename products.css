@@ -6,6 +6,7 @@
   width: 100%;
 }
 .product_container h1 {
+  transition-duration: 0.6s;
   font-family: "Dancing Script", cursive;
   position: relative;
   z-index: 2;
@@ -14,6 +15,7 @@
   font-size: 5rem;
 }
 .products_underline {
+  transition-duration: 0.6s;
   display: none;
   position: relative;
   top: -7rem;
@@ -26,7 +28,8 @@
   background-color: #e0bc75;
 }
 .product_overlay {
-  height: 150%;
+  transition-duration: 0.6s;
+  height: 250%;
   width: 100%;
   position: absolute;
   top: 0;
@@ -38,10 +41,25 @@
 .intro_paragraph {
   font-family: "Jost", sans-serif;
   padding: 1rem;
+  text-align: center;
+}
+.intro_paragraph button {
+  width: 6rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-left: 2rem;
+  font-size: 1rem;
+  background-color: #e0bc75;
+  margin: 1rem;
+}
+.intro_paragraph button:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.1);
 }
 .product_container h2 {
   padding: 1rem;
   margin: 6rem 0;
+  text-align: center;
 }
 .products_content {
   display: flex;
@@ -58,6 +76,10 @@
   justify-content: space-between;
   width: 20rem;
   margin-top: 2.5rem;
+  padding: 0.3rem;
+}
+.products_content .item:hover {
+  outline: 1px solid #e0bc75;
 }
 .item img {
   width: auto;
@@ -130,16 +152,8 @@
     margin: 5rem 0 15rem;
   }
   .intro_paragraph button {
-    width: 9rem;
-    height: 5rem;
-    border-radius: 5px;
-    margin-left: 2rem;
-    font-size: 1rem;
-    background-color: #e0bc75;
-  }
-  .intro_paragraph button:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.1);
+    width: 8rem;
+    height: 4rem;
   }
   .product_container h2 {
     text-align: center;
