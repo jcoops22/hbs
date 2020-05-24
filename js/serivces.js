@@ -101,9 +101,6 @@ show.addEventListener("click", () => {
 });
 
 const mensCuts = [
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens6_yfltpz.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens3_mlvuiw.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens5_k4wnok.jpg",
@@ -113,6 +110,9 @@ const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250714/HBS/mensCuts/mensCuts7_yzpxwa.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts8_g8zamd.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts9_iiaqdj.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg",
 ];
 const color = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color4_wss56i.jpg",
@@ -163,14 +163,15 @@ const add = [
 ];
 
 // count for carosel
-let cuts_count = { count: 2 };
-let color_count = { count: 2 };
-let style_count = { count: 2 };
-let ext_count = { count: 2 };
-let add_count = { count: 2 };
+let cuts_count = { count: -1 };
+let color_count = { count: -1 };
+let style_count = { count: -1 };
+let ext_count = { count: -1 };
+let add_count = { count: -1 };
 
 // carosel spin function
 caroselSpin = (arr, section, counter) => {
+  console.log(counter.count);
   let imgs = document.querySelectorAll(`.${section} img`);
 
   if (imgs[0].classList.contains("middle1")) {
@@ -184,8 +185,8 @@ caroselSpin = (arr, section, counter) => {
       counter.count++;
       if (counter.count >= arr.length) {
         counter.count = 0;
-        imgs[1].src = arr[counter.count];
       }
+      console.log(counter.count);
       imgs[1].src = arr[counter.count];
       imgs[0].classList.add("right1");
       imgs[0].classList.remove("middle1");
@@ -205,8 +206,8 @@ caroselSpin = (arr, section, counter) => {
       counter.count++;
       if (counter.count >= arr.length) {
         counter.count = 0;
-        imgs[0].src = arr[counter.count];
       }
+      console.log(counter.count);
       imgs[0].src = arr[counter.count];
       imgs[0].classList.add("left1");
       imgs[0].classList.remove("right1");
@@ -226,7 +227,6 @@ caroselSpin = (arr, section, counter) => {
       counter.count++;
       if (counter.count >= arr.length) {
         counter.count = 0;
-        imgs[2].src = arr[counter.count];
       }
       imgs[2].src = arr[counter.count];
       imgs[0].classList.add("middle1");
@@ -239,7 +239,76 @@ caroselSpin = (arr, section, counter) => {
   }
 };
 // end rotate carosel function
+// rotate carosel REVERSE
+caroselSpinReverse = (arr, section, counter) => {
+  let imgs = document.querySelectorAll(`.${section} img`);
+  console.log(counter.count);
+  if (imgs[0].classList.contains("middle1")) {
+    // imgs[0] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "-1";
+      imgs[1].style.zIndex = "1";
+      imgs[2].style.zIndex = "-1";
+    }, 300);
+    setTimeout(() => {
+      counter.count--;
+      if (counter.count < 0) {
+        counter.count = arr.length - 1;
+      }
+      imgs[2].src = arr[counter.count];
+      imgs[0].classList.add("left1");
+      imgs[0].classList.remove("middle1");
+      imgs[1].classList.add("middle2");
+      imgs[1].classList.remove("right2");
+      imgs[2].classList.add("right3");
+      imgs[2].classList.remove("left3");
+    }, 400);
+  } else if (imgs[0].classList.contains("right1")) {
+    // imgs[2] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "1";
+      imgs[1].style.zIndex = "-1";
+      imgs[2].style.zIndex = "-2";
+    }, 300);
+    setTimeout(() => {
+      counter.count--;
+      if (counter.count < 0) {
+        counter.count = arr.length - 1;
+      }
+      imgs[1].src = arr[counter.count];
+      imgs[0].classList.add("middle1");
+      imgs[0].classList.remove("right1");
+      imgs[1].classList.add("right2");
+      imgs[1].classList.remove("left2");
+      imgs[2].classList.add("left3");
+      imgs[2].classList.remove("middle3");
+    }, 400);
+  } else {
+    // imgs[1] is in the middle
+    setTimeout(() => {
+      imgs[0].style.zIndex = "-1";
+      imgs[2].style.zIndex = "2";
+      imgs[1].style.zIndex = "-1";
+    }, 300);
+    setTimeout(() => {
+      counter.count--;
+      if (counter.count < 0) {
+        counter.count = arr.length - 1;
+      }
+      imgs[0].src = arr[counter.count];
+      imgs[0].classList.add("right1");
+      imgs[0].classList.remove("left1");
+      imgs[1].classList.add("left2");
+      imgs[1].classList.remove("middle2");
+      imgs[2].classList.add("middle3");
+      imgs[2].classList.remove("right3");
+    }, 400);
+  }
+};
+// carosel rotate REVERSE end
 
+// calling rotate functions
+// NEXT
 let cutNext = document.querySelector("#next_1");
 cutNext.addEventListener("click", () => {
   caroselSpin(mensCuts, "caroselDivs", cuts_count);
@@ -260,7 +329,27 @@ let addNext = document.querySelector("#next_5");
 addNext.addEventListener("click", () =>
   caroselSpin(add, "caroselDivsAdd", add_count)
 );
-
+// BACK
+let cutBack = document.querySelector("#back_1");
+cutBack.addEventListener("click", () => {
+  caroselSpinReverse(mensCuts, "caroselDivs", cuts_count);
+});
+let colorBack = document.querySelector("#back_2");
+colorBack.addEventListener("click", () => {
+  caroselSpinReverse(color, "caroselDivsColor", color_count);
+});
+let styleBack = document.querySelector("#back_3");
+styleBack.addEventListener("click", () =>
+  caroselSpinReverse(styles, "caroselDivsStyle", style_count)
+);
+let extBack = document.querySelector("#back_4");
+extBack.addEventListener("click", () =>
+  caroselSpinReverse(ext, "caroselDivsExt", ext_count)
+);
+let addBack = document.querySelector("#back_5");
+addBack.addEventListener("click", () =>
+  caroselSpinReverse(add, "caroselDivsAdd", add_count)
+);
 // get lazy images
 lazyLoad = (arr) => {
   let scrollTop = window.pageYOffset;
@@ -412,3 +501,13 @@ for (let i = 0; i < services.length; i++) {
     .addTo(controller);
 }
 // change scroll location title end
+
+let testDiv = document.querySelector(".test");
+mensCuts.forEach((img) => {
+  testDiv.insertAdjacentHTML(
+    "afterbegin",
+    `
+    <img src=${img}>
+  `
+  );
+});

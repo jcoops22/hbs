@@ -476,3 +476,14 @@
     left: calc(100% - 18.1rem);
   }
 }
+
+.test {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  width: 100%;
+}
+.test img {
+  width: 5.2rem;
+}

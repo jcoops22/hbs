@@ -35,7 +35,7 @@ const tweenNavbar = TweenMax.to(".scrolledNav", ".3", {
 const navbarScene = new ScrollMagic.Scene({
   triggerElement: ".products_content",
   triggerHook: "onCenter",
-  offset: 190,
+  offset: 100,
 })
   .setTween(tweenNavbar)
   .addTo(navbarController);
