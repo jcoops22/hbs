@@ -30,7 +30,9 @@ a:hover {
   text-decoration: underline;
   color: #e09900;
 }
-
+button {
+  cursor: pointer;
+}
 p {
   font-family: "Jost", sans-serif;
   font-size: 1.2rem;

@@ -1,6 +1,6 @@
 // tween underline
 let underline = document.querySelector(".products_underline");
-const slideIn = new TweenMax.from(underline, 0.3, {
+const slideIn = new TweenMax.from(".products_underline", 0.6, {
   left: "200%",
 });
 // overlay effect

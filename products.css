@@ -15,7 +15,6 @@
   font-size: 5rem;
 }
 .products_underline {
-  transition-duration: 0.6s;
   display: none;
   position: relative;
   top: -7rem;
@@ -79,7 +78,7 @@
   padding: 0.3rem;
 }
 .products_content .item:hover {
-  outline: 1px solid #e0bc75;
+  /* outline: 1px solid #e0bc75; */
 }
 .item img {
   width: auto;
