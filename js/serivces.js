@@ -84,7 +84,6 @@ let priceHTML = [
 // show prices on check
 show.addEventListener("click", () => {
   if (!checked) {
-    console.log("bawls");
     checked = true;
     prices_div.innerHTML = priceHTML[ind];
     prices_div.style.top = "3.5rem";
@@ -101,6 +100,9 @@ show.addEventListener("click", () => {
 });
 
 const mensCuts = [
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg",
+  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens6_yfltpz.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens3_mlvuiw.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309914/HBS/mensCuts/mens5_k4wnok.jpg",
@@ -110,9 +112,6 @@ const mensCuts = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250714/HBS/mensCuts/mensCuts7_yzpxwa.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts8_g8zamd.jpg",
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589250713/HBS/mensCuts/mensCuts9_iiaqdj.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309916/HBS/mensCuts/mens9_rbf9zg.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens7_idispr.jpg",
-  "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309915/HBS/mensCuts/mens8_dk1bsx.jpg",
 ];
 const color = [
   "https://res.cloudinary.com/drucvvo7f/image/upload/v1589309816/HBS/color/color4_wss56i.jpg",
@@ -171,7 +170,6 @@ let add_count = { count: -1 };
 
 // carosel spin function
 caroselSpin = (arr, section, counter) => {
-  console.log(counter.count);
   let imgs = document.querySelectorAll(`.${section} img`);
 
   if (imgs[0].classList.contains("middle1")) {
@@ -186,7 +184,7 @@ caroselSpin = (arr, section, counter) => {
       if (counter.count >= arr.length) {
         counter.count = 0;
       }
-      console.log(counter.count);
+
       imgs[1].src = arr[counter.count];
       imgs[0].classList.add("right1");
       imgs[0].classList.remove("middle1");
@@ -207,7 +205,7 @@ caroselSpin = (arr, section, counter) => {
       if (counter.count >= arr.length) {
         counter.count = 0;
       }
-      console.log(counter.count);
+
       imgs[0].src = arr[counter.count];
       imgs[0].classList.add("left1");
       imgs[0].classList.remove("right1");
@@ -242,7 +240,7 @@ caroselSpin = (arr, section, counter) => {
 // rotate carosel REVERSE
 caroselSpinReverse = (arr, section, counter) => {
   let imgs = document.querySelectorAll(`.${section} img`);
-  console.log(counter.count);
+
   if (imgs[0].classList.contains("middle1")) {
     // imgs[0] is in the middle
     setTimeout(() => {
@@ -501,13 +499,3 @@ for (let i = 0; i < services.length; i++) {
     .addTo(controller);
 }
 // change scroll location title end
-
-let testDiv = document.querySelector(".test");
-mensCuts.forEach((img) => {
-  testDiv.insertAdjacentHTML(
-    "afterbegin",
-    `
-    <img src=${img}>
-  `
-  );
-});
