@@ -196,7 +196,7 @@
   width: 230%;
   align-self: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .controls button {
   outline-color: lightgrey;
@@ -228,6 +228,7 @@
 #back_4,
 #back_5 {
   transform: rotate(180deg);
+  display: none;
 }
 .seeMore span:nth-child(2) {
   margin-top: 1rem;

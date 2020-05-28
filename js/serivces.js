@@ -162,11 +162,11 @@ const add = [
 ];
 
 // count for carosel
-let cuts_count = { count: -1 };
-let color_count = { count: -1 };
-let style_count = { count: -1 };
-let ext_count = { count: -1 };
-let add_count = { count: -1 };
+let cuts_count = { count: 2 };
+let color_count = { count: 2 };
+let style_count = { count: 2 };
+let ext_count = { count: 2 };
+let add_count = { count: 2 };
 
 // carosel spin function
 caroselSpin = (arr, section, counter) => {
@@ -328,26 +328,26 @@ addNext.addEventListener("click", () =>
   caroselSpin(add, "caroselDivsAdd", add_count)
 );
 // BACK
-let cutBack = document.querySelector("#back_1");
-cutBack.addEventListener("click", () => {
-  caroselSpinReverse(mensCuts, "caroselDivs", cuts_count);
-});
-let colorBack = document.querySelector("#back_2");
-colorBack.addEventListener("click", () => {
-  caroselSpinReverse(color, "caroselDivsColor", color_count);
-});
-let styleBack = document.querySelector("#back_3");
-styleBack.addEventListener("click", () =>
-  caroselSpinReverse(styles, "caroselDivsStyle", style_count)
-);
-let extBack = document.querySelector("#back_4");
-extBack.addEventListener("click", () =>
-  caroselSpinReverse(ext, "caroselDivsExt", ext_count)
-);
-let addBack = document.querySelector("#back_5");
-addBack.addEventListener("click", () =>
-  caroselSpinReverse(add, "caroselDivsAdd", add_count)
-);
+// let cutBack = document.querySelector("#back_1");
+// cutBack.addEventListener("click", () => {
+//   caroselSpinReverse(mensCuts, "caroselDivs", cuts_count);
+// });
+// let colorBack = document.querySelector("#back_2");
+// colorBack.addEventListener("click", () => {
+//   caroselSpinReverse(color, "caroselDivsColor", color_count);
+// });
+// let styleBack = document.querySelector("#back_3");
+// styleBack.addEventListener("click", () =>
+//   caroselSpinReverse(styles, "caroselDivsStyle", style_count)
+// );
+// let extBack = document.querySelector("#back_4");
+// extBack.addEventListener("click", () =>
+//   caroselSpinReverse(ext, "caroselDivsExt", ext_count)
+// );
+// let addBack = document.querySelector("#back_5");
+// addBack.addEventListener("click", () =>
+//   caroselSpinReverse(add, "caroselDivsAdd", add_count)
+// );
 // get lazy images
 lazyLoad = (arr) => {
   let scrollTop = window.pageYOffset;
