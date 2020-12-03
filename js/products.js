@@ -98,6 +98,30 @@ let items = [
     link:
       "https://shop.saloninteractive.com/store/HairbyShandel/product/26182/29633",
   },
+  {
+    name: "KILLER.CURLS",
+    desc:
+      "helps to activate curls while adding essential moisture to throw out the frizz",
+    img: "./resources/products/killercurls.jpg",
+    link:
+      "https://shop.saloninteractive.com/store/HairbyShandel/product/26059/95",
+  },
+  {
+    name: "NIGHT.RIDER",
+    desc:
+      "this state-of-the-art paste helps seal in moisture to prevent hair breakage",
+    img: "./resources/products/nightrider.jpg",
+    link:
+      "https://shop.saloninteractive.com/store/HairbyShandel/product/15754/130",
+  },
+  {
+    name: "Young.Again Dry Conditioner",
+    desc:
+      "weightless spray that nourishes your tresses, restores softness, adds manageability",
+    img: "./resources/products/KMDC.jpg",
+    link:
+      "https://shop.saloninteractive.com/store/HairbyShandel/product/36949/40400",
+  },
 ];
 let container = document.querySelector(".products_content");
 items.forEach((product) => {
